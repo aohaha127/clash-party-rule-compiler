@@ -1,0 +1,10 @@
+# Derived from blackmatrix7/ios_rule_script (GPL-2.0)
+# Upstream commit: 17582922869fc3ebb35b9081631b11e02303f3f5
+# Sources: GitLab/GitLab.yaml
+payload:
+- DOMAIN-SUFFIX,gitlab-assets.oss-cn-hongkong.aliyuncs.com
+- DOMAIN-SUFFIX,gitlab-static.net
+- DOMAIN-SUFFIX,gitlab.com
+- DOMAIN-SUFFIX,gitlab.net
+- DOMAIN-SUFFIX,gitter-static.net
+- DOMAIN-SUFFIX,gitter.im

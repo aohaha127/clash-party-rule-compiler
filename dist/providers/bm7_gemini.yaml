@@ -1,0 +1,18 @@
+# Derived from blackmatrix7/ios_rule_script (GPL-2.0)
+# Upstream commit: 17582922869fc3ebb35b9081631b11e02303f3f5
+# Sources: Gemini/Gemini.yaml, BardAI/BardAI.yaml
+payload:
+- DOMAIN,ai.google.dev
+- DOMAIN,alkalimakersuite-pa.clients6.google.com
+- DOMAIN,makersuite.google.com
+- DOMAIN-SUFFIX,bard.google.com
+- DOMAIN-SUFFIX,deepmind.com
+- DOMAIN-SUFFIX,deepmind.google
+- DOMAIN-SUFFIX,gemini.google.com
+- DOMAIN-SUFFIX,generativeai.google
+- DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+- DOMAIN-SUFFIX,apis.google.com
+- DOMAIN-KEYWORD,colab
+- DOMAIN-KEYWORD,developerprofiles
+- DOMAIN-KEYWORD,generativelanguage
+- DOMAIN,generativelanguage.googleapis.com

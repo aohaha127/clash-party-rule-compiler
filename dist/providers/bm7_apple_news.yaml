@@ -1,0 +1,6 @@
+# Derived from blackmatrix7/ios_rule_script (GPL-2.0)
+# Upstream commit: 17582922869fc3ebb35b9081631b11e02303f3f5
+# Sources: AppleNews/AppleNews.yaml
+payload:
+- DOMAIN,gspe1-ssl.ls.apple.com
+- DOMAIN,news-client-search.apple.com

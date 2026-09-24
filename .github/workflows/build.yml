@@ -1,0 +1,50 @@
+name: Build Clash Party rules
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/**"
+      - "requirements.txt"
+      - ".github/workflows/build.yml"
+  schedule:
+    - cron: "0 8 * * *"
+      timezone: "Asia/Hong_Kong"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-rules
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install YAML parser
+        run: python -m pip install --index-url https://pypi.org/simple -r requirements.txt
+      - name: Fetch and compile upstream lists
+        run: python scripts/build.py --repo "$GITHUB_REPOSITORY"
+      - name: Validate YAML, references and cycles
+        run: python scripts/validate.py
+      - name: Download verified stable Mihomo core
+        run: python scripts/download_mihomo.py
+      - name: Validate with Mihomo
+        run: python scripts/validate.py --mihomo .cache/mihomo
+      - name: Publish build outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist reports
+          if ! git diff --cached --quiet; then
+            git commit -m "build: refresh Clash Party rules"
+            git push
+          fi

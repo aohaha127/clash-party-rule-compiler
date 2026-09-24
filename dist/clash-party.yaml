@@ -1,0 +1,1641 @@
+# Clash Party YAML override; generated, do not edit directly.
+# Upstream: https://github.com/blackmatrix7/ios_rule_script @ 17582922869fc3ebb35b9081631b11e02303f3f5
+# Rules and generated providers derived from upstream GPL-2.0 data.
+proxy-groups:
+- name: 节点选择
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png
+  proxies:
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 手动切换
+  type: select
+  include-all: true
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png
+  empty-fallback: REJECT
+- name: 自动选择
+  type: url-test
+  include-all: true
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
+  empty-fallback: REJECT
+- name: 非港节点
+  type: select
+  include-all: true
+  exclude-filter: (?i)港|HK|Hong[ _-]?Kong
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png
+  empty-fallback: REJECT
+- name: 奈飞节点
+  type: select
+  include-all: true
+  filter: (?i)NF|奈飞|解锁|Netflix|Media
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
+  empty-fallback: REJECT
+- name: 香港节点
+  type: url-test
+  include-all: true
+  filter: (?i)港|HK|Hong[ _-]?Kong
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png
+  empty-fallback: REJECT
+- name: 台湾节点
+  type: url-test
+  include-all: true
+  filter: (?i)台|TW|Taiwan
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png
+  empty-fallback: REJECT
+- name: 狮城节点
+  type: url-test
+  include-all: true
+  filter: (?i)新加坡|坡|狮城|SG|Singapore
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png
+  empty-fallback: REJECT
+- name: 日本节点
+  type: url-test
+  include-all: true
+  filter: (?i)日本|东京|大阪|JP|Japan
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png
+  empty-fallback: REJECT
+- name: 美国节点
+  type: url-test
+  include-all: true
+  filter: (?i)美|US|United[ _-]?States
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
+  empty-fallback: REJECT
+- name: 韩国节点
+  type: url-test
+  include-all: true
+  filter: (?i)韩|韓|首尔|KR|Korea
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png
+  empty-fallback: REJECT
+- name: 漏网之鱼
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - DIRECT
+  - 手动切换
+- name: 局域网
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 全球直连
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 国服游戏
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 广告拦截
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 应用净化
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 隐私拦截
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Filter.png
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 知乎广告
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png
+  proxies:
+  - REJECT
+  - DIRECT
+- name: OpenAI
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png
+  proxies:
+  - 非港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - DIRECT
+- name: Claude
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png
+  proxies:
+  - 非港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - DIRECT
+- name: Gemini
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png
+  proxies:
+  - 非港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - DIRECT
+- name: Civitai
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png
+  proxies:
+  - 非港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - DIRECT
+- name: Telegram
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: WhatsApp
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Discord
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Discord.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: LINE
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Line.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: NPM
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: GitHub
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: GitLab
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Docker
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: JetBrains
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Notion
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Notion.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Figma
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Cloudflare
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Vercel
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: DigitalOcean
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 谷歌FCM
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 谷歌搜索
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 谷歌云盘
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Drive.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Google Voice
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: YouTube Music
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 油管视频
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 谷歌服务
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 微软Bing
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 微软云盘
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 微软浏览器
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 微软服务
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 苹果商店
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/App_Store.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 苹果云端
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/iCloud.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: TestFlight
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 苹果音乐
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_Music.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 苹果视频
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_TV.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 苹果新闻
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 苹果服务
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 奈飞视频
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
+  proxies:
+  - 奈飞节点
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 迪士尼视频
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Prime Video
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Amazon.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: HBO
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Hulu
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hulu.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Spotify
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 巴哈姆特
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png
+  proxies:
+  - 台湾节点
+  - 节点选择
+  - 手动切换
+  - DIRECT
+- name: 哔哩哔哩国际
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 哔哩哔哩
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili.png
+  proxies:
+  - DIRECT
+  - 香港节点
+  - 台湾节点
+  - 节点选择
+  - 手动切换
+- name: TikTok
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Twitch
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Twitch.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 网易音乐
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netease_Music.png
+  proxies:
+  - DIRECT
+  - 香港节点
+  - 台湾节点
+  - 节点选择
+  - 手动切换
+- name: 国内媒体
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/DomesticMedia.png
+  proxies:
+  - DIRECT
+  - 香港节点
+  - 台湾节点
+  - 节点选择
+  - 手动切换
+- name: 国外媒体
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Steam
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Steam.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Epic
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: PlayStation
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Nintendo
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Xbox
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 游戏平台
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: X / Twitter
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Twitter.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Facebook
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Facebook.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Instagram
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Instagram.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Reddit
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Threads
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Instagram.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Snapchat
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: PayPal
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PayPal.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Amazon
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Amazon.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Shopify
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Amazon.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: Shopee
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Amazon.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+- name: 下载服务
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 测速服务
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 国内网站
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png
+  proxies:
+  - DIRECT
+  - 节点选择
+  - 自动选择
+  - 手动切换
+- name: 国外网站
+  type: select
+  icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
+  proxies:
+  - 节点选择
+  - 自动选择
+  - 香港节点
+  - 台湾节点
+  - 狮城节点
+  - 日本节点
+  - 美国节点
+  - 韩国节点
+  - 手动切换
+  - DIRECT
+rule-providers:
+  bm7_lan:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_lan.yaml
+    path: ./rule_provider/bm7/bm7_lan.yaml
+    interval: 86400
+  bm7_direct:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_direct.yaml
+    path: ./rule_provider/bm7/bm7_direct.yaml
+    interval: 86400
+  bm7_steam_cn:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_steam_cn.yaml
+    path: ./rule_provider/bm7/bm7_steam_cn.yaml
+    interval: 86400
+  bm7_advertising:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_advertising.yaml
+    path: ./rule_provider/bm7/bm7_advertising.yaml
+    interval: 86400
+  bm7_hijacking:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_hijacking.yaml
+    path: ./rule_provider/bm7/bm7_hijacking.yaml
+    interval: 86400
+  bm7_privacy:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_privacy.yaml
+    path: ./rule_provider/bm7/bm7_privacy.yaml
+    interval: 86400
+  bm7_zhihu_ads:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_zhihu_ads.yaml
+    path: ./rule_provider/bm7/bm7_zhihu_ads.yaml
+    interval: 86400
+  bm7_openai:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_openai.yaml
+    path: ./rule_provider/bm7/bm7_openai.yaml
+    interval: 86400
+  bm7_claude:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_claude.yaml
+    path: ./rule_provider/bm7/bm7_claude.yaml
+    interval: 86400
+  bm7_gemini:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_gemini.yaml
+    path: ./rule_provider/bm7/bm7_gemini.yaml
+    interval: 86400
+  bm7_civitai:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_civitai.yaml
+    path: ./rule_provider/bm7/bm7_civitai.yaml
+    interval: 86400
+  bm7_telegram:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_telegram.yaml
+    path: ./rule_provider/bm7/bm7_telegram.yaml
+    interval: 86400
+  bm7_whatsapp:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_whatsapp.yaml
+    path: ./rule_provider/bm7/bm7_whatsapp.yaml
+    interval: 86400
+  bm7_discord:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_discord.yaml
+    path: ./rule_provider/bm7/bm7_discord.yaml
+    interval: 86400
+  bm7_line:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_line.yaml
+    path: ./rule_provider/bm7/bm7_line.yaml
+    interval: 86400
+  bm7_npm:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_npm.yaml
+    path: ./rule_provider/bm7/bm7_npm.yaml
+    interval: 86400
+  bm7_github:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_github.yaml
+    path: ./rule_provider/bm7/bm7_github.yaml
+    interval: 86400
+  bm7_gitlab:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_gitlab.yaml
+    path: ./rule_provider/bm7/bm7_gitlab.yaml
+    interval: 86400
+  bm7_docker:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_docker.yaml
+    path: ./rule_provider/bm7/bm7_docker.yaml
+    interval: 86400
+  bm7_jetbrains:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_jetbrains.yaml
+    path: ./rule_provider/bm7/bm7_jetbrains.yaml
+    interval: 86400
+  bm7_notion:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_notion.yaml
+    path: ./rule_provider/bm7/bm7_notion.yaml
+    interval: 86400
+  bm7_figma:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_figma.yaml
+    path: ./rule_provider/bm7/bm7_figma.yaml
+    interval: 86400
+  bm7_cloudflare:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_cloudflare.yaml
+    path: ./rule_provider/bm7/bm7_cloudflare.yaml
+    interval: 86400
+  bm7_vercel:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_vercel.yaml
+    path: ./rule_provider/bm7/bm7_vercel.yaml
+    interval: 86400
+  bm7_digitalocean:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_digitalocean.yaml
+    path: ./rule_provider/bm7/bm7_digitalocean.yaml
+    interval: 86400
+  bm7_google_fcm:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_google_fcm.yaml
+    path: ./rule_provider/bm7/bm7_google_fcm.yaml
+    interval: 86400
+  bm7_google_search:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_google_search.yaml
+    path: ./rule_provider/bm7/bm7_google_search.yaml
+    interval: 86400
+  bm7_google_drive:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_google_drive.yaml
+    path: ./rule_provider/bm7/bm7_google_drive.yaml
+    interval: 86400
+  bm7_google_voice:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_google_voice.yaml
+    path: ./rule_provider/bm7/bm7_google_voice.yaml
+    interval: 86400
+  bm7_youtube_music:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_youtube_music.yaml
+    path: ./rule_provider/bm7/bm7_youtube_music.yaml
+    interval: 86400
+  bm7_youtube:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_youtube.yaml
+    path: ./rule_provider/bm7/bm7_youtube.yaml
+    interval: 86400
+  bm7_google:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_google.yaml
+    path: ./rule_provider/bm7/bm7_google.yaml
+    interval: 86400
+  bm7_bing:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_bing.yaml
+    path: ./rule_provider/bm7/bm7_bing.yaml
+    interval: 86400
+  bm7_onedrive:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_onedrive.yaml
+    path: ./rule_provider/bm7/bm7_onedrive.yaml
+    interval: 86400
+  bm7_microsoft_edge:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_microsoft_edge.yaml
+    path: ./rule_provider/bm7/bm7_microsoft_edge.yaml
+    interval: 86400
+  bm7_microsoft:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_microsoft.yaml
+    path: ./rule_provider/bm7/bm7_microsoft.yaml
+    interval: 86400
+  bm7_app_store:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_app_store.yaml
+    path: ./rule_provider/bm7/bm7_app_store.yaml
+    interval: 86400
+  bm7_icloud:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_icloud.yaml
+    path: ./rule_provider/bm7/bm7_icloud.yaml
+    interval: 86400
+  bm7_testflight:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_testflight.yaml
+    path: ./rule_provider/bm7/bm7_testflight.yaml
+    interval: 86400
+  bm7_apple_music:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_apple_music.yaml
+    path: ./rule_provider/bm7/bm7_apple_music.yaml
+    interval: 86400
+  bm7_apple_tv:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_apple_tv.yaml
+    path: ./rule_provider/bm7/bm7_apple_tv.yaml
+    interval: 86400
+  bm7_apple_news:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_apple_news.yaml
+    path: ./rule_provider/bm7/bm7_apple_news.yaml
+    interval: 86400
+  bm7_apple:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_apple.yaml
+    path: ./rule_provider/bm7/bm7_apple.yaml
+    interval: 86400
+  bm7_netflix:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_netflix.yaml
+    path: ./rule_provider/bm7/bm7_netflix.yaml
+    interval: 86400
+  bm7_disney:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_disney.yaml
+    path: ./rule_provider/bm7/bm7_disney.yaml
+    interval: 86400
+  bm7_prime_video:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_prime_video.yaml
+    path: ./rule_provider/bm7/bm7_prime_video.yaml
+    interval: 86400
+  bm7_hbo:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_hbo.yaml
+    path: ./rule_provider/bm7/bm7_hbo.yaml
+    interval: 86400
+  bm7_hulu:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_hulu.yaml
+    path: ./rule_provider/bm7/bm7_hulu.yaml
+    interval: 86400
+  bm7_spotify:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_spotify.yaml
+    path: ./rule_provider/bm7/bm7_spotify.yaml
+    interval: 86400
+  bm7_bahamut:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_bahamut.yaml
+    path: ./rule_provider/bm7/bm7_bahamut.yaml
+    interval: 86400
+  bm7_bilibili_intl:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_bilibili_intl.yaml
+    path: ./rule_provider/bm7/bm7_bilibili_intl.yaml
+    interval: 86400
+  bm7_bilibili:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_bilibili.yaml
+    path: ./rule_provider/bm7/bm7_bilibili.yaml
+    interval: 86400
+  bm7_tiktok:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_tiktok.yaml
+    path: ./rule_provider/bm7/bm7_tiktok.yaml
+    interval: 86400
+  bm7_twitch:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_twitch.yaml
+    path: ./rule_provider/bm7/bm7_twitch.yaml
+    interval: 86400
+  bm7_netease_music:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_netease_music.yaml
+    path: ./rule_provider/bm7/bm7_netease_music.yaml
+    interval: 86400
+  bm7_china_media:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_china_media.yaml
+    path: ./rule_provider/bm7/bm7_china_media.yaml
+    interval: 86400
+  bm7_global_media:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_global_media.yaml
+    path: ./rule_provider/bm7/bm7_global_media.yaml
+    interval: 86400
+  bm7_steam:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_steam.yaml
+    path: ./rule_provider/bm7/bm7_steam.yaml
+    interval: 86400
+  bm7_epic:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_epic.yaml
+    path: ./rule_provider/bm7/bm7_epic.yaml
+    interval: 86400
+  bm7_playstation:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_playstation.yaml
+    path: ./rule_provider/bm7/bm7_playstation.yaml
+    interval: 86400
+  bm7_nintendo:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_nintendo.yaml
+    path: ./rule_provider/bm7/bm7_nintendo.yaml
+    interval: 86400
+  bm7_xbox:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_xbox.yaml
+    path: ./rule_provider/bm7/bm7_xbox.yaml
+    interval: 86400
+  bm7_game:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_game.yaml
+    path: ./rule_provider/bm7/bm7_game.yaml
+    interval: 86400
+  bm7_twitter:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_twitter.yaml
+    path: ./rule_provider/bm7/bm7_twitter.yaml
+    interval: 86400
+  bm7_facebook:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_facebook.yaml
+    path: ./rule_provider/bm7/bm7_facebook.yaml
+    interval: 86400
+  bm7_instagram:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_instagram.yaml
+    path: ./rule_provider/bm7/bm7_instagram.yaml
+    interval: 86400
+  bm7_reddit:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_reddit.yaml
+    path: ./rule_provider/bm7/bm7_reddit.yaml
+    interval: 86400
+  bm7_threads:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_threads.yaml
+    path: ./rule_provider/bm7/bm7_threads.yaml
+    interval: 86400
+  bm7_snap:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_snap.yaml
+    path: ./rule_provider/bm7/bm7_snap.yaml
+    interval: 86400
+  bm7_paypal:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_paypal.yaml
+    path: ./rule_provider/bm7/bm7_paypal.yaml
+    interval: 86400
+  bm7_amazon:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_amazon.yaml
+    path: ./rule_provider/bm7/bm7_amazon.yaml
+    interval: 86400
+  bm7_shopify:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_shopify.yaml
+    path: ./rule_provider/bm7/bm7_shopify.yaml
+    interval: 86400
+  bm7_shopee:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_shopee.yaml
+    path: ./rule_provider/bm7/bm7_shopee.yaml
+    interval: 86400
+  bm7_download:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_download.yaml
+    path: ./rule_provider/bm7/bm7_download.yaml
+    interval: 86400
+  bm7_speedtest:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_speedtest.yaml
+    path: ./rule_provider/bm7/bm7_speedtest.yaml
+    interval: 86400
+  bm7_china:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_china.yaml
+    path: ./rule_provider/bm7/bm7_china.yaml
+    interval: 86400
+  bm7_global:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_global.yaml
+    path: ./rule_provider/bm7/bm7_global.yaml
+    interval: 86400
+rules:
+- RULE-SET,bm7_lan,局域网
+- RULE-SET,bm7_direct,全球直连
+- RULE-SET,bm7_steam_cn,国服游戏
+- RULE-SET,bm7_advertising,广告拦截
+- RULE-SET,bm7_hijacking,应用净化
+- RULE-SET,bm7_privacy,隐私拦截
+- RULE-SET,bm7_zhihu_ads,知乎广告
+- RULE-SET,bm7_openai,OpenAI
+- RULE-SET,bm7_claude,Claude
+- RULE-SET,bm7_gemini,Gemini
+- RULE-SET,bm7_civitai,Civitai
+- RULE-SET,bm7_telegram,Telegram
+- RULE-SET,bm7_whatsapp,WhatsApp
+- RULE-SET,bm7_discord,Discord
+- RULE-SET,bm7_line,LINE
+- RULE-SET,bm7_npm,NPM
+- RULE-SET,bm7_github,GitHub
+- RULE-SET,bm7_gitlab,GitLab
+- RULE-SET,bm7_docker,Docker
+- RULE-SET,bm7_jetbrains,JetBrains
+- RULE-SET,bm7_notion,Notion
+- RULE-SET,bm7_figma,Figma
+- RULE-SET,bm7_cloudflare,Cloudflare
+- RULE-SET,bm7_vercel,Vercel
+- RULE-SET,bm7_digitalocean,DigitalOcean
+- RULE-SET,bm7_google_fcm,谷歌FCM
+- RULE-SET,bm7_google_search,谷歌搜索
+- RULE-SET,bm7_google_drive,谷歌云盘
+- RULE-SET,bm7_google_voice,Google Voice
+- RULE-SET,bm7_youtube_music,YouTube Music
+- RULE-SET,bm7_youtube,油管视频
+- RULE-SET,bm7_google,谷歌服务
+- RULE-SET,bm7_bing,微软Bing
+- RULE-SET,bm7_onedrive,微软云盘
+- RULE-SET,bm7_microsoft_edge,微软浏览器
+- RULE-SET,bm7_microsoft,微软服务
+- RULE-SET,bm7_app_store,苹果商店
+- RULE-SET,bm7_icloud,苹果云端
+- RULE-SET,bm7_testflight,TestFlight
+- RULE-SET,bm7_apple_music,苹果音乐
+- RULE-SET,bm7_apple_tv,苹果视频
+- RULE-SET,bm7_apple_news,苹果新闻
+- RULE-SET,bm7_apple,苹果服务
+- RULE-SET,bm7_netflix,奈飞视频
+- RULE-SET,bm7_disney,迪士尼视频
+- RULE-SET,bm7_prime_video,Prime Video
+- RULE-SET,bm7_hbo,HBO
+- RULE-SET,bm7_hulu,Hulu
+- RULE-SET,bm7_spotify,Spotify
+- RULE-SET,bm7_bahamut,巴哈姆特
+- RULE-SET,bm7_bilibili_intl,哔哩哔哩国际
+- RULE-SET,bm7_bilibili,哔哩哔哩
+- RULE-SET,bm7_tiktok,TikTok
+- RULE-SET,bm7_twitch,Twitch
+- RULE-SET,bm7_netease_music,网易音乐
+- RULE-SET,bm7_china_media,国内媒体
+- RULE-SET,bm7_global_media,国外媒体
+- RULE-SET,bm7_steam,Steam
+- RULE-SET,bm7_epic,Epic
+- RULE-SET,bm7_playstation,PlayStation
+- RULE-SET,bm7_nintendo,Nintendo
+- RULE-SET,bm7_xbox,Xbox
+- RULE-SET,bm7_game,游戏平台
+- RULE-SET,bm7_twitter,X / Twitter
+- RULE-SET,bm7_facebook,Facebook
+- RULE-SET,bm7_instagram,Instagram
+- RULE-SET,bm7_reddit,Reddit
+- RULE-SET,bm7_threads,Threads
+- RULE-SET,bm7_snap,Snapchat
+- RULE-SET,bm7_paypal,PayPal
+- RULE-SET,bm7_amazon,Amazon
+- RULE-SET,bm7_shopify,Shopify
+- RULE-SET,bm7_shopee,Shopee
+- RULE-SET,bm7_download,下载服务
+- RULE-SET,bm7_speedtest,测速服务
+- RULE-SET,bm7_china,国内网站
+- RULE-SET,bm7_global,国外网站
+- MATCH,漏网之鱼

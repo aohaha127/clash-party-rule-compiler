@@ -1,0 +1,10 @@
+# Derived from blackmatrix7/ios_rule_script (GPL-2.0)
+# Upstream commit: 17582922869fc3ebb35b9081631b11e02303f3f5
+# Sources: Snap/Snap.yaml
+payload:
+- DOMAIN-SUFFIX,sc-cdn.net
+- DOMAIN-SUFFIX,snap-dev.net
+- DOMAIN-SUFFIX,snap.com
+- DOMAIN-SUFFIX,snapads.com
+- DOMAIN-SUFFIX,snapchat.com
+- DOMAIN-SUFFIX,snapkit.co

@@ -1,0 +1,7 @@
+# Derived from blackmatrix7/ios_rule_script (GPL-2.0)
+# Upstream commit: 17582922869fc3ebb35b9081631b11e02303f3f5
+# Sources: TestFlight/TestFlight.yaml
+payload:
+- DOMAIN,beta.apple.com
+- DOMAIN,testflight.apple.com
+- DOMAIN-KEYWORD,testflight

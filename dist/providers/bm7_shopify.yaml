@@ -1,0 +1,12 @@
+# Derived from blackmatrix7/ios_rule_script (GPL-2.0)
+# Upstream commit: 17582922869fc3ebb35b9081631b11e02303f3f5
+# Sources: Shopify/Shopify.yaml
+payload:
+- DOMAIN-SUFFIX,myshopify.com
+- DOMAIN-SUFFIX,shop.app
+- DOMAIN-SUFFIX,shopify.com
+- DOMAIN-SUFFIX,shopify.dev
+- DOMAIN-SUFFIX,shopifycdn.com
+- DOMAIN-SUFFIX,shopifycloud.com
+- DOMAIN-SUFFIX,shopifystatus.com
+- DOMAIN-SUFFIX,shopifysvc.com
