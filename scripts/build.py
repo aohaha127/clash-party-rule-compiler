@@ -180,6 +180,26 @@ def base_groups() -> list[dict]:
     return groups
 
 
+def catalog_groups() -> list[dict]:
+    groups: list[dict] = []
+    modes: dict[str, str] = {}
+    for entry in CATALOG:
+        # LAN rules target Mihomo's built-in DIRECT policy, so changing the
+        # domestic policy group cannot send local traffic through a proxy.
+        if entry.group == "DIRECT":
+            if entry.mode != "direct":
+                raise ValueError(f"built-in DIRECT has non-direct mode: {entry.slug}")
+            continue
+        previous_mode = modes.get(entry.group)
+        if previous_mode is not None:
+            if previous_mode != entry.mode:
+                raise ValueError(f"conflicting modes in {entry.group}: {previous_mode}, {entry.mode}")
+            continue
+        modes[entry.group] = entry.mode
+        groups.append(group(entry.group, entry.mode, entry.icon))
+    return groups
+
+
 def validate_override(override: dict, provider_files: dict[str, list[str]]) -> None:
     groups = override["proxy-groups"]
     group_names = [entry["name"] for entry in groups]
@@ -276,6 +296,12 @@ def compile_rules(data: dict[str, tuple[str, list[str]]]) -> tuple[dict[str, lis
         "source_rule_count": sum(len(data[source][1]) for entry in CATALOG for source in entry.sources),
         "unique_rule_count": len(seen),
         "duplicate_within_provider": within_source,
+        "same_group_duplicates_across_providers": sum(
+            count for (first, second), count in exact_pairs.items() if first == second
+        ),
+        "cross_group_duplicates": sum(
+            count for (first, second), count in exact_pairs.items() if first != second
+        ),
         "exact_duplicates_by_group_pair": [
             {"kept_group": first, "removed_group": second, "count": count}
             for (first, second), count in exact_pairs.most_common()
@@ -289,7 +315,7 @@ def compile_rules(data: dict[str, tuple[str, list[str]]]) -> tuple[dict[str, lis
 
 
 def make_override(repo: str, sha: str, providers: dict[str, list[str]]) -> dict:
-    groups = base_groups() + [group(entry.group, entry.mode, entry.icon) for entry in CATALOG]
+    groups = base_groups() + catalog_groups()
     root_url = f"https://raw.githubusercontent.com/{repo}/main/dist/providers"
     rule_providers = {}
     rules = []
@@ -352,8 +378,9 @@ def write_outputs(repo: str, sha: str, data: dict[str, tuple[str, list[str]]],
         lines = ["# 规则重复与覆盖报告", "", f"- 上游版本：`{sha}`",
                  f"- 原始规则条数：{conflicts['source_rule_count']:,}",
                  f"- 去重后规则条数：{conflicts['unique_rule_count']:,}",
-                 f"- 同一策略组内重复：{conflicts['duplicate_within_provider']:,}",
-                 f"- 跨组相同规则：{sum(x['count'] for x in conflicts['exact_duplicates_by_group_pair'] if x['kept_group'] != x['removed_group']):,}",
+                 f"- 同一规则集内重复：{conflicts['duplicate_within_provider']:,}",
+                 f"- 同组不同规则集的相同规则：{conflicts['same_group_duplicates_across_providers']:,}",
+                 f"- 跨组相同规则：{conflicts['cross_group_duplicates']:,}",
                  f"- 不同策略组的域名后缀覆盖：{conflicts['domain_suffix_overlap_count']:,}",
                  "", "规则按 `dist/clash-party.yaml` 中的先后顺序匹配。完全相同的规则仅保留先出现的一条。",
                  "域名后缀覆盖保留在报告中，专用规则优先于通用合集。", "", "## 跨组重复最多的策略组", "",
@@ -410,7 +437,7 @@ def main() -> None:
     providers, conflicts = compile_rules(data)
     write_outputs(args.repo, sha, data, providers, conflicts)
     print(json.dumps({"repository": args.repo, "upstream_commit": sha,
-                      "groups": len(base_groups()) + len(CATALOG),
+                      "groups": len(base_groups()) + len(catalog_groups()),
                       "providers": len(providers), "sources": len(sources),
                       "raw_rules": conflicts["source_rule_count"],
                       "unique_rules": conflicts["unique_rule_count"],

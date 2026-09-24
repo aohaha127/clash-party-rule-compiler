@@ -2,7 +2,7 @@
 
 > 本项目由 ChatGPT（Codex）协助构建，规则文件由自动化流程生成，仅供个人学习使用。规则内容来自上游项目，并非 blackmatrix7 或 Clash Party 的官方发布。
 
-基于 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash) 自动生成的 Clash Party YAML 覆写。当前版本将 79 个上游规则目录编译为 **77 个规则集、89 个策略组**，包含 AI、通信、开发平台、Google、微软、Apple、流媒体、游戏、社交、购物、国内外网站和广告拦截等独立策略。上游 `ChinaMax`、`Global`、`GlobalMedia` 和 `Game` 等合集覆盖大量子规则，因此没有逐一启用上游全部目录。
+基于 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash) 自动生成的 Clash Party YAML 覆写。当前版本将 79 个上游规则目录编译为 **77 个规则集、55 个策略组**。相关服务共用策略组，但保留独立规则集，便于追踪上游更新与规则冲突。上游 `ChinaMax`、`Global`、`GlobalMedia` 和 `Game` 等合集覆盖大量子规则，因此没有逐一启用上游全部目录。
 
 ## 导入
 
@@ -13,11 +13,33 @@
 2. 在「订阅管理」中编辑你的订阅，将该覆写绑定到订阅。
 3. 更新订阅，并检查「节点选择」、地区节点组及各服务策略组。地区节点组根据节点名称筛选；名称不符合筛选式时，该组会为空并回退为 `REJECT`。
 
-该覆写以 `rules` 和 `proxy-groups` 替换订阅中的对应数组，保留订阅提供的 `proxies` 与 `proxy-providers`。策略组默认选择见生成文件；例如 AI 服务默认进入排除香港节点的「非港节点」，但用户可以在各 AI 策略组中手动选择其他列出的策略。
+该覆写以 `rules` 和 `proxy-groups` 替换订阅中的对应数组，保留订阅提供的 `proxies` 与 `proxy-providers`。策略组默认选择见生成文件；「AI 服务」默认进入排除香港节点的「非港节点」，也可以手动选择其他列出的策略。
+
+## 合并后的策略组
+
+| 策略组 | 对应的独立规则集 |
+|---|---|
+| 国内直连 | 全球直连、下载服务、国内网站；局域网规则单独固定走 `DIRECT` |
+| 广告拦截 | 广告拦截、知乎广告 |
+| AI 服务 | OpenAI、Claude、Gemini、Civitai |
+| 即时通讯 | WhatsApp、Discord、LINE；Telegram 保持独立 |
+| 开发工具 | NPM、GitLab、Docker、JetBrains、Figma；GitHub 保持独立 |
+| 云平台 | Vercel、DigitalOcean；Cloudflare 保持独立 |
+| 谷歌服务 | 谷歌搜索、谷歌云盘、Google Voice、谷歌服务；谷歌FCM 保持独立 |
+| YouTube | YouTube Music、油管视频 |
+| 微软服务 | 微软Bing、微软浏览器、微软服务；微软云盘保持独立 |
+| 苹果服务 | 苹果商店、苹果云端、TestFlight、苹果服务 |
+| 苹果媒体 | 苹果音乐、苹果视频、苹果新闻 |
+| 游戏代理 | Steam、Epic、PlayStation、Nintendo、Xbox |
+| 游戏直连 | 国服游戏、游戏平台 |
+| Meta 社交 | Facebook、Instagram、Threads |
+| 海外购物 | Amazon、Shopify、Shopee |
+
+完整策略组及其选项见 [`dist/clash-party.yaml`](dist/clash-party.yaml)。
 
 ## 规则优先顺序
 
-局域网与明确直连 → 广告及隐私拦截 → 具体服务 → 媒体和游戏合集 → 国内网站 → 国外网站 → 漏网之鱼。完全相同的规则只保留第一条。更具体的域名与通用后缀可能分别属于不同策略，按 YAML 中的先后顺序匹配。
+局域网固定 `DIRECT` → 明确直连 → 广告及隐私拦截 → 具体服务 → 媒体和游戏合集 → 国内网站 → 国外网站 → 漏网之鱼。完全相同的规则只保留第一条。更具体的域名与通用后缀可能分别属于不同策略，按 YAML 中的先后顺序匹配。
 
 查看 [重复与覆盖报告](reports/conflicts.md) 和 [机器可读报告](reports/conflicts.json)。报告列出完全重复规则、保留的策略、被去掉的后续重复项，以及不同策略之间的域名后缀覆盖示例。
 

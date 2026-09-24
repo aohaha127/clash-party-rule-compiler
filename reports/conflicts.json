@@ -2,16 +2,18 @@
   "source_rule_count": 247565,
   "unique_rule_count": 240754,
   "duplicate_within_provider": 11,
+  "same_group_duplicates_across_providers": 133,
+  "cross_group_duplicates": 6667,
   "exact_duplicates_by_group_pair": [
     {
       "kept_group": "苹果服务",
       "removed_group": "国外网站",
-      "count": 1421
+      "count": 1467
     },
     {
       "kept_group": "谷歌服务",
       "removed_group": "国外网站",
-      "count": 637
+      "count": 639
     },
     {
       "kept_group": "国外媒体",
@@ -19,17 +21,17 @@
       "count": 594
     },
     {
-      "kept_group": "Facebook",
+      "kept_group": "Meta 社交",
       "removed_group": "国外网站",
-      "count": 552
+      "count": 554
     },
     {
       "kept_group": "微软服务",
       "removed_group": "国外网站",
-      "count": 408
+      "count": 416
     },
     {
-      "kept_group": "游戏平台",
+      "kept_group": "游戏直连",
       "removed_group": "国外网站",
       "count": 245
     },
@@ -39,14 +41,24 @@
       "count": 233
     },
     {
-      "kept_group": "油管视频",
+      "kept_group": "游戏代理",
+      "removed_group": "游戏直连",
+      "count": 201
+    },
+    {
+      "kept_group": "YouTube",
       "removed_group": "国外媒体",
       "count": 183
     },
     {
-      "kept_group": "油管视频",
+      "kept_group": "YouTube",
       "removed_group": "国外网站",
       "count": 172
+    },
+    {
+      "kept_group": "海外购物",
+      "removed_group": "国外网站",
+      "count": 163
     },
     {
       "kept_group": "迪士尼视频",
@@ -60,18 +72,13 @@
     },
     {
       "kept_group": "国内媒体",
-      "removed_group": "国内网站",
+      "removed_group": "国内直连",
       "count": 150
     },
     {
-      "kept_group": "Amazon",
+      "kept_group": "游戏代理",
       "removed_group": "国外网站",
-      "count": 136
-    },
-    {
-      "kept_group": "Nintendo",
-      "removed_group": "游戏平台",
-      "count": 126
+      "count": 133
     },
     {
       "kept_group": "哔哩哔哩",
@@ -79,19 +86,19 @@
       "count": 124
     },
     {
-      "kept_group": "Nintendo",
-      "removed_group": "国外网站",
-      "count": 110
-    },
-    {
       "kept_group": "奈飞视频",
       "removed_group": "国外媒体",
       "count": 94
     },
     {
-      "kept_group": "苹果云端",
+      "kept_group": "即时通讯",
+      "removed_group": "国外网站",
+      "count": 62
+    },
+    {
+      "kept_group": "苹果服务",
       "removed_group": "苹果服务",
-      "count": 57
+      "count": 58
     },
     {
       "kept_group": "Hulu",
@@ -99,13 +106,13 @@
       "count": 55
     },
     {
-      "kept_group": "Steam",
-      "removed_group": "游戏平台",
-      "count": 51
+      "kept_group": "国内直连",
+      "removed_group": "国内直连",
+      "count": 55
     },
     {
       "kept_group": "哔哩哔哩",
-      "removed_group": "国内网站",
+      "removed_group": "国内直连",
       "count": 51
     },
     {
@@ -114,29 +121,19 @@
       "count": 48
     },
     {
-      "kept_group": "苹果云端",
-      "removed_group": "国外网站",
-      "count": 46
-    },
-    {
-      "kept_group": "全球直连",
-      "removed_group": "国内网站",
-      "count": 43
-    },
-    {
       "kept_group": "广告拦截",
       "removed_group": "应用净化",
       "count": 38
     },
     {
       "kept_group": "微软服务",
-      "removed_group": "游戏平台",
+      "removed_group": "游戏代理",
       "count": 37
     },
     {
       "kept_group": "微软服务",
-      "removed_group": "Xbox",
-      "count": 36
+      "removed_group": "游戏直连",
+      "count": 37
     },
     {
       "kept_group": "HBO",
@@ -154,9 +151,9 @@
       "count": 28
     },
     {
-      "kept_group": "Discord",
+      "kept_group": "云平台",
       "removed_group": "国外网站",
-      "count": 26
+      "count": 28
     },
     {
       "kept_group": "Telegram",
@@ -179,14 +176,14 @@
       "count": 24
     },
     {
-      "kept_group": "Vercel",
+      "kept_group": "开发工具",
       "removed_group": "国外网站",
       "count": 24
     },
     {
-      "kept_group": "LINE",
+      "kept_group": "国内直连",
       "removed_group": "国外网站",
-      "count": 22
+      "count": 23
     },
     {
       "kept_group": "隐私拦截",
@@ -194,18 +191,8 @@
       "count": 21
     },
     {
-      "kept_group": "全球直连",
-      "removed_group": "国外网站",
-      "count": 21
-    },
-    {
       "kept_group": "Prime Video",
-      "removed_group": "Amazon",
-      "count": 19
-    },
-    {
-      "kept_group": "Shopee",
-      "removed_group": "国外网站",
+      "removed_group": "海外购物",
       "count": 19
     },
     {
@@ -234,9 +221,9 @@
       "count": 16
     },
     {
-      "kept_group": "Epic",
-      "removed_group": "游戏平台",
-      "count": 14
+      "kept_group": "AI 服务",
+      "removed_group": "国外网站",
+      "count": 15
     },
     {
       "kept_group": "Prime Video",
@@ -244,23 +231,8 @@
       "count": 14
     },
     {
-      "kept_group": "Epic",
-      "removed_group": "国外网站",
-      "count": 14
-    },
-    {
-      "kept_group": "WhatsApp",
-      "removed_group": "国外网站",
-      "count": 14
-    },
-    {
       "kept_group": "TikTok",
       "removed_group": "国外媒体",
-      "count": 13
-    },
-    {
-      "kept_group": "JetBrains",
-      "removed_group": "国外网站",
       "count": 13
     },
     {
@@ -275,7 +247,7 @@
     },
     {
       "kept_group": "Cloudflare",
-      "removed_group": "国内网站",
+      "removed_group": "国内直连",
       "count": 12
     },
     {
@@ -284,33 +256,23 @@
       "count": 11
     },
     {
-      "kept_group": "全球直连",
-      "removed_group": "下载服务",
-      "count": 11
-    },
-    {
-      "kept_group": "OpenAI",
-      "removed_group": "国外网站",
-      "count": 11
-    },
-    {
       "kept_group": "广告拦截",
       "removed_group": "谷歌服务",
       "count": 10
     },
     {
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "removed_group": "谷歌FCM",
       "count": 9
     },
     {
-      "kept_group": "微软Bing",
+      "kept_group": "微软服务",
       "removed_group": "微软服务",
       "count": 9
     },
     {
       "kept_group": "国外媒体",
-      "removed_group": "Amazon",
+      "removed_group": "海外购物",
       "count": 9
     },
     {
@@ -324,37 +286,22 @@
       "count": 8
     },
     {
-      "kept_group": "微软Bing",
-      "removed_group": "国外网站",
-      "count": 8
-    },
-    {
       "kept_group": "Twitch",
       "removed_group": "国外网站",
       "count": 8
     },
     {
-      "kept_group": "Shopify",
-      "removed_group": "国外网站",
-      "count": 8
-    },
-    {
-      "kept_group": "Xbox",
-      "removed_group": "游戏平台",
+      "kept_group": "AI 服务",
+      "removed_group": "国外媒体",
       "count": 6
     },
     {
       "kept_group": "国外媒体",
-      "removed_group": "国内网站",
+      "removed_group": "国内直连",
       "count": 6
     },
     {
       "kept_group": "Snapchat",
-      "removed_group": "国外网站",
-      "count": 6
-    },
-    {
-      "kept_group": "Steam",
       "removed_group": "国外网站",
       "count": 6
     },
@@ -369,8 +316,8 @@
       "count": 5
     },
     {
-      "kept_group": "国服游戏",
-      "removed_group": "游戏平台",
+      "kept_group": "游戏直连",
+      "removed_group": "游戏直连",
       "count": 5
     },
     {
@@ -389,43 +336,43 @@
       "count": 4
     },
     {
-      "kept_group": "Gemini",
-      "removed_group": "国外媒体",
-      "count": 4
-    },
-    {
       "kept_group": "巴哈姆特",
       "removed_group": "国外媒体",
       "count": 4
     },
     {
-      "kept_group": "PlayStation",
-      "removed_group": "游戏平台",
+      "kept_group": "即时通讯",
+      "removed_group": "Meta 社交",
       "count": 4
     },
     {
-      "kept_group": "DigitalOcean",
-      "removed_group": "国外网站",
+      "kept_group": "苹果服务",
+      "removed_group": "国内直连",
       "count": 4
     },
     {
-      "kept_group": "Docker",
-      "removed_group": "国外网站",
-      "count": 4
-    },
-    {
-      "kept_group": "NPM",
+      "kept_group": "开发工具",
       "removed_group": "GitHub",
       "count": 3
     },
     {
-      "kept_group": "谷歌云盘",
+      "kept_group": "谷歌服务",
       "removed_group": "谷歌服务",
       "count": 3
     },
     {
-      "kept_group": "油管视频",
+      "kept_group": "YouTube",
       "removed_group": "谷歌服务",
+      "count": 3
+    },
+    {
+      "kept_group": "苹果媒体",
+      "removed_group": "苹果服务",
+      "count": 3
+    },
+    {
+      "kept_group": "苹果媒体",
+      "removed_group": "国外媒体",
       "count": 3
     },
     {
@@ -434,43 +381,23 @@
       "count": 3
     },
     {
-      "kept_group": "WhatsApp",
-      "removed_group": "Facebook",
-      "count": 3
-    },
-    {
-      "kept_group": "Facebook",
-      "removed_group": "Instagram",
+      "kept_group": "Meta 社交",
+      "removed_group": "Meta 社交",
       "count": 3
     },
     {
       "kept_group": "网易音乐",
-      "removed_group": "国内网站",
-      "count": 3
-    },
-    {
-      "kept_group": "苹果服务",
-      "removed_group": "国内网站",
+      "removed_group": "国内直连",
       "count": 3
     },
     {
       "kept_group": "谷歌服务",
-      "removed_group": "国内网站",
+      "removed_group": "国内直连",
       "count": 3
     },
     {
-      "kept_group": "局域网",
-      "removed_group": "国内网站",
-      "count": 3
-    },
-    {
-      "kept_group": "GitLab",
-      "removed_group": "国外网站",
-      "count": 3
-    },
-    {
-      "kept_group": "NPM",
-      "removed_group": "国外网站",
+      "kept_group": "DIRECT",
+      "removed_group": "国内直连",
       "count": 3
     },
     {
@@ -479,22 +406,17 @@
       "count": 3
     },
     {
-      "kept_group": "PlayStation",
-      "removed_group": "国外网站",
-      "count": 3
-    },
-    {
       "kept_group": "隐私拦截",
-      "removed_group": "OpenAI",
+      "removed_group": "AI 服务",
       "count": 2
     },
     {
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "removed_group": "谷歌服务",
       "count": 2
     },
     {
-      "kept_group": "苹果音乐",
+      "kept_group": "国内直连",
       "removed_group": "苹果服务",
       "count": 2
     },
@@ -504,17 +426,12 @@
       "count": 2
     },
     {
-      "kept_group": "Claude",
+      "kept_group": "开发工具",
       "removed_group": "国外媒体",
       "count": 2
     },
     {
-      "kept_group": "JetBrains",
-      "removed_group": "国外媒体",
-      "count": 2
-    },
-    {
-      "kept_group": "LINE",
+      "kept_group": "即时通讯",
       "removed_group": "国外媒体",
       "count": 2
     },
@@ -524,43 +441,33 @@
       "count": 2
     },
     {
-      "kept_group": "游戏平台",
-      "removed_group": "国内网站",
+      "kept_group": "海外购物",
+      "removed_group": "国内直连",
       "count": 2
     },
     {
-      "kept_group": "Claude",
+      "kept_group": "游戏直连",
+      "removed_group": "国内直连",
+      "count": 2
+    },
+    {
+      "kept_group": "DIRECT",
       "removed_group": "国外网站",
       "count": 2
     },
     {
-      "kept_group": "谷歌云盘",
-      "removed_group": "国外网站",
-      "count": 2
-    },
-    {
-      "kept_group": "局域网",
-      "removed_group": "国外网站",
-      "count": 2
-    },
-    {
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "removed_group": "广告拦截",
       "count": 1
     },
     {
       "kept_group": "广告拦截",
-      "removed_group": "OpenAI",
+      "removed_group": "AI 服务",
       "count": 1
     },
     {
-      "kept_group": "Gemini",
+      "kept_group": "AI 服务",
       "removed_group": "谷歌服务",
-      "count": 1
-    },
-    {
-      "kept_group": "全球直连",
-      "removed_group": "苹果商店",
       "count": 1
     },
     {
@@ -570,21 +477,6 @@
     },
     {
       "kept_group": "广告拦截",
-      "removed_group": "苹果服务",
-      "count": 1
-    },
-    {
-      "kept_group": "全球直连",
-      "removed_group": "苹果服务",
-      "count": 1
-    },
-    {
-      "kept_group": "TestFlight",
-      "removed_group": "苹果服务",
-      "count": 1
-    },
-    {
-      "kept_group": "苹果视频",
       "removed_group": "苹果服务",
       "count": 1
     },
@@ -609,7 +501,7 @@
       "count": 1
     },
     {
-      "kept_group": "油管视频",
+      "kept_group": "YouTube",
       "removed_group": "巴哈姆特",
       "count": 1
     },
@@ -629,17 +521,7 @@
       "count": 1
     },
     {
-      "kept_group": "苹果新闻",
-      "removed_group": "国外媒体",
-      "count": 1
-    },
-    {
       "kept_group": "苹果服务",
-      "removed_group": "国外媒体",
-      "count": 1
-    },
-    {
-      "kept_group": "苹果音乐",
       "removed_group": "国外媒体",
       "count": 1
     },
@@ -659,23 +541,8 @@
       "count": 1
     },
     {
-      "kept_group": "苹果视频",
-      "removed_group": "国外媒体",
-      "count": 1
-    },
-    {
-      "kept_group": "微软服务",
-      "removed_group": "Epic",
-      "count": 1
-    },
-    {
-      "kept_group": "LINE",
-      "removed_group": "Facebook",
-      "count": 1
-    },
-    {
-      "kept_group": "WhatsApp",
-      "removed_group": "Amazon",
+      "kept_group": "即时通讯",
+      "removed_group": "海外购物",
       "count": 1
     },
     {
@@ -685,81 +552,26 @@
     },
     {
       "kept_group": "哔哩哔哩国际",
-      "removed_group": "国内网站",
+      "removed_group": "国内直连",
       "count": 1
     },
     {
-      "kept_group": "Amazon",
-      "removed_group": "国内网站",
-      "count": 1
-    },
-    {
-      "kept_group": "苹果云端",
-      "removed_group": "国内网站",
-      "count": 1
-    },
-    {
-      "kept_group": "PlayStation",
-      "removed_group": "国内网站",
+      "kept_group": "游戏代理",
+      "removed_group": "国内直连",
       "count": 1
     },
     {
       "kept_group": "应用净化",
-      "removed_group": "国内网站",
-      "count": 1
-    },
-    {
-      "kept_group": "Shopee",
-      "removed_group": "国内网站",
+      "removed_group": "国内直连",
       "count": 1
     },
     {
       "kept_group": "TikTok",
-      "removed_group": "国内网站",
+      "removed_group": "国内直连",
       "count": 1
     },
     {
-      "kept_group": "下载服务",
-      "removed_group": "国内网站",
-      "count": 1
-    },
-    {
-      "kept_group": "苹果音乐",
-      "removed_group": "国外网站",
-      "count": 1
-    },
-    {
-      "kept_group": "Figma",
-      "removed_group": "国外网站",
-      "count": 1
-    },
-    {
-      "kept_group": "Civitai",
-      "removed_group": "国外网站",
-      "count": 1
-    },
-    {
-      "kept_group": "Gemini",
-      "removed_group": "国外网站",
-      "count": 1
-    },
-    {
-      "kept_group": "下载服务",
-      "removed_group": "国外网站",
-      "count": 1
-    },
-    {
-      "kept_group": "Threads",
-      "removed_group": "国外网站",
-      "count": 1
-    },
-    {
-      "kept_group": "Instagram",
-      "removed_group": "国外网站",
-      "count": 1
-    },
-    {
-      "kept_group": "国内网站",
+      "kept_group": "苹果媒体",
       "removed_group": "国外网站",
       "count": 1
     }
@@ -767,7 +579,7 @@
   "exact_duplicate_examples": [
     {
       "rule": "DOMAIN,ad.10010.com",
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "kept_source": "Direct",
       "removed_group": "广告拦截",
       "removed_source": "AdvertisingLite"
@@ -1042,103 +854,103 @@
       "rule": "DOMAIN-SUFFIX,featuregates.org",
       "kept_group": "隐私拦截",
       "kept_source": "Privacy",
-      "removed_group": "OpenAI",
+      "removed_group": "AI 服务",
       "removed_source": "OpenAI"
     },
     {
       "rule": "DOMAIN-SUFFIX,segment.io",
       "kept_group": "隐私拦截",
       "kept_source": "Privacy",
-      "removed_group": "OpenAI",
+      "removed_group": "AI 服务",
       "removed_source": "OpenAI"
     },
     {
       "rule": "DOMAIN-SUFFIX,sentry.io",
       "kept_group": "广告拦截",
       "kept_source": "AdvertisingLite",
-      "removed_group": "OpenAI",
+      "removed_group": "AI 服务",
       "removed_source": "OpenAI"
     },
     {
       "rule": "DOMAIN-SUFFIX,npm.community",
-      "kept_group": "NPM",
+      "kept_group": "开发工具",
       "kept_source": "Npmjs",
       "removed_group": "GitHub",
       "removed_source": "GitHub"
     },
     {
       "rule": "DOMAIN-SUFFIX,npmjs.com",
-      "kept_group": "NPM",
+      "kept_group": "开发工具",
       "kept_source": "Npmjs",
       "removed_group": "GitHub",
       "removed_source": "GitHub"
     },
     {
       "rule": "DOMAIN-SUFFIX,npmjs.org",
-      "kept_group": "NPM",
+      "kept_group": "开发工具",
       "kept_source": "Npmjs",
       "removed_group": "GitHub",
       "removed_source": "GitHub"
     },
     {
       "rule": "DOMAIN,alt1-mtalk.google.com",
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "kept_source": "Direct",
       "removed_group": "谷歌FCM",
       "removed_source": "GoogleFCM"
     },
     {
       "rule": "DOMAIN,alt2-mtalk.google.com",
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "kept_source": "Direct",
       "removed_group": "谷歌FCM",
       "removed_source": "GoogleFCM"
     },
     {
       "rule": "DOMAIN,alt3-mtalk.google.com",
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "kept_source": "Direct",
       "removed_group": "谷歌FCM",
       "removed_source": "GoogleFCM"
     },
     {
       "rule": "DOMAIN,alt4-mtalk.google.com",
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "kept_source": "Direct",
       "removed_group": "谷歌FCM",
       "removed_source": "GoogleFCM"
     },
     {
       "rule": "DOMAIN,alt5-mtalk.google.com",
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "kept_source": "Direct",
       "removed_group": "谷歌FCM",
       "removed_source": "GoogleFCM"
     },
     {
       "rule": "DOMAIN,alt6-mtalk.google.com",
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "kept_source": "Direct",
       "removed_group": "谷歌FCM",
       "removed_source": "GoogleFCM"
     },
     {
       "rule": "DOMAIN,alt7-mtalk.google.com",
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "kept_source": "Direct",
       "removed_group": "谷歌FCM",
       "removed_source": "GoogleFCM"
     },
     {
       "rule": "DOMAIN,alt8-mtalk.google.com",
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "kept_source": "Direct",
       "removed_group": "谷歌FCM",
       "removed_source": "GoogleFCM"
     },
     {
       "rule": "DOMAIN,mtalk.google.com",
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "kept_source": "Direct",
       "removed_group": "谷歌FCM",
       "removed_source": "GoogleFCM"
@@ -1166,7 +978,7 @@
     },
     {
       "rule": "DOMAIN-SUFFIX,blog.google",
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "kept_source": "Direct",
       "removed_group": "谷歌服务",
       "removed_source": "Google"
@@ -1180,7 +992,7 @@
     },
     {
       "rule": "DOMAIN-SUFFIX,deepmind.com",
-      "kept_group": "Gemini",
+      "kept_group": "AI 服务",
       "kept_source": "Gemini",
       "removed_group": "谷歌服务",
       "removed_source": "Google"
@@ -1257,7 +1069,7 @@
     },
     {
       "rule": "DOMAIN-SUFFIX,googletraveladservices.com",
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "kept_source": "Direct",
       "removed_group": "谷歌服务",
       "removed_source": "Google"
@@ -1270,58 +1082,58 @@
       "removed_source": "Google"
     },
     {
-      "rule": "DOMAIN-SUFFIX,googledrive.com",
-      "kept_group": "谷歌云盘",
-      "kept_source": "GoogleDrive",
-      "removed_group": "谷歌服务",
-      "removed_source": "Google"
-    },
-    {
-      "rule": "DOMAIN-SUFFIX,googleusercontent.com",
-      "kept_group": "谷歌云盘",
-      "kept_source": "GoogleDrive",
-      "removed_group": "谷歌服务",
-      "removed_source": "Google"
-    },
-    {
       "rule": "IP-CIDR,172.110.32.0/21",
-      "kept_group": "油管视频",
+      "kept_group": "YouTube",
       "kept_source": "YouTube",
       "removed_group": "谷歌服务",
       "removed_source": "Google"
     },
     {
       "rule": "IP-CIDR,216.73.80.0/20",
-      "kept_group": "油管视频",
+      "kept_group": "YouTube",
       "kept_source": "YouTube",
       "removed_group": "谷歌服务",
       "removed_source": "Google"
     },
     {
       "rule": "IP-CIDR6,2620:120:e000::/40",
-      "kept_group": "油管视频",
+      "kept_group": "YouTube",
       "kept_source": "YouTube",
       "removed_group": "谷歌服务",
       "removed_source": "Google"
     },
     {
-      "rule": "PROCESS-NAME,BackupandSync",
-      "kept_group": "谷歌云盘",
-      "kept_source": "GoogleDrive",
-      "removed_group": "谷歌服务",
-      "removed_source": "Google"
-    },
-    {
-      "rule": "DOMAIN-SUFFIX,bing.com",
-      "kept_group": "微软Bing",
-      "kept_source": "Bing",
+      "rule": "DOMAIN-SUFFIX,localytics.com",
+      "kept_group": "广告拦截",
+      "kept_source": "AdvertisingLite",
       "removed_group": "微软服务",
       "removed_source": "Microsoft"
     },
     {
-      "rule": "DOMAIN-SUFFIX,bing.com.cn",
-      "kept_group": "微软Bing",
-      "kept_source": "Bing",
+      "rule": "DOMAIN-SUFFIX,msads.net",
+      "kept_group": "广告拦截",
+      "kept_source": "AdvertisingLite",
+      "removed_group": "微软服务",
+      "removed_source": "Microsoft"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,optimizely.com",
+      "kept_group": "广告拦截",
+      "kept_source": "AdvertisingLite",
+      "removed_group": "微软服务",
+      "removed_source": "Microsoft"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,uservoice.com",
+      "kept_group": "广告拦截",
+      "kept_source": "AdvertisingLite",
+      "removed_group": "微软服务",
+      "removed_source": "Microsoft"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,1drv.com",
+      "kept_group": "微软云盘",
+      "kept_source": "OneDrive",
       "removed_group": "微软服务",
       "removed_source": "Microsoft"
     }
@@ -1329,7 +1141,7 @@
   "block_vs_service_examples": [
     {
       "rule": "DOMAIN,ad.10010.com",
-      "kept_group": "全球直连",
+      "kept_group": "国内直连",
       "kept_mode": "direct",
       "removed_group": "广告拦截",
       "removed_mode": "block"
@@ -1338,21 +1150,21 @@
       "rule": "DOMAIN-SUFFIX,featuregates.org",
       "kept_group": "隐私拦截",
       "kept_mode": "block",
-      "removed_group": "OpenAI",
+      "removed_group": "AI 服务",
       "removed_mode": "ai"
     },
     {
       "rule": "DOMAIN-SUFFIX,segment.io",
       "kept_group": "隐私拦截",
       "kept_mode": "block",
-      "removed_group": "OpenAI",
+      "removed_group": "AI 服务",
       "removed_mode": "ai"
     },
     {
       "rule": "DOMAIN-SUFFIX,sentry.io",
       "kept_group": "广告拦截",
       "kept_mode": "block",
-      "removed_group": "OpenAI",
+      "removed_group": "AI 服务",
       "removed_mode": "ai"
     },
     {
@@ -1681,7 +1493,7 @@
       "rule": "DOMAIN-SUFFIX,adsame.com",
       "kept_group": "应用净化",
       "kept_mode": "block",
-      "removed_group": "国内网站",
+      "removed_group": "国内直连",
       "removed_mode": "direct"
     },
     {
@@ -1832,403 +1644,361 @@
       "removed_mode": "proxy"
     }
   ],
-  "domain_suffix_overlap_count": 7884,
+  "domain_suffix_overlap_count": 7861,
   "domain_suffix_overlap_examples": [
     {
       "specific": "DOMAIN,local.adguard.org",
-      "specific_group": "局域网",
+      "specific_group": "DIRECT",
       "broader": "DOMAIN-SUFFIX,adguard.org",
       "broader_group": "国外网站"
     },
     {
       "specific": "DOMAIN,oasisauth.h3c.com",
-      "specific_group": "局域网",
+      "specific_group": "DIRECT",
       "broader": "DOMAIN-SUFFIX,h3c.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN,router.asus.com",
-      "specific_group": "局域网",
+      "specific_group": "DIRECT",
       "broader": "DOMAIN-SUFFIX,asus.com",
       "broader_group": "国外网站"
     },
     {
       "specific": "DOMAIN-SUFFIX,kis.v2.scr.kaspersky-labs.com",
-      "specific_group": "局域网",
+      "specific_group": "DIRECT",
       "broader": "DOMAIN-SUFFIX,kaspersky-labs.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN-SUFFIX,localhost.ptlogin2.qq.com",
-      "specific_group": "局域网",
+      "specific_group": "DIRECT",
       "broader": "DOMAIN-SUFFIX,qq.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN-SUFFIX,localhost.sec.qq.com",
-      "specific_group": "局域网",
+      "specific_group": "DIRECT",
       "broader": "DOMAIN-SUFFIX,qq.com",
-      "broader_group": "国内网站"
-    },
-    {
-      "specific": "DOMAIN,ad.10010.com",
-      "specific_group": "全球直连",
-      "broader": "DOMAIN-SUFFIX,10010.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN,ad.12306.cn",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,ad.12306.cn",
       "broader_group": "广告拦截"
     },
     {
       "specific": "DOMAIN,ain.bgm.tv",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,bgm.tv",
       "broader_group": "国外网站"
     },
     {
       "specific": "DOMAIN,alt1-mtalk.google.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,google.com",
       "broader_group": "谷歌服务"
     },
     {
       "specific": "DOMAIN,alt2-mtalk.google.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,google.com",
       "broader_group": "谷歌服务"
     },
     {
       "specific": "DOMAIN,alt3-mtalk.google.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,google.com",
       "broader_group": "谷歌服务"
     },
     {
       "specific": "DOMAIN,alt4-mtalk.google.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,google.com",
       "broader_group": "谷歌服务"
     },
     {
       "specific": "DOMAIN,alt5-mtalk.google.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,google.com",
       "broader_group": "谷歌服务"
     },
     {
       "specific": "DOMAIN,alt6-mtalk.google.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,google.com",
       "broader_group": "谷歌服务"
     },
     {
       "specific": "DOMAIN,alt7-mtalk.google.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,google.com",
       "broader_group": "谷歌服务"
     },
     {
       "specific": "DOMAIN,alt8-mtalk.google.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,google.com",
       "broader_group": "谷歌服务"
     },
     {
-      "specific": "DOMAIN,analytics.95516.com",
-      "specific_group": "全球直连",
-      "broader": "DOMAIN-SUFFIX,95516.com",
-      "broader_group": "国内网站"
-    },
-    {
       "specific": "DOMAIN,app.adjust.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,adjust.com",
       "broader_group": "隐私拦截"
     },
     {
       "specific": "DOMAIN,bdtj.tagtic.cn",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,tagtic.cn",
       "broader_group": "广告拦截"
     },
     {
       "specific": "DOMAIN,cdn.jsdelivr.net",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,jsdelivr.net",
       "broader_group": "国外网站"
     },
     {
       "specific": "DOMAIN,clientservices.googleapis.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,googleapis.com",
       "broader_group": "谷歌服务"
     },
     {
       "specific": "DOMAIN,deo.shopeemobile.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,shopeemobile.com",
-      "broader_group": "Shopee"
+      "broader_group": "海外购物"
     },
     {
       "specific": "DOMAIN,dl.google.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,google.com",
       "broader_group": "谷歌服务"
     },
     {
       "specific": "DOMAIN,dl.l.google.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,google.com",
       "broader_group": "谷歌服务"
     },
     {
       "specific": "DOMAIN,eco-push-api-client.meiqia.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,meiqia.com",
       "broader_group": "广告拦截"
     },
     {
-      "specific": "DOMAIN,errlog.umeng.com",
-      "specific_group": "全球直连",
-      "broader": "DOMAIN-SUFFIX,umeng.com",
-      "broader_group": "国内网站"
-    },
-    {
       "specific": "DOMAIN,fairplay.l.qq.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,l.qq.com",
       "broader_group": "广告拦截"
     },
     {
       "specific": "DOMAIN,init.ess.apple.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,apple.com",
       "broader_group": "苹果服务"
     },
     {
       "specific": "DOMAIN,itunes.apple.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,apple.com",
       "broader_group": "苹果服务"
     },
     {
       "specific": "DOMAIN,lain.bgm.tv",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,bgm.tv",
       "broader_group": "国外网站"
     },
     {
       "specific": "DOMAIN,livew.l.qq.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,l.qq.com",
       "broader_group": "广告拦截"
     },
     {
       "specific": "DOMAIN,log.mmstat.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,mmstat.com",
       "broader_group": "广告拦截"
     },
     {
-      "specific": "DOMAIN,msg.umeng.com",
-      "specific_group": "全球直连",
-      "broader": "DOMAIN-SUFFIX,umeng.com",
-      "broader_group": "国内网站"
-    },
-    {
-      "specific": "DOMAIN,msg.umengcloud.com",
-      "specific_group": "全球直连",
-      "broader": "DOMAIN-SUFFIX,umengcloud.com",
-      "broader_group": "国内网站"
-    },
-    {
       "specific": "DOMAIN,mtalk.google.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,google.com",
       "broader_group": "谷歌服务"
     },
     {
       "specific": "DOMAIN,new-api.meiqia.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,meiqia.com",
       "broader_group": "广告拦截"
     },
     {
       "specific": "DOMAIN,origin-a.akamaihd.net",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,origin-a.akamaihd.net",
-      "broader_group": "游戏平台"
+      "broader_group": "游戏直连"
     },
     {
       "specific": "DOMAIN,smp-device-content.apple.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,apple.com",
       "broader_group": "苹果服务"
     },
     {
       "specific": "DOMAIN,sycm.mmstat.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,mmstat.com",
       "broader_group": "广告拦截"
     },
     {
       "specific": "DOMAIN,time.apple.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,apple.com",
       "broader_group": "苹果服务"
     },
     {
       "specific": "DOMAIN,tracking.miui.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,tracking.miui.com",
       "broader_group": "隐私拦截"
     },
     {
-      "specific": "DOMAIN,ts.thefilehosting.com",
-      "specific_group": "全球直连",
-      "broader": "DOMAIN-SUFFIX,thefilehosting.com",
-      "broader_group": "国内网站"
-    },
-    {
       "specific": "DOMAIN,update.googleapis.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,googleapis.com",
       "broader_group": "谷歌服务"
     },
     {
       "specific": "DOMAIN,vd.l.qq.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,l.qq.com",
       "broader_group": "广告拦截"
     },
     {
       "specific": "DOMAIN,vi.l.qq.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,l.qq.com",
       "broader_group": "广告拦截"
     },
     {
       "specific": "DOMAIN-SUFFIX,dizhensubao.getui.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,getui.com",
       "broader_group": "广告拦截"
     },
     {
-      "specific": "DOMAIN-SUFFIX,f.video.weibocdn.com",
-      "specific_group": "全球直连",
-      "broader": "DOMAIN-SUFFIX,weibocdn.com",
-      "broader_group": "国内网站"
-    },
-    {
       "specific": "DOMAIN-SUFFIX,ol.epicgames.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,epicgames.com",
-      "broader_group": "Epic"
+      "broader_group": "游戏代理"
     },
     {
       "specific": "DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,mozilla.net",
       "broader_group": "国外网站"
     },
     {
       "specific": "DOMAIN-SUFFIX,weather-analytics-events.apple.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,apple.com",
       "broader_group": "苹果服务"
     },
     {
       "specific": "DOMAIN-SUFFIX,weather-data.apple.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,apple.com",
       "broader_group": "苹果服务"
     },
     {
       "specific": "DOMAIN-SUFFIX,weather-map.apple.com",
-      "specific_group": "全球直连",
+      "specific_group": "国内直连",
       "broader": "DOMAIN-SUFFIX,apple.com",
       "broader_group": "苹果服务"
     },
     {
       "specific": "DOMAIN,csgo.wmsj.cn",
-      "specific_group": "国服游戏",
+      "specific_group": "游戏直连",
       "broader": "DOMAIN-SUFFIX,csgo.wmsj.cn",
-      "broader_group": "Steam"
+      "broader_group": "游戏代理"
     },
     {
       "specific": "DOMAIN,dl.steam.clngaa.com",
-      "specific_group": "国服游戏",
+      "specific_group": "游戏直连",
       "broader": "DOMAIN-SUFFIX,dl.steam.clngaa.com",
-      "broader_group": "Steam"
+      "broader_group": "游戏代理"
     },
     {
       "specific": "DOMAIN,dl.steam.ksyna.com",
-      "specific_group": "国服游戏",
+      "specific_group": "游戏直连",
       "broader": "DOMAIN-SUFFIX,dl.steam.ksyna.com",
-      "broader_group": "Steam"
+      "broader_group": "游戏代理"
     },
     {
       "specific": "DOMAIN,dota2.wmsj.cn",
-      "specific_group": "国服游戏",
+      "specific_group": "游戏直连",
       "broader": "DOMAIN-SUFFIX,dota2.wmsj.cn",
-      "broader_group": "Steam"
+      "broader_group": "游戏代理"
     },
     {
       "specific": "DOMAIN,st.dl.bscstorage.net",
-      "specific_group": "国服游戏",
+      "specific_group": "游戏直连",
       "broader": "DOMAIN-SUFFIX,st.dl.bscstorage.net",
-      "broader_group": "Steam"
+      "broader_group": "游戏代理"
     },
     {
       "specific": "DOMAIN,st.dl.eccdnx.com",
-      "specific_group": "国服游戏",
+      "specific_group": "游戏直连",
       "broader": "DOMAIN-SUFFIX,st.dl.eccdnx.com",
-      "broader_group": "Steam"
+      "broader_group": "游戏代理"
     },
     {
       "specific": "DOMAIN,st.dl.pinyuncloud.com",
-      "specific_group": "国服游戏",
+      "specific_group": "游戏直连",
       "broader": "DOMAIN-SUFFIX,st.dl.pinyuncloud.com",
-      "broader_group": "Steam"
+      "broader_group": "游戏代理"
     },
     {
       "specific": "DOMAIN,steampipe.steamcontent.tnkjmec.com",
-      "specific_group": "国服游戏",
+      "specific_group": "游戏直连",
       "broader": "DOMAIN-SUFFIX,steamcontent.tnkjmec.com",
-      "broader_group": "Steam"
+      "broader_group": "游戏代理"
     },
     {
       "specific": "DOMAIN,steampowered.com.8686c.com",
-      "specific_group": "国服游戏",
+      "specific_group": "游戏直连",
       "broader": "DOMAIN-SUFFIX,steampowered.com.8686c.com",
-      "broader_group": "Steam"
+      "broader_group": "游戏代理"
     },
     {
       "specific": "DOMAIN,steamstatic.com.8686c.com",
-      "specific_group": "国服游戏",
+      "specific_group": "游戏直连",
       "broader": "DOMAIN-SUFFIX,steamstatic.com.8686c.com",
-      "broader_group": "Steam"
+      "broader_group": "游戏代理"
     },
     {
       "specific": "DOMAIN,wmsjsteam.com",
-      "specific_group": "国服游戏",
+      "specific_group": "游戏直连",
       "broader": "DOMAIN-SUFFIX,wmsjsteam.com",
-      "broader_group": "Steam"
+      "broader_group": "游戏代理"
     },
     {
       "specific": "DOMAIN,xz.pphimalayanrt.com",
-      "specific_group": "国服游戏",
+      "specific_group": "游戏直连",
       "broader": "DOMAIN-SUFFIX,pphimalayanrt.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN-SUFFIX,cm.steampowered.com",
-      "specific_group": "国服游戏",
+      "specific_group": "游戏直连",
       "broader": "DOMAIN-SUFFIX,steampowered.com",
-      "broader_group": "Steam"
+      "broader_group": "游戏代理"
     },
     {
       "specific": "DOMAIN,0127.adsame.com",
@@ -2246,19 +2016,19 @@
       "specific": "DOMAIN,0ka.com",
       "specific_group": "广告拦截",
       "broader": "DOMAIN-SUFFIX,0ka.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN,1.qt86.com",
       "specific_group": "广告拦截",
       "broader": "DOMAIN-SUFFIX,qt86.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN,1.tongquee.com",
       "specific_group": "广告拦截",
       "broader": "DOMAIN-SUFFIX,tongquee.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN,114study.adsame.com",
@@ -2270,31 +2040,31 @@
       "specific": "DOMAIN,1234.zgxue.com",
       "specific_group": "广告拦截",
       "broader": "DOMAIN-SUFFIX,zgxue.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN,2.arpun.com",
       "specific_group": "广告拦截",
       "broader": "DOMAIN-SUFFIX,arpun.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN,21.huanqiu.com",
       "specific_group": "广告拦截",
       "broader": "DOMAIN-SUFFIX,huanqiu.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN,217wo.com",
       "specific_group": "广告拦截",
       "broader": "DOMAIN-SUFFIX,217wo.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN,23txt.com",
       "specific_group": "广告拦截",
       "broader": "DOMAIN-SUFFIX,23txt.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN,24smile.org",
@@ -2306,13 +2076,55 @@
       "specific": "DOMAIN,2898.com",
       "specific_group": "广告拦截",
       "broader": "DOMAIN-SUFFIX,2898.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN,2f.com",
       "specific_group": "广告拦截",
       "broader": "DOMAIN-SUFFIX,2f.com",
-      "broader_group": "国内网站"
+      "broader_group": "国内直连"
+    },
+    {
+      "specific": "DOMAIN,2mdn.net",
+      "specific_group": "广告拦截",
+      "broader": "DOMAIN-SUFFIX,2mdn.net",
+      "broader_group": "谷歌服务"
+    },
+    {
+      "specific": "DOMAIN,2smt6mfgo.de",
+      "specific_group": "广告拦截",
+      "broader": "DOMAIN-SUFFIX,2smt6mfgo.de",
+      "broader_group": "隐私拦截"
+    },
+    {
+      "specific": "DOMAIN,360doo.com",
+      "specific_group": "广告拦截",
+      "broader": "DOMAIN-SUFFIX,360doo.com",
+      "broader_group": "国内直连"
+    },
+    {
+      "specific": "DOMAIN,36500.net",
+      "specific_group": "广告拦截",
+      "broader": "DOMAIN-SUFFIX,36500.net",
+      "broader_group": "国内直连"
+    },
+    {
+      "specific": "DOMAIN,39d83s.com",
+      "specific_group": "广告拦截",
+      "broader": "DOMAIN-SUFFIX,39d83s.com",
+      "broader_group": "国内直连"
+    },
+    {
+      "specific": "DOMAIN,3gl.net",
+      "specific_group": "广告拦截",
+      "broader": "DOMAIN-SUFFIX,3gl.net",
+      "broader_group": "隐私拦截"
+    },
+    {
+      "specific": "DOMAIN,49453k0l.vr.loveota.com",
+      "specific_group": "广告拦截",
+      "broader": "DOMAIN-SUFFIX,loveota.com",
+      "broader_group": "国内直连"
     }
   ]
 }
