@@ -119,3 +119,71 @@
 | `DOMAIN,origin-a.akamaihd.net` | 全球直连 | `DOMAIN-SUFFIX,origin-a.akamaihd.net` | 游戏平台 |
 | `DOMAIN,smp-device-content.apple.com` | 全球直连 | `DOMAIN-SUFFIX,apple.com` | 苹果服务 |
 | `DOMAIN,sycm.mmstat.com` | 全球直连 | `DOMAIN-SUFFIX,mmstat.com` | 广告拦截 |
+
+## 拦截规则与服务规则相撞
+
+以下完全相同的规则出现在拦截与非拦截策略中。表格中的先匹配策略生效；
+这些项目需要结合实际连通性决定是否单独放行。
+
+| 规则 | 先匹配 | 后匹配 |
+|---|---|---|
+| `DOMAIN,ad.10010.com` | 全球直连 | 广告拦截 |
+| `DOMAIN-SUFFIX,featuregates.org` | 隐私拦截 | OpenAI |
+| `DOMAIN-SUFFIX,segment.io` | 隐私拦截 | OpenAI |
+| `DOMAIN-SUFFIX,sentry.io` | 广告拦截 | OpenAI |
+| `DOMAIN-SUFFIX,admob.com` | 广告拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,app-measurement.com` | 广告拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,apps5.oingo.com` | 广告拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,crashlytics.com` | 广告拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,doubleclick.com` | 广告拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,doubleclick.net` | 广告拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,google-analytics-cn.com` | 隐私拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,google-analytics.com` | 隐私拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,googlecommerce.com` | 广告拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,googleoptimize-cn.com` | 隐私拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,googlesyndication.com` | 广告拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,googletagmanager-cn.com` | 隐私拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,googletagmanager.com` | 隐私拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,googletagservices.com` | 广告拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,panoramio.com` | 广告拦截 | 谷歌服务 |
+| `DOMAIN-SUFFIX,localytics.com` | 广告拦截 | 微软服务 |
+| `DOMAIN-SUFFIX,msads.net` | 广告拦截 | 微软服务 |
+| `DOMAIN-SUFFIX,optimizely.com` | 广告拦截 | 微软服务 |
+| `DOMAIN-SUFFIX,uservoice.com` | 广告拦截 | 微软服务 |
+| `DOMAIN-SUFFIX,crashlytics.com` | 广告拦截 | 苹果服务 |
+| `DOMAIN-SUFFIX,bam.nr-data.net` | 广告拦截 | 迪士尼视频 |
+| `DOMAIN-SUFFIX,conviva.com` | 广告拦截 | 迪士尼视频 |
+| `DOMAIN-SUFFIX,fls-na.amazon.com` | 隐私拦截 | Prime Video |
+| `DOMAIN-SUFFIX,youboranqs01.com` | 隐私拦截 | HBO |
+| `DOMAIN,api.iplay.163.com` | 广告拦截 | 国内媒体 |
+| `DOMAIN,mam.netease.com` | 广告拦截 | 国内媒体 |
+| `DOMAIN-SUFFIX,1.letvlive.com` | 广告拦截 | 国内媒体 |
+| `DOMAIN-SUFFIX,2.letvlive.com` | 广告拦截 | 国内媒体 |
+| `DOMAIN-SUFFIX,ads1.lfengmobile.com` | 广告拦截 | 国内媒体 |
+| `DOMAIN-SUFFIX,afp.pplive.com` | 广告拦截 | 国内媒体 |
+| `DOMAIN-SUFFIX,koowo.com` | 广告拦截 | 国内媒体 |
+| `DOMAIN-SUFFIX,mmstat.com` | 广告拦截 | 国内媒体 |
+| `DOMAIN-SUFFIX,pgdt.gtimg.cn` | 广告拦截 | 国内媒体 |
+| `DOMAIN-SUFFIX,v1d.szbdyd.com` | 广告拦截 | 国内媒体 |
+| `DOMAIN-SUFFIX,videojj.com` | 广告拦截 | 国内媒体 |
+| `DOMAIN-SUFFIX,zamplus.com` | 广告拦截 | 国内媒体 |
+| `DOMAIN-SUFFIX,bam.nr-data.net` | 广告拦截 | 国外媒体 |
+| `DOMAIN-SUFFIX,conviva.com` | 广告拦截 | 国外媒体 |
+| `DOMAIN-SUFFIX,dm-event.net` | 隐私拦截 | 国外媒体 |
+| `DOMAIN-SUFFIX,fls-na.amazon.com` | 隐私拦截 | 国外媒体 |
+| `DOMAIN-SUFFIX,fwmrm.net` | 广告拦截 | 国外媒体 |
+| `DOMAIN-SUFFIX,logx.optimizely.com` | 隐私拦截 | 国外媒体 |
+| `DOMAIN-SUFFIX,socdm.com` | 隐私拦截 | 国外媒体 |
+| `DOMAIN-SUFFIX,youboranqs01.com` | 隐私拦截 | 国外媒体 |
+| `DOMAIN-SUFFIX,ads-twitter.com` | 广告拦截 | X / Twitter |
+| `DOMAIN-SUFFIX,tellapart.com` | 广告拦截 | X / Twitter |
+| `DOMAIN-SUFFIX,adsame.com` | 应用净化 | 国内网站 |
+| `DOMAIN-SUFFIX,bkrtx.com` | 隐私拦截 | 国外网站 |
+| `DOMAIN-SUFFIX,bluekai.com` | 隐私拦截 | 国外网站 |
+| `DOMAIN-SUFFIX,demdex.net` | 隐私拦截 | 国外网站 |
+| `DOMAIN-SUFFIX,dm-event.net` | 隐私拦截 | 国外网站 |
+| `DOMAIN-SUFFIX,google-analytics-cn.com` | 隐私拦截 | 国外网站 |
+| `DOMAIN-SUFFIX,google-analytics.com` | 隐私拦截 | 国外网站 |
+| `DOMAIN-SUFFIX,googleoptimize-cn.com` | 隐私拦截 | 国外网站 |
+| `DOMAIN-SUFFIX,googletagmanager-cn.com` | 隐私拦截 | 国外网站 |
+| `DOMAIN-SUFFIX,googletagmanager.com` | 隐私拦截 | 国外网站 |

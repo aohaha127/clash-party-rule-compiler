@@ -235,6 +235,8 @@ def compile_rules(data: dict[str, tuple[str, list[str]]]) -> tuple[dict[str, lis
     seen: dict[str, tuple[str, str]] = {}
     exact_pairs: Counter[tuple[str, str]] = Counter()
     exact_examples: list[dict] = []
+    policy_conflicts: list[dict] = []
+    mode_by_group = {entry.group: entry.mode for entry in CATALOG}
     within_source = 0
     for entry in CATALOG:
         provider = f"bm7_{entry.slug}"
@@ -256,6 +258,14 @@ def compile_rules(data: dict[str, tuple[str, list[str]]]) -> tuple[dict[str, lis
                         exact_examples.append({"rule": key, "kept_group": previous_group,
                                                "kept_source": previous_source,
                                                "removed_group": entry.group, "removed_source": source})
+                    previous_mode = mode_by_group[previous_group]
+                    if (previous_group != entry.group and
+                            "block" in {previous_mode, entry.mode} and
+                            previous_mode != entry.mode and len(policy_conflicts) < 100):
+                        policy_conflicts.append({"rule": key, "kept_group": previous_group,
+                                                 "kept_mode": previous_mode,
+                                                 "removed_group": entry.group,
+                                                 "removed_mode": entry.mode})
                     continue
                 seen[key] = (entry.group, source)
                 output.append(rule.strip())
@@ -271,6 +281,7 @@ def compile_rules(data: dict[str, tuple[str, list[str]]]) -> tuple[dict[str, lis
             for (first, second), count in exact_pairs.most_common()
         ],
         "exact_duplicate_examples": exact_examples,
+        "block_vs_service_examples": policy_conflicts,
         "domain_suffix_overlap_count": suffix_count,
         "domain_suffix_overlap_examples": suffix_examples,
     }
@@ -356,6 +367,12 @@ def write_outputs(repo: str, sha: str, data: dict[str, tuple[str, list[str]]],
         for example in conflicts["domain_suffix_overlap_examples"][:40]:
             lines.append(f"| `{example['specific']}` | {example['specific_group']} | "
                          f"`{example['broader']}` | {example['broader_group']} |")
+        lines += ["", "## 拦截规则与服务规则相撞", "",
+                  "以下完全相同的规则出现在拦截与非拦截策略中。表格中的先匹配策略生效；",
+                  "这些项目需要结合实际连通性决定是否单独放行。", "",
+                  "| 规则 | 先匹配 | 后匹配 |", "|---|---|---|"]
+        for example in conflicts["block_vs_service_examples"][:60]:
+            lines.append(f"| `{example['rule']}` | {example['kept_group']} | {example['removed_group']} |")
         (reports / "conflicts.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
         for name in ("dist", "reports"):
             target = ROOT / name

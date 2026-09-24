@@ -1326,6 +1326,512 @@
       "removed_source": "Microsoft"
     }
   ],
+  "block_vs_service_examples": [
+    {
+      "rule": "DOMAIN,ad.10010.com",
+      "kept_group": "全球直连",
+      "kept_mode": "direct",
+      "removed_group": "广告拦截",
+      "removed_mode": "block"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,featuregates.org",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "OpenAI",
+      "removed_mode": "ai"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,segment.io",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "OpenAI",
+      "removed_mode": "ai"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,sentry.io",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "OpenAI",
+      "removed_mode": "ai"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,admob.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,app-measurement.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,apps5.oingo.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,crashlytics.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,doubleclick.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,doubleclick.net",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,google-analytics-cn.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,google-analytics.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,googlecommerce.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,googleoptimize-cn.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,googlesyndication.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,googletagmanager-cn.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,googletagmanager.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,googletagservices.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,panoramio.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "谷歌服务",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,localytics.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "微软服务",
+      "removed_mode": "direct"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,msads.net",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "微软服务",
+      "removed_mode": "direct"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,optimizely.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "微软服务",
+      "removed_mode": "direct"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,uservoice.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "微软服务",
+      "removed_mode": "direct"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,crashlytics.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "苹果服务",
+      "removed_mode": "direct"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bam.nr-data.net",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "迪士尼视频",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,conviva.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "迪士尼视频",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,fls-na.amazon.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "Prime Video",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,youboranqs01.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "HBO",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN,api.iplay.163.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国内媒体",
+      "removed_mode": "domestic_media"
+    },
+    {
+      "rule": "DOMAIN,mam.netease.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国内媒体",
+      "removed_mode": "domestic_media"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,1.letvlive.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国内媒体",
+      "removed_mode": "domestic_media"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,2.letvlive.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国内媒体",
+      "removed_mode": "domestic_media"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ads1.lfengmobile.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国内媒体",
+      "removed_mode": "domestic_media"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,afp.pplive.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国内媒体",
+      "removed_mode": "domestic_media"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,koowo.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国内媒体",
+      "removed_mode": "domestic_media"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,mmstat.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国内媒体",
+      "removed_mode": "domestic_media"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,pgdt.gtimg.cn",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国内媒体",
+      "removed_mode": "domestic_media"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,v1d.szbdyd.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国内媒体",
+      "removed_mode": "domestic_media"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,videojj.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国内媒体",
+      "removed_mode": "domestic_media"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,zamplus.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国内媒体",
+      "removed_mode": "domestic_media"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bam.nr-data.net",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国外媒体",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,conviva.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国外媒体",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,dm-event.net",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外媒体",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,fls-na.amazon.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外媒体",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,fwmrm.net",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "国外媒体",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,logx.optimizely.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外媒体",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,socdm.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外媒体",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,youboranqs01.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外媒体",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ads-twitter.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "X / Twitter",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,tellapart.com",
+      "kept_group": "广告拦截",
+      "kept_mode": "block",
+      "removed_group": "X / Twitter",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,adsame.com",
+      "kept_group": "应用净化",
+      "kept_mode": "block",
+      "removed_group": "国内网站",
+      "removed_mode": "direct"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bkrtx.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bluekai.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,demdex.net",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,dm-event.net",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,google-analytics-cn.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,google-analytics.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,googleoptimize-cn.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,googletagmanager-cn.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,googletagmanager.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ladsp.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,marketo.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,pardot.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,prfct.co",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,sc-static.net",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,scorecardresearch.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,slackb.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,socdm.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,urbanairship.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,yandexadexchange.net",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,zononi.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cws.conviva.com",
+      "kept_group": "隐私拦截",
+      "kept_mode": "block",
+      "removed_group": "国外网站",
+      "removed_mode": "proxy"
+    }
+  ],
   "domain_suffix_overlap_count": 7884,
   "domain_suffix_overlap_examples": [
     {
