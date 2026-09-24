@@ -1,5 +1,7 @@
 # Clash Party 分流覆写
 
+> 本项目由 ChatGPT（Codex）协助构建，规则文件由自动化流程生成，仅供个人学习使用。规则内容来自上游项目，并非 blackmatrix7 或 Clash Party 的官方发布。
+
 基于 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash) 自动生成的 Clash Party YAML 覆写。当前版本将 79 个上游规则目录编译为 **77 个规则集、89 个策略组**，包含 AI、通信、开发平台、Google、微软、Apple、流媒体、游戏、社交、购物、国内外网站和广告拦截等独立策略。上游 `ChinaMax`、`Global`、`GlobalMedia` 和 `Game` 等合集覆盖大量子规则，因此没有逐一启用上游全部目录。
 
 ## 导入

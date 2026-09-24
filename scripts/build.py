@@ -334,7 +334,8 @@ def write_outputs(repo: str, sha: str, data: dict[str, tuple[str, list[str]]],
             header = (f"# Derived from {UPSTREAM_REPO} (GPL-2.0)\n"
                       f"# Upstream commit: {sha}\n# Sources: {sources}\n")
             write_yaml(dist / "providers" / f"{name}.yaml", {"payload": providers[name]}, header)
-        header = ("# Clash Party YAML override; generated, do not edit directly.\n"
+        header = ("# Built with ChatGPT (Codex) for personal learning; generated automatically.\n"
+                  "# Clash Party YAML override; generated, do not edit directly.\n"
                   f"# Upstream: https://github.com/{UPSTREAM_REPO} @ {sha}\n"
                   "# Rules and generated providers derived from upstream GPL-2.0 data.\n")
         write_yaml(dist / "clash-party.yaml", override, header)
