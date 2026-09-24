@@ -15,6 +15,10 @@
 
 该覆写以 `rules` 和 `proxy-groups` 替换订阅中的对应数组，保留订阅提供的 `proxies` 与 `proxy-providers`。策略组默认选择见生成文件；「AI 服务」默认进入排除香港节点的「非港节点」，也可以手动选择其他列出的策略。
 
+### Clash Party Smart 内核
+
+「非港节点」使用 `url-test` 类型，并继续通过 `exclude-filter` 排除名称中带有香港标识的节点。在 Clash Party 的「内核设置 → 使用自动 Smart 规则覆写」开启后，应用会把 `url-test` 组转换为 Smart 组，显示为「非港节点(Smart Group)」，并更新「AI 服务」对它的引用。关闭自动 Smart 覆写时，该组仍会按延迟自动选择非港节点。由于自动覆写也会转换其他 `url-test` 地区组，启用后请在 Clash Party 中检查「AI 服务」选择的是「非港节点(Smart Group)」。
+
 ## 合并后的策略组
 
 | 策略组 | 对应的独立规则集 |
