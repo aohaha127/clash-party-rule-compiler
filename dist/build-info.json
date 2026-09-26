@@ -1,10 +1,10 @@
 {
-  "checked_at_utc": "2026-09-25T04:13:34+00:00",
-  "upstream_commit": "17582922869fc3ebb35b9081631b11e02303f3f5",
+  "checked_at_utc": "2026-09-26T04:18:07+00:00",
+  "upstream_commit": "9ff3629c1bf539b65767cf62db87a16f5e60a32a",
   "upstream_repository": "blackmatrix7/ios_rule_script",
   "published_repository": "aohaha127/clash-party-rule-compiler",
   "policy_groups": 55,
   "rule_providers": 77,
   "source_directories": 79,
-  "unique_rules": 240754
+  "unique_rules": 240985
 }
