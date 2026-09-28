@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script (GPL-2.0)
-# Upstream commit: 9ff3629c1bf539b65767cf62db87a16f5e60a32a
+# Upstream commit: 5c22b5056f6288c27935489f74f8681fadbdba87
 # Sources: TestFlight/TestFlight.yaml
 payload:
 - DOMAIN,beta.apple.com

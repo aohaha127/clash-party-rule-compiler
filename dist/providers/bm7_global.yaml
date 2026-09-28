@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script (GPL-2.0)
-# Upstream commit: 9ff3629c1bf539b65767cf62db87a16f5e60a32a
+# Upstream commit: 5c22b5056f6288c27935489f74f8681fadbdba87
 # Sources: Global/Global_Classical.yaml
 payload:
 - DOMAIN,1password.drift.click
@@ -24213,6 +24213,7 @@ payload:
 - DOMAIN-SUFFIX,c-est-simple.com
 - DOMAIN-SUFFIX,c-span.org
 - DOMAIN-SUFFIX,c-spanvideo.org
+- DOMAIN-SUFFIX,c.go-mpulse.net
 - DOMAIN-SUFFIX,c.mi.com
 - DOMAIN-SUFFIX,c100tibet.org
 - DOMAIN-SUFFIX,c2cx.com
@@ -29096,6 +29097,7 @@ payload:
 - DOMAIN-SUFFIX,vansky.com
 - DOMAIN-SUFFIX,vaticannews.va
 - DOMAIN-SUFFIX,vatn.org
+- DOMAIN-SUFFIX,vava8.com
 - DOMAIN-SUFFIX,vbstatic.co
 - DOMAIN-SUFFIX,vcf-online.org
 - DOMAIN-SUFFIX,vcfbuilder.org
@@ -29781,7 +29783,10 @@ payload:
 - IP-CIDR,120.253.255.162/32
 - IP-CIDR,120.253.255.34/32
 - IP-CIDR,120.253.255.98/32
+- IP-CIDR,13.251.24.0/24
+- IP-CIDR,13.251.41.0/24
 - IP-CIDR,14.102.250.18/31
+- IP-CIDR,17.252.156.0/23
 - IP-CIDR,174.142.105.153/32
 - IP-CIDR,174.37.0.0/16
 - IP-CIDR,179.60.192.0/22

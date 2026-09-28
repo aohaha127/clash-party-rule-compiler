@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script (GPL-2.0)
-# Upstream commit: 9ff3629c1bf539b65767cf62db87a16f5e60a32a
+# Upstream commit: 5c22b5056f6288c27935489f74f8681fadbdba87
 # Sources: Apple/Apple_Classical.yaml
 payload:
 - DOMAIN,apple-events.akamaized.net
@@ -1465,7 +1465,6 @@ payload:
 - DOMAIN-SUFFIX,wwwipodlounge.com
 - DOMAIN-SUFFIX,wwwmacbookair.com
 - DOMAIN-SUFFIX,apple.comscoreresearch.com
-- DOMAIN-SUFFIX,apple.news
 - DOMAIN-SUFFIX,appleenews.com
 - DOMAIN-SUFFIX,applemusic.berlin
 - DOMAIN-SUFFIX,applemusic.co
@@ -1502,6 +1501,7 @@ payload:
 - DOMAIN-SUFFIX,musickit.net
 - DOMAIN-SUFFIX,wwwapplemusic.com
 - DOMAIN-SUFFIX,apple-dns.net
+- DOMAIN-SUFFIX,apple.news
 - DOMAIN-SUFFIX,digicert.com
 - DOMAIN-KEYWORD,apple-support.akadns.net
 - DOMAIN-KEYWORD,apple.com.akadns.net
