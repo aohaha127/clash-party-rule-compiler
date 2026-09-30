@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script (GPL-2.0)
-# Upstream commit: 5c22b5056f6288c27935489f74f8681fadbdba87
+# Upstream commit: c9b2158695596a1ba866adcf74def8d5ab348e25
 # Sources: Global/Global_Classical.yaml
 payload:
 - DOMAIN,1password.drift.click

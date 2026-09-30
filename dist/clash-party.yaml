@@ -1,6 +1,6 @@
 # Built with ChatGPT (Codex) for personal learning; generated automatically.
 # Clash Party YAML override; generated, do not edit directly.
-# Upstream: https://github.com/blackmatrix7/ios_rule_script @ 5c22b5056f6288c27935489f74f8681fadbdba87
+# Upstream: https://github.com/blackmatrix7/ios_rule_script @ c9b2158695596a1ba866adcf74def8d5ab348e25
 # Rules and generated providers derived from upstream GPL-2.0 data.
 proxy-groups:
 - name: 节点选择
