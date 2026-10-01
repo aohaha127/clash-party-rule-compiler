@@ -1,6 +1,6 @@
-# Derived from blackmatrix7/ios_rule_script (GPL-2.0)
-# Upstream commit: c9b2158695596a1ba866adcf74def8d5ab348e25
-# Sources: Privacy/Privacy_Classical.yaml
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: c9b2158695596a1ba866adcf74def8d5ab348e25
+# Source directories: Privacy; deduplicated
 payload:
 - DOMAIN,hmma.baidu.com
 - DOMAIN,ios-pclog.i4.cn
@@ -39918,15 +39918,15 @@ payload:
 - DOMAIN-SUFFIX,zzaoea.costacrociere.it
 - DOMAIN-SUFFIX,zzqyxd.smartpozyczka.pl
 - DOMAIN-SUFFIX,zzsqqx.shopjapan.co.jp
-- DOMAIN-KEYWORD,analytics.
+- DOMAIN-KEYWORD,analytics
 - DOMAIN-KEYWORD,app-analytics
-- DOMAIN-KEYWORD,app-log.
-- DOMAIN-KEYWORD,applog.
+- DOMAIN-KEYWORD,app-log
+- DOMAIN-KEYWORD,applog
 - DOMAIN-KEYWORD,fzlm
-- DOMAIN-KEYWORD,ios-log.
-- DOMAIN-KEYWORD,ioslog.
-- DOMAIN-KEYWORD,pc-log.
-- DOMAIN-KEYWORD,pclog.
+- DOMAIN-KEYWORD,ios-log
+- DOMAIN-KEYWORD,ioslog
+- DOMAIN-KEYWORD,pc-log
+- DOMAIN-KEYWORD,pclog
 - IP-CIDR,0.0.0.1/32
 - IP-CIDR,109.123.233.251/32
 - IP-CIDR,157.148.47.204/32

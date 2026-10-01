@@ -2,7 +2,7 @@
 
 > 本项目由 ChatGPT（Codex）协助构建，规则文件由自动化流程生成，仅供个人学习使用。规则内容来自上游项目，并非 blackmatrix7 或 Clash Party 的官方发布。
 
-基于 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash) 自动生成的 Clash Party YAML 覆写。当前版本将 79 个上游规则目录编译为 **77 个规则集、55 个策略组**。相关服务共用策略组，但保留独立规则集，便于追踪上游更新与规则冲突。上游 `ChinaMax`、`Global`、`GlobalMedia` 和 `Game` 等合集覆盖大量子规则，因此没有逐一启用上游全部目录。
+基于 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash)，并精选补充 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash) 的 Clash Party YAML 覆写。blackmatrix7 的 79 个目录形成 77 个基础规则集，ACL4SSR 按类别补充，仍保持 **55 个策略组**。相关服务共用策略组，规则集按来源分别生成，便于追踪更新与冲突。上游 `ChinaMax`、`Global`、`GlobalMedia` 和 `Game` 等合集覆盖大量子规则，因此没有逐一启用上游全部目录。
 
 ## 导入
 
@@ -61,4 +61,21 @@ python scripts/validate.py
 
 ## 来源与许可
 
-规则内容来自 blackmatrix7/ios_rule_script，按其 [GPL-2.0 许可](LICENSE)发布。每个生成的 provider 文件标注上游提交与源文件；本仓库保留生成脚本，便于检查与重新构建。图标链接引用 [Koolson/Qure](https://github.com/Koolson/Qure) 的图标资源。
+blackmatrix7 规则文件遵循其 [GPL-2.0 许可](LICENSE)；ACL4SSR 补充规则文件遵循其 [CC-BY-SA-4.0 许可](licenses/ACL4SSR-CC-BY-SA-4.0.txt)。两种来源分开生成 provider，并分别标注来源、提交、许可与筛选修改。图标链接引用 [Koolson/Qure](https://github.com/Koolson/Qure)。
+
+## ACL4SSR 精选补充
+
+每天同一工作流同时拉取 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash) 和 blackmatrix7 的固定提交。下载文件和缓存均校验 Git blob SHA-1 与字节数，下载截断时从 GitHub blob API 恢复；完整性或配置验证失败会停止发布。
+
+默认版本补充 AI、开发工具、明确下载进程和游戏 CDN，沿用现有 55 个策略组。AI 补充先于谷歌、微软及通用媒体合集；开发工具补充先于通用合集。共享登录/统计域名、宽泛下载/PT 关键词、URL-REGEX、USER-AGENT、NAS 海外云 IP 被排除；Reddit 保留原策略。局域网与已有拦截规则优先。
+
+| 版本 | 使用链接 | 内容 |
+|---|---|---|
+| 默认 | [clash-party.yaml](https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/clash-party.yaml) | 精选服务补充 |
+| 广告增强 | [clash-party-adblock.yaml](https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/clash-party-adblock.yaml) | 默认 + EasyList / EasyListChina |
+| 本地服务 | [clash-party-local-services.yaml](https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/clash-party-local-services.yaml) | 默认 + 明确 PT 域名、精选 NAS/DDNS、远程桌面进程直连 |
+| 全部增强 | [clash-party-full.yaml](https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/clash-party-full.yaml) | 默认 + 上述两类可选补充 |
+
+四个版本均为完整覆写，选一个绑定订阅即可。PT 版本会让列出的海外 PT 域名也走国内直连策略；远程桌面版本影响对应进程的全部连接，请按自己的访问条件选择。广告增强可能影响登录、统计和页面功能，上游广告合集的更新频率独立于本项目每日编译。
+
+完全相同规则按顺序去重；ACL 补充被此前同策略后缀覆盖时省略。跨策略后缀覆盖保留并报告，避免删除有意设置的服务例外。最新规则数、补充保留数与各版本统计见 [build-info.json](dist/build-info.json)，排除原因与归类变化见 [ACL4SSR 报告](reports/acl4ssr.md) / [完整 JSON](reports/acl4ssr.json)。原 conflicts.md 专门记录 blackmatrix7 编译阶段。

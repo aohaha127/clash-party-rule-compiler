@@ -1,6 +1,6 @@
-# Derived from blackmatrix7/ios_rule_script (GPL-2.0)
-# Upstream commit: c9b2158695596a1ba866adcf74def8d5ab348e25
-# Sources: HBO/HBO.yaml
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: c9b2158695596a1ba866adcf74def8d5ab348e25
+# Source directories: HBO; deduplicated
 payload:
 - DOMAIN-SUFFIX,bcbolthboa-a.akamaihd.net
 - DOMAIN-SUFFIX,cf-images.ap-southeast-1.prod.boltdns.net

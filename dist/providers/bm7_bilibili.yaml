@@ -1,6 +1,6 @@
-# Derived from blackmatrix7/ios_rule_script (GPL-2.0)
-# Upstream commit: c9b2158695596a1ba866adcf74def8d5ab348e25
-# Sources: BiliBili/BiliBili.yaml
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: c9b2158695596a1ba866adcf74def8d5ab348e25
+# Source directories: BiliBili; deduplicated
 payload:
 - DOMAIN,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com
 - DOMAIN,0gr4uqmtt8y41hcjsgrzdrc3s.ourdvsss.com

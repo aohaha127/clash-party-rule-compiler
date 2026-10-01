@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import argparse
+import base64
+import hashlib
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
@@ -13,6 +15,7 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import time
 from urllib.parse import quote
@@ -55,10 +58,15 @@ def github_api(path: str) -> dict:
     if token:
         return json.loads(get_bytes(f"https://api.github.com/{path}", token=token))
     # gh uses the user's existing credential without exposing it in process output.
-    result = subprocess.run(
-        ["gh", "api", path], check=True, capture_output=True, text=True, encoding="utf-8"
-    )
-    return json.loads(result.stdout)
+    for attempt in range(4):
+        result = subprocess.run(
+            ["gh", "api", path], capture_output=True, text=True, encoding="utf-8", timeout=90
+        )
+        if result.returncode == 0:
+            return json.loads(result.stdout)
+        if attempt < 3:
+            time.sleep(2**attempt)
+    raise RuntimeError(f"GitHub API failed: {path}: {result.stderr}")
 
 
 def upstream_snapshot() -> tuple[str, dict[str, dict]]:
@@ -86,18 +94,31 @@ def source_path(name: str, files: dict[str, dict]) -> str:
     raise ValueError(f"no classical YAML source for {name}")
 
 
-def fetch_source(sha: str, name: str, path: str) -> tuple[str, str, list[str]]:
-    cache = ROOT / ".cache" / "raw" / sha / f"{name}.yaml"
+def verified_blob(repo: str, sha: str, path: str, metadata: dict, cache: Path) -> bytes:
+    def valid(body: bytes) -> bool:
+        digest = hashlib.sha1(b"blob " + str(len(body)).encode() + b"\0" + body).hexdigest()
+        return len(body) == metadata["size"] and digest == metadata["sha"]
+
     if cache.exists():
         body = cache.read_bytes()
-    else:
-        raw_url = (
-            f"https://raw.githubusercontent.com/{UPSTREAM_REPO}/{sha}/rule/Clash/"
-            f"{quote(path, safe='/')}"
-        )
-        body = get_bytes(raw_url)
-        cache.parent.mkdir(parents=True, exist_ok=True)
-        cache.write_bytes(body)
+        if valid(body):
+            return body
+    body = get_bytes(f"https://raw.githubusercontent.com/{repo}/{sha}/{quote(path, safe='/')}")
+    if not valid(body):
+        blob = github_api(f"repos/{repo}/git/blobs/{metadata['sha']}")
+        if blob.get("encoding") != "base64":
+            raise ValueError(f"unexpected blob encoding: {path}")
+        body = base64.b64decode(blob["content"])
+    if not valid(body):
+        raise ValueError(f"source integrity check failed: {repo}/{path}")
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    cache.write_bytes(body)
+    return body
+
+
+def fetch_source(sha: str, name: str, path: str, metadata: dict) -> tuple[str, str, list[str]]:
+    cache = ROOT / ".cache" / "raw" / sha / f"{name}.yaml"
+    body = verified_blob(UPSTREAM_REPO, sha, f"rule/Clash/{path}", metadata, cache)
     parsed = yaml.safe_load(body)
     if not isinstance(parsed, dict) or not isinstance(parsed.get("payload"), list):
         raise ValueError(f"invalid payload in {path}")
@@ -211,12 +232,9 @@ def validate_override(override: dict, provider_files: dict[str, list[str]]) -> N
         for option in entry.get("proxies", []):
             if option not in known:
                 raise ValueError(f"unknown proxy target {option!r} in {entry['name']}")
-    for entry in CATALOG:
-        name = f"bm7_{entry.slug}"
+    for name in override["rule-providers"]:
         if name not in provider_files or not provider_files[name]:
             raise ValueError(f"missing provider payload: {name}")
-        if entry.group not in known:
-            raise ValueError(f"missing policy group: {entry.group}")
     if override["rules"][-1] != "MATCH,漏网之鱼":
         raise ValueError("MATCH must be last")
     for line in override["rules"][:-1]:
@@ -421,6 +439,8 @@ def main() -> None:
     args = parser.parse_args()
     if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", args.repo):
         parser.error("--repo must be OWNER/REPO")
+    subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", "scripts", "-p", "test_*.py"],
+                   cwd=ROOT, check=True)
     slugs = [entry.slug for entry in CATALOG]
     sources = [source for entry in CATALOG for source in entry.sources]
     if len(slugs) != len(set(slugs)) or len(sources) != len(set(sources)):
@@ -430,18 +450,21 @@ def main() -> None:
     paths = {source: source_path(source, files) for source in sources}
     data: dict[str, tuple[str, list[str]]] = {}
     with ThreadPoolExecutor(max_workers=8) as executor:
-        futures = {executor.submit(fetch_source, sha, source, path): source
+        futures = {executor.submit(fetch_source, sha, source, path, files[path]): source
                    for source, path in paths.items()}
         for future in as_completed(futures):
             source, path, rules = future.result()
             data[source] = (path, rules)
     providers, conflicts = compile_rules(data)
     write_outputs(args.repo, sha, data, providers, conflicts)
+    from supplement import augment
+    augment(args.repo)
+    final_metadata = json.loads((ROOT / "dist" / "build-info.json").read_text(encoding="utf-8"))
     print(json.dumps({"repository": args.repo, "upstream_commit": sha,
                       "groups": len(base_groups()) + len(catalog_groups()),
-                      "providers": len(providers), "sources": len(sources),
+                      "providers": final_metadata["rule_providers"], "sources": len(sources),
                       "raw_rules": conflicts["source_rule_count"],
-                      "unique_rules": conflicts["unique_rule_count"],
+                      "unique_rules": final_metadata["unique_rules"],
                       "suffix_overlaps": conflicts["domain_suffix_overlap_count"]}, ensure_ascii=False))
 
 

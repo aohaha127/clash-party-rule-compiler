@@ -1,0 +1,15 @@
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: c9b2158695596a1ba866adcf74def8d5ab348e25
+# Source directories: Download; deduplicated
+payload:
+- DOMAIN-SUFFIX,qbittorrent.org
+- DOMAIN-KEYWORD,aria2
+- DOMAIN-KEYWORD,thunder
+- DOMAIN-KEYWORD,xlliveud
+- DOMAIN-KEYWORD,xunlei
+- DOMAIN-KEYWORD,yunpan
+- PROCESS-NAME,BitComet.exe
+- PROCESS-NAME,BitComet_x64.exe
+- PROCESS-NAME,WebTorrentHelper.exe
+- PROCESS-NAME,Weiyun
+- PROCESS-NAME,qbittorrent

@@ -1,0 +1,8 @@
+# Derived from ACL4SSR/ACL4SSR; CC-BY-SA-4.0
+# Commit: 7ec917109533597bd7f646cf2c01ad8f1db6c88d; source: Clash/Ruleset/RemoteDesktop.list; curated and deduplicated
+payload:
+- PROCESS-NAME,SunloginClient.exe
+- PROCESS-NAME,ToDesk_Session.exe
+- PROCESS-NAME,ToDesk_Service.exe
+- PROCESS-NAME,ToDesk.exe
+- PROCESS-NAME,mstsc.exe

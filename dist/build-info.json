@@ -1,10 +1,84 @@
 {
-  "checked_at_utc": "2026-10-01T05:03:22+00:00",
+  "checked_at_utc": "2026-10-01T14:41:28+00:00",
   "upstream_commit": "c9b2158695596a1ba866adcf74def8d5ab348e25",
   "upstream_repository": "blackmatrix7/ios_rule_script",
   "published_repository": "aohaha127/clash-party-rule-compiler",
   "policy_groups": 55,
-  "rule_providers": 77,
+  "rule_providers": 81,
   "source_directories": 79,
-  "unique_rules": 240942
+  "unique_rules": 240961,
+  "acl4ssr_commit": "7ec917109533597bd7f646cf2c01ad8f1db6c88d",
+  "acl4ssr_repository": "ACL4SSR/ACL4SSR",
+  "variants": {
+    "default": {
+      "unique_rules": 240961,
+      "exact_duplicates_removed": 69,
+      "covered_supplements_removed": 2,
+      "cross_policy_duplicates": 43,
+      "suffix_overlap_count": 7873,
+      "groups": 55,
+      "providers": 81,
+      "acl_providers": {
+        "acl_game_download": 19,
+        "acl_ai": 26,
+        "acl_developer": 15,
+        "acl_download": 13
+      }
+    },
+    "adblock": {
+      "unique_rules": 285947,
+      "exact_duplicates_removed": 978,
+      "covered_supplements_removed": 25,
+      "cross_policy_duplicates": 75,
+      "suffix_overlap_count": 8163,
+      "groups": 55,
+      "providers": 83,
+      "acl_providers": {
+        "acl_game_download": 19,
+        "acl_easylist": 40594,
+        "acl_easylist_china": 4414,
+        "acl_ai": 26,
+        "acl_developer": 15,
+        "acl_download": 13
+      }
+    },
+    "local": {
+      "unique_rules": 241000,
+      "exact_duplicates_removed": 170,
+      "covered_supplements_removed": 2,
+      "cross_policy_duplicates": 47,
+      "suffix_overlap_count": 7878,
+      "groups": 55,
+      "providers": 84,
+      "acl_providers": {
+        "acl_game_download": 19,
+        "acl_private_tracker": 28,
+        "acl_nas": 14,
+        "acl_remote_desktop": 5,
+        "acl_ai": 26,
+        "acl_developer": 15,
+        "acl_download": 13
+      }
+    },
+    "full": {
+      "unique_rules": 285986,
+      "exact_duplicates_removed": 1079,
+      "covered_supplements_removed": 25,
+      "cross_policy_duplicates": 79,
+      "suffix_overlap_count": 8168,
+      "groups": 55,
+      "providers": 86,
+      "acl_providers": {
+        "acl_game_download": 19,
+        "acl_private_tracker": 28,
+        "acl_nas": 14,
+        "acl_remote_desktop": 5,
+        "acl_easylist": 40594,
+        "acl_easylist_china": 4414,
+        "acl_ai": 26,
+        "acl_developer": 15,
+        "acl_download": 13
+      }
+    }
+  }
 }

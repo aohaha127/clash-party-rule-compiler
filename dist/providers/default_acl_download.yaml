@@ -1,0 +1,16 @@
+# Derived from ACL4SSR/ACL4SSR; CC-BY-SA-4.0
+# Commit: 7ec917109533597bd7f646cf2c01ad8f1db6c88d; source: Clash/Ruleset/Download.list; curated and deduplicated
+payload:
+- PROCESS-NAME,DownloadService.exe
+- PROCESS-NAME,Folx.exe
+- PROCESS-NAME,NetTransport.exe
+- PROCESS-NAME,Thunder.exe
+- PROCESS-NAME,Transmission.exe
+- PROCESS-NAME,WebTorrent Helper.exe
+- PROCESS-NAME,WebTorrent.exe
+- PROCESS-NAME,Weiyun.exe
+- PROCESS-NAME,aria2c.exe
+- PROCESS-NAME,baidunetdisk.exe
+- PROCESS-NAME,fdm.exe
+- PROCESS-NAME,qbittorrent.exe
+- PROCESS-NAME,uTorrent.exe

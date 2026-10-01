@@ -1,0 +1,16 @@
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: c9b2158695596a1ba866adcf74def8d5ab348e25
+# Source directories: Jetbrains; deduplicated
+payload:
+- DOMAIN-SUFFIX,datalore.io
+- DOMAIN-SUFFIX,intellij.com
+- DOMAIN-SUFFIX,intellij.net
+- DOMAIN-SUFFIX,intellij.org
+- DOMAIN-SUFFIX,jetbrains.com
+- DOMAIN-SUFFIX,jetbrains.io
+- DOMAIN-SUFFIX,jetbrains.net
+- DOMAIN-SUFFIX,jetbrains.org
+- DOMAIN-SUFFIX,jetbrains.space
+- DOMAIN-SUFFIX,jetbrains.team
+- DOMAIN-SUFFIX,kotlinconf.com
+- DOMAIN-SUFFIX,kotlinlang.org

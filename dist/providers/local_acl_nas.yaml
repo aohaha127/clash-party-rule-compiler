@@ -1,0 +1,17 @@
+# Derived from ACL4SSR/ACL4SSR; CC-BY-SA-4.0
+# Commit: 7ec917109533597bd7f646cf2c01ad8f1db6c88d; source: Clash/Ruleset/NaSDDNS.list; curated and deduplicated
+payload:
+- DOMAIN-SUFFIX,tpddns.cn
+- DOMAIN-SUFFIX,3322.org
+- DOMAIN-SUFFIX,3322.net
+- DOMAIN-SUFFIX,nat123.com
+- DOMAIN-SUFFIX,dnsapi.cn
+- DOMAIN-SUFFIX,checkip.synology.com
+- DOMAIN-SUFFIX,checkipv6.synology.com
+- DOMAIN-SUFFIX,checkport.synology.com
+- DOMAIN-SUFFIX,ddns.synology.com
+- DOMAIN-SUFFIX,quickconnect.to
+- DOMAIN-SUFFIX,quickconnect.cn
+- DOMAIN-SUFFIX,synology.cn
+- DOMAIN-SUFFIX,edge.api.myqnapcloud.com
+- DOMAIN-SUFFIX,myqnapcloud.com

@@ -1,6 +1,6 @@
-# Derived from blackmatrix7/ios_rule_script (GPL-2.0)
-# Upstream commit: c9b2158695596a1ba866adcf74def8d5ab348e25
-# Sources: Claude/Claude.yaml, Anthropic/Anthropic.yaml
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: c9b2158695596a1ba866adcf74def8d5ab348e25
+# Source directories: Claude, Anthropic; deduplicated
 payload:
 - DOMAIN,cdn.usefathom.com
 - DOMAIN-SUFFIX,anthropic.com

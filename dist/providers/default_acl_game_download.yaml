@@ -1,0 +1,22 @@
+# Derived from ACL4SSR/ACL4SSR; CC-BY-SA-4.0
+# Commit: 7ec917109533597bd7f646cf2c01ad8f1db6c88d; source: Clash/Ruleset/GameDownload.list; curated and deduplicated
+payload:
+- DOMAIN,ssl-lvlt.cdn.ea.com
+- DOMAIN,uplaypc-s-ubisoft.cdn.ubionline.com.cn
+- DOMAIN,gamedownloads-rockstargames-com.akamaized.net
+- DOMAIN,gog-cdn-lumen.secure2.footprint.net
+- DOMAIN,download.cdp.bethesda.net
+- DOMAIN,download.hikarifield.co.jp
+- DOMAIN,client.hikarifield.co.jp
+- DOMAIN,download.epicgames.com
+- DOMAIN,download2.epicgames.com
+- DOMAIN,download3.epicgames.com
+- DOMAIN,download4.epicgames.com
+- DOMAIN,epicgames-download1.akamaized.net
+- DOMAIN,packagespc.xboxlive.com
+- DOMAIN,xvcf1.xboxlive.com
+- DOMAIN,xvcf2.xboxlive.com
+- DOMAIN,assets1.xboxlive.com
+- DOMAIN,assets2.xboxlive.com
+- DOMAIN-SUFFIX,dyn.riotcdn.net
+- DOMAIN-SUFFIX,cdn.ubi.com
