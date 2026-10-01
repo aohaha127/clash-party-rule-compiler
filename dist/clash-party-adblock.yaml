@@ -623,49 +623,56 @@ rule-providers:
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_lan.yaml
-    path: ./rule_provider/compiled/bm7_lan.yaml
+    path: ./rule_provider/bm7/bm7_lan.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_direct:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_direct.yaml
-    path: ./rule_provider/compiled/bm7_direct.yaml
+    path: ./rule_provider/bm7/bm7_direct.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_steam_cn:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_steam_cn.yaml
-    path: ./rule_provider/compiled/bm7_steam_cn.yaml
+    path: ./rule_provider/bm7/bm7_steam_cn.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_advertising:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_advertising.yaml
-    path: ./rule_provider/compiled/bm7_advertising.yaml
+    path: ./rule_provider/bm7/bm7_advertising.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_hijacking:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_hijacking.yaml
-    path: ./rule_provider/compiled/bm7_hijacking.yaml
+    path: ./rule_provider/bm7/bm7_hijacking.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_privacy:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_privacy.yaml
-    path: ./rule_provider/compiled/bm7_privacy.yaml
+    path: ./rule_provider/bm7/bm7_privacy.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_zhihu_ads:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_zhihu_ads.yaml
-    path: ./rule_provider/compiled/bm7_zhihu_ads.yaml
+    path: ./rule_provider/bm7/bm7_zhihu_ads.yaml
+    proxy: 节点选择
     interval: 86400
   default_acl_game_download:
     type: http
@@ -673,6 +680,7 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/default_acl_game_download.yaml
     path: ./rule_provider/compiled/default_acl_game_download.yaml
+    proxy: 节点选择
     interval: 86400
   adblock_acl_easylist:
     type: http
@@ -680,6 +688,7 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/adblock_acl_easylist.yaml
     path: ./rule_provider/compiled/adblock_acl_easylist.yaml
+    proxy: 节点选择
     interval: 86400
   adblock_acl_easylist_china:
     type: http
@@ -687,34 +696,39 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/adblock_acl_easylist_china.yaml
     path: ./rule_provider/compiled/adblock_acl_easylist_china.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_openai:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_openai.yaml
-    path: ./rule_provider/compiled/bm7_openai.yaml
+    path: ./rule_provider/bm7/bm7_openai.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_claude:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_claude.yaml
-    path: ./rule_provider/compiled/bm7_claude.yaml
+    path: ./rule_provider/bm7/bm7_claude.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_gemini:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_gemini.yaml
-    path: ./rule_provider/compiled/bm7_gemini.yaml
+    path: ./rule_provider/bm7/bm7_gemini.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_civitai:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_civitai.yaml
-    path: ./rule_provider/compiled/bm7_civitai.yaml
+    path: ./rule_provider/bm7/bm7_civitai.yaml
+    proxy: 节点选择
     interval: 86400
   default_acl_ai:
     type: http
@@ -722,62 +736,71 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/default_acl_ai.yaml
     path: ./rule_provider/compiled/default_acl_ai.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_telegram:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_telegram.yaml
-    path: ./rule_provider/compiled/bm7_telegram.yaml
+    path: ./rule_provider/bm7/bm7_telegram.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_whatsapp:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_whatsapp.yaml
-    path: ./rule_provider/compiled/bm7_whatsapp.yaml
+    path: ./rule_provider/bm7/bm7_whatsapp.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_discord:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_discord.yaml
-    path: ./rule_provider/compiled/bm7_discord.yaml
+    path: ./rule_provider/bm7/bm7_discord.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_line:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_line.yaml
-    path: ./rule_provider/compiled/bm7_line.yaml
+    path: ./rule_provider/bm7/bm7_line.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_npm:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_npm.yaml
-    path: ./rule_provider/compiled/bm7_npm.yaml
+    path: ./rule_provider/bm7/bm7_npm.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_github:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_github.yaml
-    path: ./rule_provider/compiled/bm7_github.yaml
+    path: ./rule_provider/bm7/bm7_github.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_gitlab:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_gitlab.yaml
-    path: ./rule_provider/compiled/bm7_gitlab.yaml
+    path: ./rule_provider/bm7/bm7_gitlab.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_docker:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_docker.yaml
-    path: ./rule_provider/compiled/bm7_docker.yaml
+    path: ./rule_provider/bm7/bm7_docker.yaml
+    proxy: 节点选择
     interval: 86400
   default_bm7_jetbrains:
     type: http
@@ -785,20 +808,23 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/default_bm7_jetbrains.yaml
     path: ./rule_provider/compiled/default_bm7_jetbrains.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_notion:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_notion.yaml
-    path: ./rule_provider/compiled/bm7_notion.yaml
+    path: ./rule_provider/bm7/bm7_notion.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_figma:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_figma.yaml
-    path: ./rule_provider/compiled/bm7_figma.yaml
+    path: ./rule_provider/bm7/bm7_figma.yaml
+    proxy: 节点选择
     interval: 86400
   default_acl_developer:
     type: http
@@ -806,62 +832,71 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/default_acl_developer.yaml
     path: ./rule_provider/compiled/default_acl_developer.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_cloudflare:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_cloudflare.yaml
-    path: ./rule_provider/compiled/bm7_cloudflare.yaml
+    path: ./rule_provider/bm7/bm7_cloudflare.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_vercel:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_vercel.yaml
-    path: ./rule_provider/compiled/bm7_vercel.yaml
+    path: ./rule_provider/bm7/bm7_vercel.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_digitalocean:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_digitalocean.yaml
-    path: ./rule_provider/compiled/bm7_digitalocean.yaml
+    path: ./rule_provider/bm7/bm7_digitalocean.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_google_fcm:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_google_fcm.yaml
-    path: ./rule_provider/compiled/bm7_google_fcm.yaml
+    path: ./rule_provider/bm7/bm7_google_fcm.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_google_search:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_google_search.yaml
-    path: ./rule_provider/compiled/bm7_google_search.yaml
+    path: ./rule_provider/bm7/bm7_google_search.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_google_drive:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_google_drive.yaml
-    path: ./rule_provider/compiled/bm7_google_drive.yaml
+    path: ./rule_provider/bm7/bm7_google_drive.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_google_voice:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_google_voice.yaml
-    path: ./rule_provider/compiled/bm7_google_voice.yaml
+    path: ./rule_provider/bm7/bm7_google_voice.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_youtube_music:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_youtube_music.yaml
-    path: ./rule_provider/compiled/bm7_youtube_music.yaml
+    path: ./rule_provider/bm7/bm7_youtube_music.yaml
+    proxy: 节点选择
     interval: 86400
   adblock_bm7_youtube:
     type: http
@@ -869,6 +904,7 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/adblock_bm7_youtube.yaml
     path: ./rule_provider/compiled/adblock_bm7_youtube.yaml
+    proxy: 节点选择
     interval: 86400
   adblock_bm7_google:
     type: http
@@ -876,174 +912,199 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/adblock_bm7_google.yaml
     path: ./rule_provider/compiled/adblock_bm7_google.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_bing:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_bing.yaml
-    path: ./rule_provider/compiled/bm7_bing.yaml
+    path: ./rule_provider/bm7/bm7_bing.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_onedrive:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_onedrive.yaml
-    path: ./rule_provider/compiled/bm7_onedrive.yaml
+    path: ./rule_provider/bm7/bm7_onedrive.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_microsoft_edge:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_microsoft_edge.yaml
-    path: ./rule_provider/compiled/bm7_microsoft_edge.yaml
+    path: ./rule_provider/bm7/bm7_microsoft_edge.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_microsoft:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_microsoft.yaml
-    path: ./rule_provider/compiled/bm7_microsoft.yaml
+    path: ./rule_provider/bm7/bm7_microsoft.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_app_store:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_app_store.yaml
-    path: ./rule_provider/compiled/bm7_app_store.yaml
+    path: ./rule_provider/bm7/bm7_app_store.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_icloud:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_icloud.yaml
-    path: ./rule_provider/compiled/bm7_icloud.yaml
+    path: ./rule_provider/bm7/bm7_icloud.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_testflight:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_testflight.yaml
-    path: ./rule_provider/compiled/bm7_testflight.yaml
+    path: ./rule_provider/bm7/bm7_testflight.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_apple_music:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_apple_music.yaml
-    path: ./rule_provider/compiled/bm7_apple_music.yaml
+    path: ./rule_provider/bm7/bm7_apple_music.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_apple_tv:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_apple_tv.yaml
-    path: ./rule_provider/compiled/bm7_apple_tv.yaml
+    path: ./rule_provider/bm7/bm7_apple_tv.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_apple_news:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_apple_news.yaml
-    path: ./rule_provider/compiled/bm7_apple_news.yaml
+    path: ./rule_provider/bm7/bm7_apple_news.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_apple:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_apple.yaml
-    path: ./rule_provider/compiled/bm7_apple.yaml
+    path: ./rule_provider/bm7/bm7_apple.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_netflix:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_netflix.yaml
-    path: ./rule_provider/compiled/bm7_netflix.yaml
+    path: ./rule_provider/bm7/bm7_netflix.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_disney:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_disney.yaml
-    path: ./rule_provider/compiled/bm7_disney.yaml
+    path: ./rule_provider/bm7/bm7_disney.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_prime_video:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_prime_video.yaml
-    path: ./rule_provider/compiled/bm7_prime_video.yaml
+    path: ./rule_provider/bm7/bm7_prime_video.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_hbo:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_hbo.yaml
-    path: ./rule_provider/compiled/bm7_hbo.yaml
+    path: ./rule_provider/bm7/bm7_hbo.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_hulu:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_hulu.yaml
-    path: ./rule_provider/compiled/bm7_hulu.yaml
+    path: ./rule_provider/bm7/bm7_hulu.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_spotify:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_spotify.yaml
-    path: ./rule_provider/compiled/bm7_spotify.yaml
+    path: ./rule_provider/bm7/bm7_spotify.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_bahamut:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_bahamut.yaml
-    path: ./rule_provider/compiled/bm7_bahamut.yaml
+    path: ./rule_provider/bm7/bm7_bahamut.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_bilibili_intl:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_bilibili_intl.yaml
-    path: ./rule_provider/compiled/bm7_bilibili_intl.yaml
+    path: ./rule_provider/bm7/bm7_bilibili_intl.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_bilibili:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_bilibili.yaml
-    path: ./rule_provider/compiled/bm7_bilibili.yaml
+    path: ./rule_provider/bm7/bm7_bilibili.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_tiktok:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_tiktok.yaml
-    path: ./rule_provider/compiled/bm7_tiktok.yaml
+    path: ./rule_provider/bm7/bm7_tiktok.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_twitch:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_twitch.yaml
-    path: ./rule_provider/compiled/bm7_twitch.yaml
+    path: ./rule_provider/bm7/bm7_twitch.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_netease_music:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_netease_music.yaml
-    path: ./rule_provider/compiled/bm7_netease_music.yaml
+    path: ./rule_provider/bm7/bm7_netease_music.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_china_media:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_china_media.yaml
-    path: ./rule_provider/compiled/bm7_china_media.yaml
+    path: ./rule_provider/bm7/bm7_china_media.yaml
+    proxy: 节点选择
     interval: 86400
   adblock_bm7_global_media:
     type: http
@@ -1051,118 +1112,135 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/adblock_bm7_global_media.yaml
     path: ./rule_provider/compiled/adblock_bm7_global_media.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_steam:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_steam.yaml
-    path: ./rule_provider/compiled/bm7_steam.yaml
+    path: ./rule_provider/bm7/bm7_steam.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_epic:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_epic.yaml
-    path: ./rule_provider/compiled/bm7_epic.yaml
+    path: ./rule_provider/bm7/bm7_epic.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_playstation:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_playstation.yaml
-    path: ./rule_provider/compiled/bm7_playstation.yaml
+    path: ./rule_provider/bm7/bm7_playstation.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_nintendo:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_nintendo.yaml
-    path: ./rule_provider/compiled/bm7_nintendo.yaml
+    path: ./rule_provider/bm7/bm7_nintendo.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_xbox:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_xbox.yaml
-    path: ./rule_provider/compiled/bm7_xbox.yaml
+    path: ./rule_provider/bm7/bm7_xbox.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_game:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_game.yaml
-    path: ./rule_provider/compiled/bm7_game.yaml
+    path: ./rule_provider/bm7/bm7_game.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_twitter:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_twitter.yaml
-    path: ./rule_provider/compiled/bm7_twitter.yaml
+    path: ./rule_provider/bm7/bm7_twitter.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_facebook:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_facebook.yaml
-    path: ./rule_provider/compiled/bm7_facebook.yaml
+    path: ./rule_provider/bm7/bm7_facebook.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_instagram:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_instagram.yaml
-    path: ./rule_provider/compiled/bm7_instagram.yaml
+    path: ./rule_provider/bm7/bm7_instagram.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_reddit:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_reddit.yaml
-    path: ./rule_provider/compiled/bm7_reddit.yaml
+    path: ./rule_provider/bm7/bm7_reddit.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_threads:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_threads.yaml
-    path: ./rule_provider/compiled/bm7_threads.yaml
+    path: ./rule_provider/bm7/bm7_threads.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_snap:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_snap.yaml
-    path: ./rule_provider/compiled/bm7_snap.yaml
+    path: ./rule_provider/bm7/bm7_snap.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_paypal:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_paypal.yaml
-    path: ./rule_provider/compiled/bm7_paypal.yaml
+    path: ./rule_provider/bm7/bm7_paypal.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_amazon:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_amazon.yaml
-    path: ./rule_provider/compiled/bm7_amazon.yaml
+    path: ./rule_provider/bm7/bm7_amazon.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_shopify:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_shopify.yaml
-    path: ./rule_provider/compiled/bm7_shopify.yaml
+    path: ./rule_provider/bm7/bm7_shopify.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_shopee:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_shopee.yaml
-    path: ./rule_provider/compiled/bm7_shopee.yaml
+    path: ./rule_provider/bm7/bm7_shopee.yaml
+    proxy: 节点选择
     interval: 86400
   default_acl_download:
     type: http
@@ -1170,6 +1248,7 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/default_acl_download.yaml
     path: ./rule_provider/compiled/default_acl_download.yaml
+    proxy: 节点选择
     interval: 86400
   default_bm7_download:
     type: http
@@ -1177,20 +1256,23 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/default_bm7_download.yaml
     path: ./rule_provider/compiled/default_bm7_download.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_speedtest:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_speedtest.yaml
-    path: ./rule_provider/compiled/bm7_speedtest.yaml
+    path: ./rule_provider/bm7/bm7_speedtest.yaml
+    proxy: 节点选择
     interval: 86400
   bm7_china:
     type: http
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/bm7_china.yaml
-    path: ./rule_provider/compiled/bm7_china.yaml
+    path: ./rule_provider/bm7/bm7_china.yaml
+    proxy: 节点选择
     interval: 86400
   adblock_bm7_global:
     type: http
@@ -1198,6 +1280,7 @@ rule-providers:
     format: yaml
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/providers/adblock_bm7_global.yaml
     path: ./rule_provider/compiled/adblock_bm7_global.yaml
+    proxy: 节点选择
     interval: 86400
 rules:
 - RULE-SET,bm7_lan,DIRECT

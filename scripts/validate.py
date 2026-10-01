@@ -62,6 +62,11 @@ def validate_file(path: Path, mihomo: Path | None) -> None:
     providers = {}
     global_seen: set[str] = set()
     for name in override["rule-providers"]:
+        provider = override["rule-providers"][name]
+        if provider.get("proxy") != "节点选择":
+            raise ValueError(f"provider download must use node selection: {name}")
+        if name.startswith("bm7_") and provider.get("path") != f"./rule_provider/bm7/{name}.yaml":
+            raise ValueError(f"legacy provider cache path changed: {name}")
         payload = read_yaml(ROOT / "dist" / "providers" / f"{name}.yaml")["payload"]
         if not payload:
             raise ValueError(f"empty provider {name}")

@@ -182,7 +182,8 @@ def augment(published_repo: str) -> None:
             config["rule-providers"][published_name] = {
                 "type": "http", "behavior": "classical", "format": "yaml",
                 "url": f"https://raw.githubusercontent.com/{published_repo}/main/dist/providers/{published_name}.yaml",
-                "path": f"./rule_provider/compiled/{published_name}.yaml", "interval": 86400}
+                "path": f"./rule_provider/{'bm7' if published_name.startswith('bm7_') else 'compiled'}/{published_name}.yaml",
+                "proxy": "节点选择", "interval": 86400}
             config["rules"].append(f"RULE-SET,{published_name},{target}")
         config["rules"].append("MATCH,漏网之鱼")
         write_yaml(ROOT / "dist" / filename, config,

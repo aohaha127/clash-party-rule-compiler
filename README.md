@@ -78,4 +78,6 @@ blackmatrix7 规则文件遵循其 [GPL-2.0 许可](LICENSE)；ACL4SSR 补充规
 
 四个版本均为完整覆写，选一个绑定订阅即可。PT 版本会让列出的海外 PT 域名也走国内直连策略；远程桌面版本影响对应进程的全部连接，请按自己的访问条件选择。广告增强可能影响登录、统计和页面功能，上游广告合集的更新频率独立于本项目每日编译。
 
+规则集通过「节点选择」下载，请为该组选择可用的代理。已有 `bm7_*` 规则集继续使用旧 `rule_provider/bm7/` 缓存，新补充及修改后的规则集使用 `rule_provider/compiled/`。如果日志显示 `[Provider] … pull error … EOF`，且对应规则集没有缓存，服务流量可能落到「漏网之鱼」。更新覆写并重新应用订阅，然后检查规则集是否下载成功；全局模式不会按这些规则分流。
+
 完全相同规则按顺序去重；ACL 补充被此前同策略后缀覆盖时省略。跨策略后缀覆盖保留并报告，避免删除有意设置的服务例外。最新规则数、补充保留数与各版本统计见 [build-info.json](dist/build-info.json)，排除原因与归类变化见 [ACL4SSR 报告](reports/acl4ssr.md) / [完整 JSON](reports/acl4ssr.json)。原 conflicts.md 专门记录 blackmatrix7 编译阶段。
