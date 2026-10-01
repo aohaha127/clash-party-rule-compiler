@@ -80,7 +80,10 @@ def validate_file(path: Path, mihomo: Path | None) -> None:
         providers[name] = payload
     validate_override(override, providers)
     check_group_cycles(override["proxy-groups"])
-    if len(override["rules"]) != len(providers) + 1:
+    inline = [rule for rule in override["rules"][:-1] if not rule.startswith("RULE-SET,")]
+    if inline != ["DOMAIN,registry.npmjs.org,开发工具"] or override["rules"][1] != inline[0]:
+        raise ValueError("npm registry inline route missing or misplaced")
+    if len(override["rules"]) != len(providers) + len(inline) + 1:
         raise ValueError("rule count does not match provider count")
 
     if mihomo:

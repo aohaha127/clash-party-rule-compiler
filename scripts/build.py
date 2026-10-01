@@ -238,9 +238,11 @@ def validate_override(override: dict, provider_files: dict[str, list[str]]) -> N
     if override["rules"][-1] != "MATCH,漏网之鱼":
         raise ValueError("MATCH must be last")
     for line in override["rules"][:-1]:
-        _, provider, target = line.split(",", 2)
-        if provider not in override["rule-providers"] or target not in known:
+        kind, matcher, target = line.split(",", 2)
+        if target not in known or (kind == "RULE-SET" and matcher not in override["rule-providers"]):
             raise ValueError(f"invalid rule reference: {line}")
+        if kind not in {"RULE-SET", "DOMAIN", "DOMAIN-SUFFIX"}:
+            raise ValueError(f"unsupported routing rule: {line}")
 
 
 def suffix_conflicts(owners: dict[str, str], limit: int = 80) -> tuple[int, list[dict]]:

@@ -1284,6 +1284,7 @@ rule-providers:
     interval: 86400
 rules:
 - RULE-SET,bm7_lan,DIRECT
+- DOMAIN,registry.npmjs.org,开发工具
 - RULE-SET,bm7_direct,国内直连
 - RULE-SET,bm7_steam_cn,游戏直连
 - RULE-SET,bm7_advertising,广告拦截

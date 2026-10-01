@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-01T15:29:15+00:00",
+  "checked_at_utc": "2026-10-01T15:50:04+00:00",
   "upstream_commit": "c9b2158695596a1ba866adcf74def8d5ab348e25",
   "upstream_repository": "blackmatrix7/ios_rule_script",
   "published_repository": "aohaha127/clash-party-rule-compiler",
@@ -18,6 +18,9 @@
       "suffix_overlap_count": 7873,
       "groups": 55,
       "providers": 81,
+      "inline_rules": [
+        "DOMAIN,registry.npmjs.org,开发工具"
+      ],
       "acl_providers": {
         "acl_game_download": 19,
         "acl_ai": 26,
@@ -33,6 +36,9 @@
       "suffix_overlap_count": 8163,
       "groups": 55,
       "providers": 83,
+      "inline_rules": [
+        "DOMAIN,registry.npmjs.org,开发工具"
+      ],
       "acl_providers": {
         "acl_game_download": 19,
         "acl_easylist": 40594,
@@ -50,6 +56,9 @@
       "suffix_overlap_count": 7878,
       "groups": 55,
       "providers": 84,
+      "inline_rules": [
+        "DOMAIN,registry.npmjs.org,开发工具"
+      ],
       "acl_providers": {
         "acl_game_download": 19,
         "acl_private_tracker": 28,
@@ -68,6 +77,9 @@
       "suffix_overlap_count": 8168,
       "groups": 55,
       "providers": 86,
+      "inline_rules": [
+        "DOMAIN,registry.npmjs.org,开发工具"
+      ],
       "acl_providers": {
         "acl_game_download": 19,
         "acl_private_tracker": 28,

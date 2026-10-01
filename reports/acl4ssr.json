@@ -1757,6 +1757,9 @@
       ],
       "groups": 55,
       "providers": 81,
+      "inline_rules": [
+        "DOMAIN,registry.npmjs.org,开发工具"
+      ],
       "acl_providers": {
         "acl_game_download": 19,
         "acl_ai": 26,
@@ -10256,6 +10259,9 @@
       ],
       "groups": 55,
       "providers": 83,
+      "inline_rules": [
+        "DOMAIN,registry.npmjs.org,开发工具"
+      ],
       "acl_providers": {
         "acl_game_download": 19,
         "acl_easylist": 40594,
@@ -12133,6 +12139,9 @@
       ],
       "groups": 55,
       "providers": 84,
+      "inline_rules": [
+        "DOMAIN,registry.npmjs.org,开发工具"
+      ],
       "acl_providers": {
         "acl_game_download": 19,
         "acl_private_tracker": 28,
@@ -20635,6 +20644,9 @@
       ],
       "groups": 55,
       "providers": 86,
+      "inline_rules": [
+        "DOMAIN,registry.npmjs.org,开发工具"
+      ],
       "acl_providers": {
         "acl_game_download": 19,
         "acl_private_tracker": 28,
