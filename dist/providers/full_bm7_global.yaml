@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: c9b2158695596a1ba866adcf74def8d5ab348e25
+# Commit: 5fe08949edb51935c67e0766dc4bc94c0dad0509
 # Source directories: Global; deduplicated
 payload:
 - DOMAIN,1password.drift.click
@@ -9857,6 +9857,7 @@ payload:
 - DOMAIN-SUFFIX,huanyuju.com
 - DOMAIN-SUFFIX,huarenav.com
 - DOMAIN-SUFFIX,huarenporn.com
+- DOMAIN-SUFFIX,huarun.win
 - DOMAIN-SUFFIX,huashundg.com
 - DOMAIN-SUFFIX,huawen.ac.uk
 - DOMAIN-SUFFIX,huaxin-lls.xyz
@@ -12896,6 +12897,7 @@ payload:
 - DOMAIN-SUFFIX,messybrainz.org
 - DOMAIN-SUFFIX,messytube.com
 - DOMAIN-SUFFIX,met-nude.com
+- DOMAIN-SUFFIX,metaaivm.com
 - DOMAIN-SUFFIX,metabolomics.ac.uk
 - DOMAIN-SUFFIX,metabora.io
 - DOMAIN-SUFFIX,metabrainz.org
@@ -15160,6 +15162,7 @@ payload:
 - DOMAIN-SUFFIX,openbook.org.tw
 - DOMAIN-SUFFIX,opencas.io
 - DOMAIN-SUFFIX,openclaw.ai
+- DOMAIN-SUFFIX,opencode.ai
 - DOMAIN-SUFFIX,opencollective.com
 - DOMAIN-SUFFIX,opendesktop.org
 - DOMAIN-SUFFIX,opendns.com
@@ -25396,6 +25399,7 @@ payload:
 - DOMAIN-SUFFIX,fututrustee.com
 - DOMAIN-SUFFIX,fux.com
 - DOMAIN-SUFFIX,fuyin.net
+- DOMAIN-SUFFIX,fuyin116.com
 - DOMAIN-SUFFIX,fuyindiantai.org
 - DOMAIN-SUFFIX,fuyu.org.tw
 - DOMAIN-SUFFIX,fw.cm
@@ -26913,6 +26917,7 @@ payload:
 - DOMAIN-SUFFIX,multiupload.com
 - DOMAIN-SUFFIX,mummysgold.com
 - DOMAIN-SUFFIX,murmur.tw
+- DOMAIN-SUFFIX,muse.ai
 - DOMAIN-SUFFIX,musicade.net
 - DOMAIN-SUFFIX,musixmatch.com
 - DOMAIN-SUFFIX,muslimvideo.com

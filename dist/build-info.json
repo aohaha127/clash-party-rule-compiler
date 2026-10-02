@@ -1,17 +1,17 @@
 {
-  "checked_at_utc": "2026-10-01T15:53:39+00:00",
-  "upstream_commit": "c9b2158695596a1ba866adcf74def8d5ab348e25",
+  "checked_at_utc": "2026-10-02T04:53:04+00:00",
+  "upstream_commit": "5fe08949edb51935c67e0766dc4bc94c0dad0509",
   "upstream_repository": "blackmatrix7/ios_rule_script",
   "published_repository": "aohaha127/clash-party-rule-compiler",
   "policy_groups": 55,
   "rule_providers": 81,
   "source_directories": 79,
-  "unique_rules": 240961,
+  "unique_rules": 240995,
   "acl4ssr_commit": "7ec917109533597bd7f646cf2c01ad8f1db6c88d",
   "acl4ssr_repository": "ACL4SSR/ACL4SSR",
   "variants": {
     "default": {
-      "unique_rules": 240961,
+      "unique_rules": 240995,
       "exact_duplicates_removed": 69,
       "covered_supplements_removed": 2,
       "cross_policy_duplicates": 43,
@@ -29,7 +29,7 @@
       }
     },
     "adblock": {
-      "unique_rules": 285947,
+      "unique_rules": 285981,
       "exact_duplicates_removed": 978,
       "covered_supplements_removed": 25,
       "cross_policy_duplicates": 75,
@@ -49,7 +49,7 @@
       }
     },
     "local": {
-      "unique_rules": 241000,
+      "unique_rules": 241034,
       "exact_duplicates_removed": 170,
       "covered_supplements_removed": 2,
       "cross_policy_duplicates": 47,
@@ -70,7 +70,7 @@
       }
     },
     "full": {
-      "unique_rules": 285986,
+      "unique_rules": 286020,
       "exact_duplicates_removed": 1079,
       "covered_supplements_removed": 25,
       "cross_policy_duplicates": 79,

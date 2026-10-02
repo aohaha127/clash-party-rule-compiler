@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: c9b2158695596a1ba866adcf74def8d5ab348e25
+# Commit: 5fe08949edb51935c67e0766dc4bc94c0dad0509
 # Source directories: Line; deduplicated
 payload:
 - DOMAIN-SUFFIX,lin.ee
