@@ -461,6 +461,8 @@ def main() -> None:
     write_outputs(args.repo, sha, data, providers, conflicts)
     from supplement import augment
     augment(args.repo)
+    from clients import export_clients
+    export_clients(args.repo)
     final_metadata = json.loads((ROOT / "dist" / "build-info.json").read_text(encoding="utf-8"))
     print(json.dumps({"repository": args.repo, "upstream_commit": sha,
                       "groups": len(base_groups()) + len(catalog_groups()),

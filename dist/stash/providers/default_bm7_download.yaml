@@ -1,0 +1,11 @@
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: 5fe08949edb51935c67e0766dc4bc94c0dad0509
+# Source directories: Download; deduplicated
+# iOS portable export; process rules omitted.
+payload:
+- DOMAIN-SUFFIX,qbittorrent.org
+- DOMAIN-KEYWORD,aria2
+- DOMAIN-KEYWORD,thunder
+- DOMAIN-KEYWORD,xlliveud
+- DOMAIN-KEYWORD,xunlei
+- DOMAIN-KEYWORD,yunpan

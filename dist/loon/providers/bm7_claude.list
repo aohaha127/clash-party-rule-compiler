@@ -1,0 +1,8 @@
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: 5fe08949edb51935c67e0766dc4bc94c0dad0509
+# Source directories: Claude, Anthropic; deduplicated
+# Loon rule set; process rules omitted.
+DOMAIN,cdn.usefathom.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN,servd-anthropic-website.b-cdn.net

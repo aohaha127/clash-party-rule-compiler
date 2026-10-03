@@ -119,6 +119,8 @@ def main() -> None:
         raise ValueError("generated override variant missing")
     for path in paths:
         validate_file(path, args.mihomo)
+    from clients import validate_clients
+    validate_clients()
 
 
 if __name__ == "__main__":

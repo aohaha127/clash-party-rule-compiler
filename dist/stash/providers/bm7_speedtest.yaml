@@ -1,0 +1,12 @@
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: 5fe08949edb51935c67e0766dc4bc94c0dad0509
+# Source directories: Speedtest; deduplicated
+# iOS portable export; process rules omitted.
+payload:
+- DOMAIN-SUFFIX,ooklaserver.net
+- DOMAIN-SUFFIX,speed.cloudflare.com
+- DOMAIN-SUFFIX,speed.dler.io
+- DOMAIN-SUFFIX,speedtest.co
+- DOMAIN-SUFFIX,speedtest.net
+- DOMAIN-SUFFIX,speedtestcustom.com
+- DOMAIN-KEYWORD,speedtest

@@ -1,0 +1,32 @@
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: 5fe08949edb51935c67e0766dc4bc94c0dad0509
+# Source directories: Vercel; deduplicated
+# iOS portable export; process rules omitted.
+payload:
+- DOMAIN-SUFFIX,err.sh
+- DOMAIN-SUFFIX,hyper.is
+- DOMAIN-SUFFIX,nextjs.org
+- DOMAIN-SUFFIX,now.sh
+- DOMAIN-SUFFIX,static.fun
+- DOMAIN-SUFFIX,title.sh
+- DOMAIN-SUFFIX,turborepo.org
+- DOMAIN-SUFFIX,vercel-analytics.com
+- DOMAIN-SUFFIX,vercel-dns.com
+- DOMAIN-SUFFIX,vercel-insights.com
+- DOMAIN-SUFFIX,vercel-status.com
+- DOMAIN-SUFFIX,vercel.app
+- DOMAIN-SUFFIX,vercel.blog
+- DOMAIN-SUFFIX,vercel.com
+- DOMAIN-SUFFIX,vercel.events
+- DOMAIN-SUFFIX,vercel.link
+- DOMAIN-SUFFIX,vercel.live
+- DOMAIN-SUFFIX,vercel.pub
+- DOMAIN-SUFFIX,vercel.sh
+- DOMAIN-SUFFIX,vercel.store
+- DOMAIN-SUFFIX,zeit-world.co.uk
+- DOMAIN-SUFFIX,zeit-world.com
+- DOMAIN-SUFFIX,zeit-world.net
+- DOMAIN-SUFFIX,zeit-world.org
+- DOMAIN-SUFFIX,zeit.co
+- DOMAIN-SUFFIX,zeit.sh
+- DOMAIN-SUFFIX,zeitworld.com

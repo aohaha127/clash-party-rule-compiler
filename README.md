@@ -63,6 +63,25 @@ python scripts/validate.py
 
 blackmatrix7 规则文件遵循其 [GPL-2.0 许可](LICENSE)；ACL4SSR 补充规则文件遵循其 [CC-BY-SA-4.0 许可](licenses/ACL4SSR-CC-BY-SA-4.0.txt)。两种来源分开生成 provider，并分别标注来源、提交、许可与筛选修改。图标链接引用 [Koolson/Qure](https://github.com/Koolson/Qure)。
 
+## Stash 和 Loon
+
+每日香港时间 08:00 的同一构建同步生成两个客户端的四个版本，保持 55 个策略组。使用对应客户端的文件；Clash Party 的 YAML 继续独立发布。
+
+| 版本 | Stash 覆写 | Loon 配置模板 |
+|---|---|---|
+| 默认 | [default.stoverride](https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/stash/default.stoverride) | [default.conf](https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/loon/default.conf) |
+| 广告增强 | [adblock.stoverride](https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/stash/adblock.stoverride) | [adblock.conf](https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/loon/adblock.conf) |
+| 本地服务 | [local.stoverride](https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/stash/local.stoverride) | [local.conf](https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/loon/local.conf) |
+| 全部增强 | [full.stoverride](https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/stash/full.stoverride) | [full.conf](https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/loon/full.conf) |
+
+Stash：先添加自己的节点订阅，再导入并启用一个 `.stoverride`。采用官方 `#!replace` 语法替换策略组、规则集和分流规则，订阅节点及节点提供者保留；其他分流覆写可能再次覆盖这些字段。为「节点选择」选一个可用代理。「非港节点」使用台湾、狮城、日本、美国、韩国地区组；其他地区的非港节点需自行加入这个组。Stash 不使用 Clash Party Smart 自动覆写。
+
+Loon：下载一个 `.conf`，将 `[Remote Proxy]` 中 `https://example.invalid/replace-with-your-loon-subscription` 替换为自己的 **Loon 格式订阅 URL**，再导入配置；这是需要填写节点来源的模板。也可将 `[Remote Filter]`、`[Proxy Group]`、`[Rule]`、`[Remote Rule]` 合并到现有配置，并将筛选规则中的「机场订阅」改为自己的订阅别名，移除原有同名组和重复 FINAL。节点按名称筛选，非港筛选排除香港；无可用节点时请检查分组并手动选择可用策略。规则集按 Loon 资源更新设置拉取，仓库的每日编译不等于 App 每日自动重载本地模板。
+
+两种导出以 iOS 为兼容目标，省略 `PROCESS-NAME`，因此下载软件/远程桌面进程直连不会在这些导出中生效（Stash macOS 的进程功能也未包含）。域名、IPv4/IPv6、ASN 规则保留；进程规则删除后为空的规则集不再引用。Loon 按其原生机制优先匹配域名、且本地规则优先于远程规则，无法保证与 Clash 的所有 IP/域名交叉覆盖行为完全相同。npm registry 的本地精确规则保留。
+
+已验证 YAML/配置结构、规则类型、文件与策略引用、筛选表达式和策略循环；当前 Windows 环境无法运行 Loon/Stash 原生核心，**尚未在原生 App 做运行验证**。转换数量与排除统计见 [clients.json](reports/clients.json)。原生兼容依据：[Stash 覆写](https://stash.wiki/en/configuration/override)、[Stash 策略组](https://stash.wiki/en/proxy-protocols/proxy-groups)、[Stash 规则](https://stash.wiki/en/rules/rule-types)、[Loon 官方说明](https://github.com/Loon0x00/LoonManual)、[Loon 示例](https://github.com/Loon0x00/LoonExampleConfig/blob/master/example.conf)。
+
 ## ACL4SSR 精选补充
 
 每天同一工作流同时拉取 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash) 和 blackmatrix7 的固定提交。下载文件和缓存均校验 Git blob SHA-1 与字节数，下载截断时从 GitHub blob API 恢复；完整性或配置验证失败会停止发布。

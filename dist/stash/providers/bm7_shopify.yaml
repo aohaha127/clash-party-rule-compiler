@@ -1,0 +1,13 @@
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: 5fe08949edb51935c67e0766dc4bc94c0dad0509
+# Source directories: Shopify; deduplicated
+# iOS portable export; process rules omitted.
+payload:
+- DOMAIN-SUFFIX,myshopify.com
+- DOMAIN-SUFFIX,shop.app
+- DOMAIN-SUFFIX,shopify.com
+- DOMAIN-SUFFIX,shopify.dev
+- DOMAIN-SUFFIX,shopifycdn.com
+- DOMAIN-SUFFIX,shopifycloud.com
+- DOMAIN-SUFFIX,shopifystatus.com
+- DOMAIN-SUFFIX,shopifysvc.com

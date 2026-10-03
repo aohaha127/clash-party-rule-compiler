@@ -1,0 +1,10 @@
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: 5fe08949edb51935c67e0766dc4bc94c0dad0509
+# Source directories: GoogleDrive; deduplicated
+# iOS portable export; process rules omitted.
+payload:
+- DOMAIN,www.googleapis.com
+- DOMAIN-SUFFIX,docs.google.com
+- DOMAIN-SUFFIX,drive.google.com
+- DOMAIN-SUFFIX,googledrive.com
+- DOMAIN-SUFFIX,googleusercontent.com

@@ -1,0 +1,12 @@
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: 5fe08949edb51935c67e0766dc4bc94c0dad0509
+# Source directories: Docker; deduplicated
+# iOS portable export; process rules omitted.
+payload:
+- DOMAIN,d1q6f0aelx0por.cloudfront.net
+- DOMAIN,d2wy8f7a9ursnm.cloudfront.net
+- DOMAIN,d36jcksde1wxzq.cloudfront.net
+- DOMAIN-SUFFIX,compose-spec.io
+- DOMAIN-SUFFIX,docker.com
+- DOMAIN-SUFFIX,docker.io
+- DOMAIN-SUFFIX,dockerhub.com

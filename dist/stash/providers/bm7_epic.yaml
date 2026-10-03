@@ -1,0 +1,19 @@
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: 5fe08949edb51935c67e0766dc4bc94c0dad0509
+# Source directories: Epic; deduplicated
+# iOS portable export; process rules omitted.
+payload:
+- DOMAIN-SUFFIX,battlebreakers.com
+- DOMAIN-SUFFIX,eac-cdn.com
+- DOMAIN-SUFFIX,easy.ac
+- DOMAIN-SUFFIX,easyanticheat.net
+- DOMAIN-SUFFIX,epicgames.com
+- DOMAIN-SUFFIX,epicgames.dev
+- DOMAIN-SUFFIX,fortnite.com
+- DOMAIN-SUFFIX,paragon.com
+- DOMAIN-SUFFIX,playparagon.com
+- DOMAIN-SUFFIX,roborecall.com
+- DOMAIN-SUFFIX,shadowcomplex.com
+- DOMAIN-SUFFIX,spyjinx.com
+- DOMAIN-SUFFIX,unrealengine.com
+- DOMAIN-SUFFIX,unrealtournament.com

@@ -1,0 +1,25 @@
+# Derived from blackmatrix7/ios_rule_script; GPL-2.0
+# Commit: 5fe08949edb51935c67e0766dc4bc94c0dad0509
+# Source directories: Shopee; deduplicated
+# Loon rule set; process rules omitted.
+DOMAIN-SUFFIX,shopee.cl
+DOMAIN-SUFFIX,shopee.cn
+DOMAIN-SUFFIX,shopee.co.id
+DOMAIN-SUFFIX,shopee.co.th
+DOMAIN-SUFFIX,shopee.com
+DOMAIN-SUFFIX,shopee.com.br
+DOMAIN-SUFFIX,shopee.com.co
+DOMAIN-SUFFIX,shopee.com.mx
+DOMAIN-SUFFIX,shopee.com.my
+DOMAIN-SUFFIX,shopee.es
+DOMAIN-SUFFIX,shopee.fr
+DOMAIN-SUFFIX,shopee.id
+DOMAIN-SUFFIX,shopee.in
+DOMAIN-SUFFIX,shopee.io
+DOMAIN-SUFFIX,shopee.ph
+DOMAIN-SUFFIX,shopee.sg
+DOMAIN-SUFFIX,shopee.tw
+DOMAIN-SUFFIX,shopee.vn
+DOMAIN-SUFFIX,shopeemobile.com
+DOMAIN-SUFFIX,shopeesz.com
+DOMAIN-SUFFIX,shp.ee

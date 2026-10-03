@@ -1,0 +1,49 @@
+{
+  "runtime_validation": "Structural validation only; native Loon/Stash apps are not available on Windows.",
+  "sources": {
+    "stash": "https://stash.wiki/en/configuration/override",
+    "loon": "https://github.com/Loon0x00/LoonManual"
+  },
+  "variants": {
+    "default": {
+      "groups": 55,
+      "providers": 80,
+      "provider_rules": 240890,
+      "omitted": {
+        "PROCESS-NAME": 105
+      },
+      "stash_non_hk": "Uses the Taiwan/Singapore/Japan/US/Korea region groups.",
+      "loon_priority": "Loon local rules precede remote rules; domains precede IP rules."
+    },
+    "adblock": {
+      "groups": 55,
+      "providers": 82,
+      "provider_rules": 285876,
+      "omitted": {
+        "PROCESS-NAME": 105
+      },
+      "stash_non_hk": "Uses the Taiwan/Singapore/Japan/US/Korea region groups.",
+      "loon_priority": "Loon local rules precede remote rules; domains precede IP rules."
+    },
+    "local": {
+      "groups": 55,
+      "providers": 82,
+      "provider_rules": 240924,
+      "omitted": {
+        "PROCESS-NAME": 110
+      },
+      "stash_non_hk": "Uses the Taiwan/Singapore/Japan/US/Korea region groups.",
+      "loon_priority": "Loon local rules precede remote rules; domains precede IP rules."
+    },
+    "full": {
+      "groups": 55,
+      "providers": 84,
+      "provider_rules": 285910,
+      "omitted": {
+        "PROCESS-NAME": 110
+      },
+      "stash_non_hk": "Uses the Taiwan/Singapore/Japan/US/Korea region groups.",
+      "loon_priority": "Loon local rules precede remote rules; domains precede IP rules."
+    }
+  }
+}
