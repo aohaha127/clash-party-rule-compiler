@@ -1,6 +1,6 @@
 {
-  "source_rule_count": 247787,
-  "unique_rule_count": 240976,
+  "source_rule_count": 247820,
+  "unique_rule_count": 241009,
   "duplicate_within_provider": 11,
   "same_group_duplicates_across_providers": 133,
   "cross_group_duplicates": 6667,
@@ -386,17 +386,17 @@
       "count": 3
     },
     {
+      "kept_group": "网易音乐",
+      "removed_group": "国内直连",
+      "count": 3
+    },
+    {
       "kept_group": "谷歌服务",
       "removed_group": "国内直连",
       "count": 3
     },
     {
       "kept_group": "DIRECT",
-      "removed_group": "国内直连",
-      "count": 3
-    },
-    {
-      "kept_group": "网易音乐",
       "removed_group": "国内直连",
       "count": 3
     },

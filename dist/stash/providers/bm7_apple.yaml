@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: 5fe08949edb51935c67e0766dc4bc94c0dad0509
+# Commit: 5a61490ab88ddaff4e9dbd7740b881d75157a49f
 # Source directories: Apple; deduplicated
 # iOS portable export; process rules omitted.
 payload:
@@ -1466,6 +1466,7 @@ payload:
 - DOMAIN-SUFFIX,wwwipodlounge.com
 - DOMAIN-SUFFIX,wwwmacbookair.com
 - DOMAIN-SUFFIX,apple.comscoreresearch.com
+- DOMAIN-SUFFIX,apple.news
 - DOMAIN-SUFFIX,appleenews.com
 - DOMAIN-SUFFIX,applemusic.berlin
 - DOMAIN-SUFFIX,applemusic.co
@@ -1502,7 +1503,6 @@ payload:
 - DOMAIN-SUFFIX,musickit.net
 - DOMAIN-SUFFIX,wwwapplemusic.com
 - DOMAIN-SUFFIX,apple-dns.net
-- DOMAIN-SUFFIX,apple.news
 - DOMAIN-SUFFIX,digicert.com
 - DOMAIN-KEYWORD,apple-support.akadns.net
 - DOMAIN-KEYWORD,apple.com.akadns.net
