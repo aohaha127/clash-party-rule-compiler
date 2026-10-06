@@ -60,7 +60,8 @@ def loon_groups(groups: list[dict]) -> tuple[list[str], list[str]]:
             filter_name = f"筛选-{name}"
             pattern = entry.get("filter", ".*")
             if entry.get("exclude-filter"):
-                pattern = r"(?i)^(?!.*(?:港|HK|Hong[ _-]?Kong)).*$"
+                excluded = entry["exclude-filter"].removeprefix("(?i)")
+                pattern = f"(?i)^(?!.*(?:{excluded})).*$"
             filters.append(f"{filter_name} = NameRegex,机场订阅,FilterKey = {pattern}")
             options = [filter_name, "REJECT"]
         kind = entry["type"]

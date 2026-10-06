@@ -13,11 +13,11 @@
 2. 在「订阅管理」中编辑你的订阅，将该覆写绑定到订阅。
 3. 更新订阅，并检查「节点选择」、地区节点组及各服务策略组。地区节点组根据节点名称筛选；名称不符合筛选式时，该组会为空并回退为 `REJECT`。
 
-该覆写以 `rules` 和 `proxy-groups` 替换订阅中的对应数组，保留订阅提供的 `proxies` 与 `proxy-providers`。策略组默认选择见生成文件；「AI 服务」默认进入排除香港节点的「非港节点」，也可以手动选择其他列出的策略。
+该覆写以 `rules` 和 `proxy-groups` 替换订阅中的对应数组，保留订阅提供的 `proxies` 与 `proxy-providers`。策略组默认选择见生成文件；「AI 服务」默认进入排除香港和俄罗斯节点的「非港节点」，也可以手动选择其他列出的策略。
 
 ### Clash Party Smart 内核
 
-「非港节点」使用 `url-test` 类型，并继续通过 `exclude-filter` 排除名称中带有香港标识的节点。在 Clash Party 的「内核设置 → 使用自动 Smart 规则覆写」开启后，应用会把 `url-test` 组转换为 Smart 组，显示为「非港节点(Smart Group)」，并更新「AI 服务」对它的引用。关闭自动 Smart 覆写时，该组仍会按延迟自动选择非港节点。由于自动覆写也会转换其他 `url-test` 地区组，启用后请在 Clash Party 中检查「AI 服务」选择的是「非港节点(Smart Group)」。
+「非港节点」使用 `url-test` 类型，并继续通过 `exclude-filter` 排除名称中带有香港或俄罗斯标识的节点（含 RU、Russia、俄文、国旗及主要城市名）。在 Clash Party 的「内核设置 → 使用自动 Smart 规则覆写」开启后，应用会把 `url-test` 组转换为 Smart 组，显示为「非港节点(Smart Group)」，并更新「AI 服务」对它的引用。关闭自动 Smart 覆写时，该组仍会按延迟自动选择非港节点。由于自动覆写也会转换其他 `url-test` 地区组，启用后请在 Clash Party 中检查「AI 服务」选择的是「非港节点(Smart Group)」。
 
 ## 合并后的策略组
 
@@ -76,7 +76,7 @@ blackmatrix7 规则文件遵循其 [GPL-2.0 许可](LICENSE)；ACL4SSR 补充规
 
 Stash：先添加自己的节点订阅，再导入并启用一个 `.stoverride`。采用官方 `#!replace` 语法替换策略组、规则集和分流规则，订阅节点及节点提供者保留；其他分流覆写可能再次覆盖这些字段。为「节点选择」选一个可用代理。「非港节点」使用台湾、狮城、日本、美国、韩国地区组；其他地区的非港节点需自行加入这个组。Stash 不使用 Clash Party Smart 自动覆写。
 
-Loon：下载一个 `.conf`，将 `[Remote Proxy]` 中 `https://example.invalid/replace-with-your-loon-subscription` 替换为自己的 **Loon 格式订阅 URL**，再导入配置；这是需要填写节点来源的模板。也可将 `[Remote Filter]`、`[Proxy Group]`、`[Rule]`、`[Remote Rule]` 合并到现有配置，并将筛选规则中的「机场订阅」改为自己的订阅别名，移除原有同名组和重复 FINAL。节点按名称筛选，非港筛选排除香港；无可用节点时请检查分组并手动选择可用策略。规则集按 Loon 资源更新设置拉取，仓库的每日编译不等于 App 每日自动重载本地模板。
+Loon：下载一个 `.conf`，将 `[Remote Proxy]` 中 `https://example.invalid/replace-with-your-loon-subscription` 替换为自己的 **Loon 格式订阅 URL**，再导入配置；这是需要填写节点来源的模板。也可将 `[Remote Filter]`、`[Proxy Group]`、`[Rule]`、`[Remote Rule]` 合并到现有配置，并将筛选规则中的「机场订阅」改为自己的订阅别名，移除原有同名组和重复 FINAL。节点按名称筛选，非港筛选排除香港和俄罗斯；无可用节点时请检查分组并手动选择可用策略。规则集按 Loon 资源更新设置拉取，仓库的每日编译不等于 App 每日自动重载本地模板。
 
 两种导出以 iOS 为兼容目标，省略 `PROCESS-NAME`，因此下载软件/远程桌面进程直连不会在这些导出中生效（Stash macOS 的进程功能也未包含）。域名、IPv4/IPv6、ASN 规则保留；进程规则删除后为空的规则集不再引用。Loon 按其原生机制优先匹配域名、且本地规则优先于远程规则，无法保证与 Clash 的所有 IP/域名交叉覆盖行为完全相同。npm registry 的本地精确规则保留。
 

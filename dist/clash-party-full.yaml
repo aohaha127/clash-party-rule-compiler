@@ -30,7 +30,7 @@ proxy-groups:
 - name: 非港节点
   type: url-test
   include-all: true
-  exclude-filter: (?i)港|HK|Hong[ _-]?Kong
+  exclude-filter: (?i)港|HK|Hong[ _-]?Kong|俄罗斯|俄羅斯|俄国|俄國|莫斯科|圣彼得堡|聖彼得堡|Russia|Moscow|Moskva|Saint[ _-]?Petersburg|Россия|Москва|🇷🇺|(?:^|[^A-Za-z])RU(?:$|[^A-Za-z])
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

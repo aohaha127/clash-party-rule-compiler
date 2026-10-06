@@ -30,9 +30,19 @@ class ClientTests(unittest.TestCase):
         filters, _ = loon_groups(base_groups())
         line = next(line for line in filters if line.startswith("筛选-非港节点 ="))
         pattern = re.compile(line.split("FilterKey = ", 1)[1])
-        for name in ["HK 01", "香港 02", "Hong Kong 03"]:
+        for name in ["HK 01", "香港 02", "Hong Kong 03", "俄罗斯 01", "RU 01", "Russia 01",
+                     "莫斯科", "🇷🇺 01", "Россия 02", "Moscow 03"]:
             self.assertIsNone(pattern.search(name))
         self.assertIsNotNone(pattern.search("台湾 01"))
+        self.assertIsNotNone(pattern.search("Peru 01"))
+
+    def test_mihomo_filter_excludes_russia_without_matching_peru(self):
+        import re
+        group = next(group for group in base_groups() if group["name"] == "非港节点")
+        pattern = re.compile(group["exclude-filter"])
+        for name in ["俄罗斯", "俄羅斯", "RU-01", "🇷🇺", "Russia", "Москва"]:
+            self.assertIsNotNone(pattern.search(name))
+        self.assertIsNone(pattern.search("Peru 01"))
 
 
 if __name__ == "__main__":

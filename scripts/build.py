@@ -185,7 +185,7 @@ def base_groups() -> list[dict]:
          "url": "https://www.gstatic.com/generate_204", "interval": 300,
          "tolerance": 50, "icon": icon("Auto"), "empty-fallback": "REJECT"},
         {"name": "非港节点", "type": "url-test", "include-all": True,
-         "exclude-filter": r"(?i)港|HK|Hong[ _-]?Kong",
+         "exclude-filter": r"(?i)港|HK|Hong[ _-]?Kong|俄罗斯|俄羅斯|俄国|俄國|莫斯科|圣彼得堡|聖彼得堡|Russia|Moscow|Moskva|Saint[ _-]?Petersburg|Россия|Москва|🇷🇺|(?:^|[^A-Za-z])RU(?:$|[^A-Za-z])",
          "url": "https://www.gstatic.com/generate_204", "interval": 300,
          "tolerance": 50, "icon": icon("AI"), "empty-fallback": "REJECT"},
         {"name": "奈飞节点", "type": "select", "include-all": True,
