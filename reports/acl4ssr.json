@@ -698,7 +698,7 @@
   },
   "variants": {
     "default": {
-      "unique_rules": 241028,
+      "unique_rules": 241029,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -1768,7 +1768,7 @@
       }
     },
     "adblock": {
-      "unique_rules": 286014,
+      "unique_rules": 286015,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -10272,7 +10272,7 @@
       }
     },
     "local": {
-      "unique_rules": 241067,
+      "unique_rules": 241068,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -12153,7 +12153,7 @@
       }
     },
     "full": {
-      "unique_rules": 286053,
+      "unique_rules": 286054,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",

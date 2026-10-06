@@ -1,6 +1,6 @@
 {
-  "source_rule_count": 247820,
-  "unique_rule_count": 241009,
+  "source_rule_count": 247821,
+  "unique_rule_count": 241010,
   "duplicate_within_provider": 11,
   "same_group_duplicates_across_providers": 133,
   "cross_group_duplicates": 6667,
