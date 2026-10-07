@@ -1,5 +1,5 @@
 # Derived from ACL4SSR/ACL4SSR; CC-BY-SA-4.0
-# Commit: 7102021bafc77e8d19377603d8b39d3a37cc0264; source: Clash/Ruleset/PrivateTracker.list; curated and deduplicated
+# Commit: 802e3abf065f8609e7d9073ba506158dbe2ba6e7; source: Clash/Ruleset/PrivateTracker.list; curated and deduplicated
 # iOS portable export; process rules omitted.
 payload:
 - DOMAIN-SUFFIX,1ptba.com
