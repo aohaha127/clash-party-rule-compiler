@@ -1,21 +1,21 @@
 {
-  "checked_at_utc": "2026-10-07T05:10:39+00:00",
-  "upstream_commit": "124a5ab5504726bad72915baf3a6ca7e2c92ffcd",
+  "checked_at_utc": "2026-10-08T05:20:52+00:00",
+  "upstream_commit": "036c097eb26c6a52c4f04ebcb6633043cb942669",
   "upstream_repository": "blackmatrix7/ios_rule_script",
   "published_repository": "aohaha127/clash-party-rule-compiler",
   "policy_groups": 55,
   "rule_providers": 81,
   "source_directories": 79,
-  "unique_rules": 241029,
+  "unique_rules": 241054,
   "acl4ssr_commit": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
   "acl4ssr_repository": "ACL4SSR/ACL4SSR",
   "variants": {
     "default": {
-      "unique_rules": 241029,
+      "unique_rules": 241054,
       "exact_duplicates_removed": 69,
       "covered_supplements_removed": 2,
       "cross_policy_duplicates": 43,
-      "suffix_overlap_count": 7873,
+      "suffix_overlap_count": 7874,
       "groups": 55,
       "providers": 81,
       "inline_rules": [
@@ -29,11 +29,11 @@
       }
     },
     "adblock": {
-      "unique_rules": 286015,
+      "unique_rules": 286040,
       "exact_duplicates_removed": 978,
       "covered_supplements_removed": 25,
       "cross_policy_duplicates": 75,
-      "suffix_overlap_count": 8163,
+      "suffix_overlap_count": 8164,
       "groups": 55,
       "providers": 83,
       "inline_rules": [
@@ -49,11 +49,11 @@
       }
     },
     "local": {
-      "unique_rules": 241068,
+      "unique_rules": 241093,
       "exact_duplicates_removed": 170,
       "covered_supplements_removed": 2,
       "cross_policy_duplicates": 47,
-      "suffix_overlap_count": 7878,
+      "suffix_overlap_count": 7879,
       "groups": 55,
       "providers": 84,
       "inline_rules": [
@@ -70,11 +70,11 @@
       }
     },
     "full": {
-      "unique_rules": 286054,
+      "unique_rules": 286079,
       "exact_duplicates_removed": 1079,
       "covered_supplements_removed": 25,
       "cross_policy_duplicates": 79,
-      "suffix_overlap_count": 8168,
+      "suffix_overlap_count": 8169,
       "groups": 55,
       "providers": 86,
       "inline_rules": [
@@ -97,7 +97,7 @@
     "default": {
       "groups": 55,
       "providers": 80,
-      "provider_rules": 240924,
+      "provider_rules": 240949,
       "omitted": {
         "PROCESS-NAME": 105
       },
@@ -107,7 +107,7 @@
     "adblock": {
       "groups": 55,
       "providers": 82,
-      "provider_rules": 285910,
+      "provider_rules": 285935,
       "omitted": {
         "PROCESS-NAME": 105
       },
@@ -117,7 +117,7 @@
     "local": {
       "groups": 55,
       "providers": 82,
-      "provider_rules": 240958,
+      "provider_rules": 240983,
       "omitted": {
         "PROCESS-NAME": 110
       },
@@ -127,7 +127,7 @@
     "full": {
       "groups": 55,
       "providers": 84,
-      "provider_rules": 285944,
+      "provider_rules": 285969,
       "omitted": {
         "PROCESS-NAME": 110
       },

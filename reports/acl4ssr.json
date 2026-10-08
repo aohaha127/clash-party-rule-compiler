@@ -698,7 +698,7 @@
   },
   "variants": {
     "default": {
-      "unique_rules": 241029,
+      "unique_rules": 241054,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -1272,7 +1272,7 @@
       "exact_duplicates_removed": 69,
       "covered_supplements_removed": 2,
       "cross_policy_duplicates": 43,
-      "suffix_overlap_count": 7873,
+      "suffix_overlap_count": 7874,
       "suffix_overlap_examples": [
         {
           "specific": "DOMAIN,local.adguard.org",
@@ -1768,7 +1768,7 @@
       }
     },
     "adblock": {
-      "unique_rules": 286015,
+      "unique_rules": 286040,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -9774,7 +9774,7 @@
       "exact_duplicates_removed": 978,
       "covered_supplements_removed": 25,
       "cross_policy_duplicates": 75,
-      "suffix_overlap_count": 8163,
+      "suffix_overlap_count": 8164,
       "suffix_overlap_examples": [
         {
           "specific": "DOMAIN,local.adguard.org",
@@ -10272,7 +10272,7 @@
       }
     },
     "local": {
-      "unique_rules": 241068,
+      "unique_rules": 241093,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -11654,7 +11654,7 @@
       "exact_duplicates_removed": 170,
       "covered_supplements_removed": 2,
       "cross_policy_duplicates": 47,
-      "suffix_overlap_count": 7878,
+      "suffix_overlap_count": 7879,
       "suffix_overlap_examples": [
         {
           "specific": "DOMAIN,local.adguard.org",
@@ -12153,7 +12153,7 @@
       }
     },
     "full": {
-      "unique_rules": 286054,
+      "unique_rules": 286079,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -20159,7 +20159,7 @@
       "exact_duplicates_removed": 1079,
       "covered_supplements_removed": 25,
       "cross_policy_duplicates": 79,
-      "suffix_overlap_count": 8168,
+      "suffix_overlap_count": 8169,
       "suffix_overlap_examples": [
         {
           "specific": "DOMAIN,local.adguard.org",
