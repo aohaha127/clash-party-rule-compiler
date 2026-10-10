@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script (GPL-2.0)
-# Upstream commit: 036c097eb26c6a52c4f04ebcb6633043cb942669
+# Upstream commit: 83f37120c155f67c8eef43221dabe15cc3c95fec
 # Sources: Google/Google.yaml
 payload:
 - DOMAIN,voice.telephony.goog

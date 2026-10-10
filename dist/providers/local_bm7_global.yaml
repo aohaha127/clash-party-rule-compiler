@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: 036c097eb26c6a52c4f04ebcb6633043cb942669
+# Commit: 83f37120c155f67c8eef43221dabe15cc3c95fec
 # Source directories: Global; deduplicated
 payload:
 - DOMAIN,1password.drift.click
@@ -12842,6 +12842,7 @@ payload:
 - DOMAIN-SUFFIX,meetandfuck.games
 - DOMAIN-SUFFIX,meetandfuckgames.com
 - DOMAIN-SUFFIX,meetsmartbook.com
+- DOMAIN-SUFFIX,megaad.nz
 - DOMAIN-SUFFIX,megacamz.com
 - DOMAIN-SUFFIX,megaeth.com
 - DOMAIN-SUFFIX,megafilmporno.com
@@ -12852,10 +12853,12 @@ payload:
 - DOMAIN-SUFFIX,megamarket.ru
 - DOMAIN-SUFFIX,megamarket.tech
 - DOMAIN-SUFFIX,megamon.co.kr
+- DOMAIN-SUFFIX,megapay.nz
 - DOMAIN-SUFFIX,megaphone.fm
 - DOMAIN-SUFFIX,megapornfreehd.com
 - DOMAIN-SUFFIX,megaporno.com.br
 - DOMAIN-SUFFIX,megapornpics.com
+- DOMAIN-SUFFIX,megas4.com
 - DOMAIN-SUFFIX,megasrv.de
 - DOMAIN-SUFFIX,megatitsminka.com
 - DOMAIN-SUFFIX,megogo.net
@@ -16447,7 +16450,6 @@ payload:
 - DOMAIN-SUFFIX,proxyrarbg.org
 - DOMAIN-SUFFIX,prpops.com
 - DOMAIN-SUFFIX,prs-ltsn.ac.uk
-- DOMAIN-SUFFIX,prts.plus
 - DOMAIN-SUFFIX,prucomm.ac.uk
 - DOMAIN-SUFFIX,prvbank.ru
 - DOMAIN-SUFFIX,ps-exchange.com
@@ -20180,6 +20182,7 @@ payload:
 - DOMAIN-SUFFIX,transarmuito.com
 - DOMAIN-SUFFIX,transcamslive.com
 - DOMAIN-SUFFIX,transcocon.ac.uk
+- DOMAIN-SUFFIX,transfer.it
 - DOMAIN-SUFFIX,transferwise.com
 - DOMAIN-SUFFIX,transforming-musicology.ac.uk
 - DOMAIN-SUFFIX,transformingmusicology.ac.uk

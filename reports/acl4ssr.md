@@ -7,10 +7,10 @@
 
 | 版本 | 策略组 | 规则集 | 规则条目 |
 |---|---:|---:|---:|
-| default | 55 | 81 | 241054 |
-| adblock | 55 | 83 | 286040 |
-| local | 55 | 84 | 241093 |
-| full | 55 | 86 | 286079 |
+| default | 55 | 81 | 241441 |
+| adblock | 55 | 83 | 286426 |
+| local | 55 | 84 | 241480 |
+| full | 55 | 86 | 286465 |
 
 ## default 重复与策略归类示例
 
@@ -1072,6 +1072,7 @@
 | `DOMAIN-SUFFIX,gloporn.com` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,incloak.com` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,mediasama.com` | 广告拦截 | 国外网站 | exact |
+| `DOMAIN-SUFFIX,megaad.nz` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,pctlwm.com` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,pornvideos.casa` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,prpops.com` | 广告拦截 | 国外网站 | exact |
@@ -1091,7 +1092,6 @@
 | `DOMAIN-SUFFIX,quay.io` | 开发工具 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,redhat.com` | 开发工具 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,sonatype.org` | 开发工具 | 国外网站 | exact |
-| `DOMAIN-SUFFIX,sourcegraph.com` | 开发工具 | 国外网站 | exact |
 
 ## local 重复与策略归类示例
 
