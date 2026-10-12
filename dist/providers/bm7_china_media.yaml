@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: 83f37120c155f67c8eef43221dabe15cc3c95fec
+# Commit: 19c84682407580056d0ae2f27e406f70db679de1
 # Source directories: ChinaMedia; deduplicated
 payload:
 - DOMAIN,00713915daab0be43def5c338c02c80b.dlied1.cdntips.net
