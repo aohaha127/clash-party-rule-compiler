@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: 19c84682407580056d0ae2f27e406f70db679de1
+# Commit: d8363caa2c1e47fb735615316032bed3f475ee57
 # Source directories: Whatsapp; deduplicated
 # Loon rule set; process rules omitted.
 DOMAIN,graph.facebook.com

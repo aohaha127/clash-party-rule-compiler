@@ -1,6 +1,6 @@
 {
-  "source_rule_count": 248348,
-  "unique_rule_count": 241537,
+  "source_rule_count": 247582,
+  "unique_rule_count": 240771,
   "duplicate_within_provider": 11,
   "same_group_duplicates_across_providers": 133,
   "cross_group_duplicates": 6667,
@@ -386,17 +386,17 @@
       "count": 3
     },
     {
+      "kept_group": "网易音乐",
+      "removed_group": "国内直连",
+      "count": 3
+    },
+    {
       "kept_group": "谷歌服务",
       "removed_group": "国内直连",
       "count": 3
     },
     {
       "kept_group": "DIRECT",
-      "removed_group": "国内直连",
-      "count": 3
-    },
-    {
-      "kept_group": "网易音乐",
       "removed_group": "国内直连",
       "count": 3
     },
@@ -1644,7 +1644,7 @@
       "removed_mode": "proxy"
     }
   ],
-  "domain_suffix_overlap_count": 7862,
+  "domain_suffix_overlap_count": 7852,
   "domain_suffix_overlap_examples": [
     {
       "specific": "DOMAIN,local.adguard.org",
@@ -2097,12 +2097,6 @@
       "broader_group": "隐私拦截"
     },
     {
-      "specific": "DOMAIN,360doo.com",
-      "specific_group": "广告拦截",
-      "broader": "DOMAIN-SUFFIX,360doo.com",
-      "broader_group": "国内直连"
-    },
-    {
       "specific": "DOMAIN,36500.net",
       "specific_group": "广告拦截",
       "broader": "DOMAIN-SUFFIX,36500.net",
@@ -2122,6 +2116,12 @@
     },
     {
       "specific": "DOMAIN,49453k0l.vr.loveota.com",
+      "specific_group": "广告拦截",
+      "broader": "DOMAIN-SUFFIX,loveota.com",
+      "broader_group": "国内直连"
+    },
+    {
+      "specific": "DOMAIN,49453k0l.vs.loveota.com",
       "specific_group": "广告拦截",
       "broader": "DOMAIN-SUFFIX,loveota.com",
       "broader_group": "国内直连"

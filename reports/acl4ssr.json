@@ -698,7 +698,7 @@
   },
   "variants": {
     "default": {
-      "unique_rules": 241556,
+      "unique_rules": 240790,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -1272,7 +1272,7 @@
       "exact_duplicates_removed": 69,
       "covered_supplements_removed": 2,
       "cross_policy_duplicates": 43,
-      "suffix_overlap_count": 7873,
+      "suffix_overlap_count": 7863,
       "suffix_overlap_examples": [
         {
           "specific": "DOMAIN,local.adguard.org",
@@ -1725,12 +1725,6 @@
           "broader_group": "隐私拦截"
         },
         {
-          "specific": "DOMAIN,360doo.com",
-          "specific_group": "广告拦截",
-          "broader": "DOMAIN-SUFFIX,360doo.com",
-          "broader_group": "国内直连"
-        },
-        {
           "specific": "DOMAIN,36500.net",
           "specific_group": "广告拦截",
           "broader": "DOMAIN-SUFFIX,36500.net",
@@ -1753,6 +1747,12 @@
           "specific_group": "广告拦截",
           "broader": "DOMAIN-SUFFIX,loveota.com",
           "broader_group": "国内直连"
+        },
+        {
+          "specific": "DOMAIN,49453k0l.vs.loveota.com",
+          "specific_group": "广告拦截",
+          "broader": "DOMAIN-SUFFIX,loveota.com",
+          "broader_group": "国内直连"
         }
       ],
       "groups": 55,
@@ -1768,7 +1768,7 @@
       }
     },
     "adblock": {
-      "unique_rules": 286541,
+      "unique_rules": 285775,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -9774,7 +9774,7 @@
       "exact_duplicates_removed": 979,
       "covered_supplements_removed": 25,
       "cross_policy_duplicates": 76,
-      "suffix_overlap_count": 8162,
+      "suffix_overlap_count": 8152,
       "suffix_overlap_examples": [
         {
           "specific": "DOMAIN,local.adguard.org",
@@ -10227,12 +10227,6 @@
           "broader_group": "隐私拦截"
         },
         {
-          "specific": "DOMAIN,360doo.com",
-          "specific_group": "广告拦截",
-          "broader": "DOMAIN-SUFFIX,360doo.com",
-          "broader_group": "国内直连"
-        },
-        {
           "specific": "DOMAIN,36500.net",
           "specific_group": "广告拦截",
           "broader": "DOMAIN-SUFFIX,36500.net",
@@ -10255,6 +10249,12 @@
           "specific_group": "广告拦截",
           "broader": "DOMAIN-SUFFIX,loveota.com",
           "broader_group": "国内直连"
+        },
+        {
+          "specific": "DOMAIN,49453k0l.vs.loveota.com",
+          "specific_group": "广告拦截",
+          "broader": "DOMAIN-SUFFIX,loveota.com",
+          "broader_group": "国内直连"
         }
       ],
       "groups": 55,
@@ -10272,7 +10272,7 @@
       }
     },
     "local": {
-      "unique_rules": 241595,
+      "unique_rules": 240829,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -11654,7 +11654,7 @@
       "exact_duplicates_removed": 170,
       "covered_supplements_removed": 2,
       "cross_policy_duplicates": 47,
-      "suffix_overlap_count": 7878,
+      "suffix_overlap_count": 7868,
       "suffix_overlap_examples": [
         {
           "specific": "DOMAIN,local.adguard.org",
@@ -12107,12 +12107,6 @@
           "broader_group": "隐私拦截"
         },
         {
-          "specific": "DOMAIN,360doo.com",
-          "specific_group": "广告拦截",
-          "broader": "DOMAIN-SUFFIX,360doo.com",
-          "broader_group": "国内直连"
-        },
-        {
           "specific": "DOMAIN,36500.net",
           "specific_group": "广告拦截",
           "broader": "DOMAIN-SUFFIX,36500.net",
@@ -12135,6 +12129,12 @@
           "specific_group": "广告拦截",
           "broader": "DOMAIN-SUFFIX,loveota.com",
           "broader_group": "国内直连"
+        },
+        {
+          "specific": "DOMAIN,49453k0l.vs.loveota.com",
+          "specific_group": "广告拦截",
+          "broader": "DOMAIN-SUFFIX,loveota.com",
+          "broader_group": "国内直连"
         }
       ],
       "groups": 55,
@@ -12153,7 +12153,7 @@
       }
     },
     "full": {
-      "unique_rules": 286580,
+      "unique_rules": 285814,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -20159,7 +20159,7 @@
       "exact_duplicates_removed": 1080,
       "covered_supplements_removed": 25,
       "cross_policy_duplicates": 80,
-      "suffix_overlap_count": 8167,
+      "suffix_overlap_count": 8157,
       "suffix_overlap_examples": [
         {
           "specific": "DOMAIN,local.adguard.org",
@@ -20612,12 +20612,6 @@
           "broader_group": "隐私拦截"
         },
         {
-          "specific": "DOMAIN,360doo.com",
-          "specific_group": "广告拦截",
-          "broader": "DOMAIN-SUFFIX,360doo.com",
-          "broader_group": "国内直连"
-        },
-        {
           "specific": "DOMAIN,36500.net",
           "specific_group": "广告拦截",
           "broader": "DOMAIN-SUFFIX,36500.net",
@@ -20637,6 +20631,12 @@
         },
         {
           "specific": "DOMAIN,49453k0l.vr.loveota.com",
+          "specific_group": "广告拦截",
+          "broader": "DOMAIN-SUFFIX,loveota.com",
+          "broader_group": "国内直连"
+        },
+        {
+          "specific": "DOMAIN,49453k0l.vs.loveota.com",
           "specific_group": "广告拦截",
           "broader": "DOMAIN-SUFFIX,loveota.com",
           "broader_group": "国内直连"

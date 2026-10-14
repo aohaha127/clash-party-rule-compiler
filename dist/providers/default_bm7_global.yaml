@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: 19c84682407580056d0ae2f27e406f70db679de1
+# Commit: d8363caa2c1e47fb735615316032bed3f475ee57
 # Source directories: Global; deduplicated
 payload:
 - DOMAIN,1password.drift.click
@@ -580,6 +580,7 @@ payload:
 - DOMAIN-SUFFIX,91sesex.xyz
 - DOMAIN-SUFFIX,91sew.xyz
 - DOMAIN-SUFFIX,91sew40.buzz
+- DOMAIN-SUFFIX,91short.com
 - DOMAIN-SUFFIX,91vhome.com
 - DOMAIN-SUFFIX,920share.com
 - DOMAIN-SUFFIX,921bb.com
