@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: d8363caa2c1e47fb735615316032bed3f475ee57
+# Commit: 933875d42861a7fdfd9f945cd18605d74fa7e943
 # Source directories: TikTok; deduplicated
 payload:
 - DOMAIN,lf16-effectcdn.byteeffecttos-g.com
@@ -11,6 +11,9 @@ payload:
 - DOMAIN-SUFFIX,byteintlapi.com
 - DOMAIN-SUFFIX,byteoversea.com
 - DOMAIN-SUFFIX,capcut.com
+- DOMAIN-SUFFIX,capcutapi.com
+- DOMAIN-SUFFIX,capcutapi.us
+- DOMAIN-SUFFIX,capcutstatic.com
 - DOMAIN-SUFFIX,ibytedtos.com
 - DOMAIN-SUFFIX,ibyteimg.com
 - DOMAIN-SUFFIX,ipstatp.com

@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script (GPL-2.0)
-# Upstream commit: d8363caa2c1e47fb735615316032bed3f475ee57
+# Upstream commit: 933875d42861a7fdfd9f945cd18605d74fa7e943
 # Sources: Download/Download.yaml
 payload:
 - DOMAIN-SUFFIX,qbittorrent.org

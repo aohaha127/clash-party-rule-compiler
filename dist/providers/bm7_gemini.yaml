@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: d8363caa2c1e47fb735615316032bed3f475ee57
+# Commit: 933875d42861a7fdfd9f945cd18605d74fa7e943
 # Source directories: Gemini, BardAI; deduplicated
 payload:
 - DOMAIN,ai.google.dev
