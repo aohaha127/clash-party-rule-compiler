@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: 933875d42861a7fdfd9f945cd18605d74fa7e943
+# Commit: 7dd06b44f5093dd5404e1e5f3bca5452d97146ef
 # Source directories: BiliBili; deduplicated
 payload:
 - DOMAIN,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com

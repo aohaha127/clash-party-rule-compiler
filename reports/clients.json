@@ -8,7 +8,7 @@
     "default": {
       "groups": 55,
       "providers": 80,
-      "provider_rules": 240399,
+      "provider_rules": 240316,
       "omitted": {
         "PROCESS-NAME": 105
       },
@@ -18,7 +18,7 @@
     "adblock": {
       "groups": 55,
       "providers": 82,
-      "provider_rules": 285384,
+      "provider_rules": 285301,
       "omitted": {
         "PROCESS-NAME": 105
       },
@@ -28,7 +28,7 @@
     "local": {
       "groups": 55,
       "providers": 82,
-      "provider_rules": 240433,
+      "provider_rules": 240350,
       "omitted": {
         "PROCESS-NAME": 110
       },
@@ -38,7 +38,7 @@
     "full": {
       "groups": 55,
       "providers": 84,
-      "provider_rules": 285418,
+      "provider_rules": 285335,
       "omitted": {
         "PROCESS-NAME": 110
       },
