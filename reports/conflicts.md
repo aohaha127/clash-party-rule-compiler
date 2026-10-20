@@ -1,12 +1,12 @@
 # 规则重复与覆盖报告
 
-- 上游版本：`7dd06b44f5093dd5404e1e5f3bca5452d97146ef`
-- 原始规则条数：247,213
-- 去重后规则条数：240,402
+- 上游版本：`f9e403a75bbc4bee939c6d8dd766cf78f1b512f3`
+- 原始规则条数：247,231
+- 去重后规则条数：240,419
 - 同一规则集内重复：11
 - 同组不同规则集的相同规则：133
-- 跨组相同规则：6,667
-- 不同策略组的域名后缀覆盖：7,846
+- 跨组相同规则：6,668
+- 不同策略组的域名后缀覆盖：7,848
 
 规则按 `dist/clash-party.yaml` 中的先后顺序匹配。完全相同的规则仅保留先出现的一条。
 域名后缀覆盖保留在报告中，专用规则优先于通用合集。
@@ -56,8 +56,8 @@
 | TikTok | 国外网站 | 17 |
 | 国内媒体 | 国外媒体 | 16 |
 | Spotify | 国外网站 | 16 |
+| Prime Video | 国外网站 | 15 |
 | AI 服务 | 国外网站 | 15 |
-| Prime Video | 国外网站 | 14 |
 | TikTok | 国外媒体 | 13 |
 | 微软云盘 | 微软服务 | 12 |
 | 广告拦截 | 国内媒体 | 12 |
@@ -80,6 +80,8 @@
 | 专用规则 | 策略组 | 通用后缀 | 策略组 |
 |---|---|---|---|
 | `DOMAIN,local.adguard.org` | DIRECT | `DOMAIN-SUFFIX,adguard.org` | 国外网站 |
+| `DOMAIN,localhost.weixin.qq.com` | DIRECT | `DOMAIN-SUFFIX,qq.com` | 国内直连 |
+| `DOMAIN,localhost.work.weixin.qq.com` | DIRECT | `DOMAIN-SUFFIX,qq.com` | 国内直连 |
 | `DOMAIN,oasisauth.h3c.com` | DIRECT | `DOMAIN-SUFFIX,h3c.com` | 国内直连 |
 | `DOMAIN,router.asus.com` | DIRECT | `DOMAIN-SUFFIX,asus.com` | 国外网站 |
 | `DOMAIN-SUFFIX,kis.v2.scr.kaspersky-labs.com` | DIRECT | `DOMAIN-SUFFIX,kaspersky-labs.com` | 国内直连 |
@@ -117,8 +119,6 @@
 | `DOMAIN,time.apple.com` | 国内直连 | `DOMAIN-SUFFIX,apple.com` | 苹果服务 |
 | `DOMAIN,tracking.miui.com` | 国内直连 | `DOMAIN-SUFFIX,tracking.miui.com` | 隐私拦截 |
 | `DOMAIN,update.googleapis.com` | 国内直连 | `DOMAIN-SUFFIX,googleapis.com` | 谷歌服务 |
-| `DOMAIN,vd.l.qq.com` | 国内直连 | `DOMAIN-SUFFIX,l.qq.com` | 广告拦截 |
-| `DOMAIN,vi.l.qq.com` | 国内直连 | `DOMAIN-SUFFIX,l.qq.com` | 广告拦截 |
 
 ## 拦截规则与服务规则相撞
 

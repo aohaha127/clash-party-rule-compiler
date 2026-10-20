@@ -1,9 +1,9 @@
 {
-  "source_rule_count": 247213,
-  "unique_rule_count": 240402,
+  "source_rule_count": 247231,
+  "unique_rule_count": 240419,
   "duplicate_within_provider": 11,
   "same_group_duplicates_across_providers": 133,
-  "cross_group_duplicates": 6667,
+  "cross_group_duplicates": 6668,
   "exact_duplicates_by_group_pair": [
     {
       "kept_group": "苹果服务",
@@ -221,14 +221,14 @@
       "count": 16
     },
     {
-      "kept_group": "AI 服务",
+      "kept_group": "Prime Video",
       "removed_group": "国外网站",
       "count": 15
     },
     {
-      "kept_group": "Prime Video",
+      "kept_group": "AI 服务",
       "removed_group": "国外网站",
-      "count": 14
+      "count": 15
     },
     {
       "kept_group": "TikTok",
@@ -1644,13 +1644,25 @@
       "removed_mode": "proxy"
     }
   ],
-  "domain_suffix_overlap_count": 7846,
+  "domain_suffix_overlap_count": 7848,
   "domain_suffix_overlap_examples": [
     {
       "specific": "DOMAIN,local.adguard.org",
       "specific_group": "DIRECT",
       "broader": "DOMAIN-SUFFIX,adguard.org",
       "broader_group": "国外网站"
+    },
+    {
+      "specific": "DOMAIN,localhost.weixin.qq.com",
+      "specific_group": "DIRECT",
+      "broader": "DOMAIN-SUFFIX,qq.com",
+      "broader_group": "国内直连"
+    },
+    {
+      "specific": "DOMAIN,localhost.work.weixin.qq.com",
+      "specific_group": "DIRECT",
+      "broader": "DOMAIN-SUFFIX,qq.com",
+      "broader_group": "国内直连"
     },
     {
       "specific": "DOMAIN,oasisauth.h3c.com",
@@ -2113,18 +2125,6 @@
       "specific_group": "广告拦截",
       "broader": "DOMAIN-SUFFIX,3gl.net",
       "broader_group": "隐私拦截"
-    },
-    {
-      "specific": "DOMAIN,49453k0l.vr.loveota.com",
-      "specific_group": "广告拦截",
-      "broader": "DOMAIN-SUFFIX,loveota.com",
-      "broader_group": "国内直连"
-    },
-    {
-      "specific": "DOMAIN,49453k0l.vs.loveota.com",
-      "specific_group": "广告拦截",
-      "broader": "DOMAIN-SUFFIX,loveota.com",
-      "broader_group": "国内直连"
     }
   ]
 }

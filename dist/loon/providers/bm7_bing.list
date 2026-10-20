@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: 7dd06b44f5093dd5404e1e5f3bca5452d97146ef
+# Commit: f9e403a75bbc4bee939c6d8dd766cf78f1b512f3
 # Source directories: Bing; deduplicated
 # Loon rule set; process rules omitted.
 DOMAIN-SUFFIX,bing.com
