@@ -102,3 +102,7 @@ Loon：下载一个 `.conf`，将 `[Remote Proxy]` 中 `https://example.invalid/
 `registry.npmjs.org` 额外使用内嵌精确规则 `DOMAIN,registry.npmjs.org,开发工具`，排在局域网规则后，不依赖 NPM 规则集下载。现有 `npmjs.org` 后缀覆盖仍保留，两者目标一致。此规则仅对进入 Clash 的连接生效；npm 没有经过 TUN 或显式代理时，仍需指定 npm 代理。
 
 完全相同规则按顺序去重；ACL 补充被此前同策略后缀覆盖时省略。跨策略后缀覆盖保留并报告，避免删除有意设置的服务例外。最新规则数、补充保留数与各版本统计见 [build-info.json](dist/build-info.json)，排除原因与归类变化见 [ACL4SSR 报告](reports/acl4ssr.md) / [完整 JSON](reports/acl4ssr.json)。原 conflicts.md 专门记录 blackmatrix7 编译阶段。
+
+### 自定义广告域名
+
+`s.chmsrv.com` 使用内嵌精确域名规则交给「广告拦截」策略组，适用于全部 Clash Party、Stash 和 Loon 版本，不依赖远程规则集下载。仅匹配该主机，不扩大到整个 `chmsrv.com`；每日编译会保留。请将「广告拦截」设为 `REJECT` 以启用拦截。
