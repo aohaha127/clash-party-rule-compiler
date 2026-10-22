@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-22T04:00:12+00:00",
+  "checked_at_utc": "2026-10-22T19:05:41+00:00",
   "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
   "upstream_repository": "blackmatrix7/ios_rule_script",
   "published_repository": "aohaha127/clash-party-rule-compiler",
@@ -19,7 +19,8 @@
       "groups": 55,
       "providers": 81,
       "inline_rules": [
-        "DOMAIN,registry.npmjs.org,开发工具"
+        "DOMAIN,registry.npmjs.org,开发工具",
+        "DOMAIN,s.chmsrv.com,广告拦截"
       ],
       "acl_providers": {
         "acl_game_download": 19,
@@ -37,7 +38,8 @@
       "groups": 55,
       "providers": 83,
       "inline_rules": [
-        "DOMAIN,registry.npmjs.org,开发工具"
+        "DOMAIN,registry.npmjs.org,开发工具",
+        "DOMAIN,s.chmsrv.com,广告拦截"
       ],
       "acl_providers": {
         "acl_game_download": 19,
@@ -57,7 +59,8 @@
       "groups": 55,
       "providers": 84,
       "inline_rules": [
-        "DOMAIN,registry.npmjs.org,开发工具"
+        "DOMAIN,registry.npmjs.org,开发工具",
+        "DOMAIN,s.chmsrv.com,广告拦截"
       ],
       "acl_providers": {
         "acl_game_download": 19,
@@ -78,7 +81,8 @@
       "groups": 55,
       "providers": 86,
       "inline_rules": [
-        "DOMAIN,registry.npmjs.org,开发工具"
+        "DOMAIN,registry.npmjs.org,开发工具",
+        "DOMAIN,s.chmsrv.com,广告拦截"
       ],
       "acl_providers": {
         "acl_game_download": 19,
