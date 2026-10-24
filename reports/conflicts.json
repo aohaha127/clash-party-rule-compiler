@@ -1,9 +1,9 @@
 {
-  "source_rule_count": 247231,
-  "unique_rule_count": 240419,
+  "source_rule_count": 247314,
+  "unique_rule_count": 240484,
   "duplicate_within_provider": 11,
   "same_group_duplicates_across_providers": 133,
-  "cross_group_duplicates": 6668,
+  "cross_group_duplicates": 6686,
   "exact_duplicates_by_group_pair": [
     {
       "kept_group": "苹果服务",
@@ -43,7 +43,7 @@
     {
       "kept_group": "游戏代理",
       "removed_group": "游戏直连",
-      "count": 201
+      "count": 216
     },
     {
       "kept_group": "YouTube",
@@ -78,7 +78,7 @@
     {
       "kept_group": "游戏代理",
       "removed_group": "国外网站",
-      "count": 133
+      "count": 136
     },
     {
       "kept_group": "哔哩哔哩",

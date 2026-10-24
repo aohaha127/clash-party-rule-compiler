@@ -1,6 +1,6 @@
 {
   "repository": "ACL4SSR/ACL4SSR",
-  "commit": "575637df38884575bfa523e95c17d0ee3be1676c",
+  "commit": "3024bf8b2c9db5bf8807c4595674be8bbc22bd86",
   "excluded_rules": {
     "ai": [
       {
@@ -698,7 +698,7 @@
   },
   "variants": {
     "default": {
-      "unique_rules": 240438,
+      "unique_rules": 240503,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -1769,7 +1769,7 @@
       }
     },
     "adblock": {
-      "unique_rules": 285423,
+      "unique_rules": 285488,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -10274,7 +10274,7 @@
       }
     },
     "local": {
-      "unique_rules": 240477,
+      "unique_rules": 240542,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -12156,7 +12156,7 @@
       }
     },
     "full": {
-      "unique_rules": 285462,
+      "unique_rules": 285527,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",

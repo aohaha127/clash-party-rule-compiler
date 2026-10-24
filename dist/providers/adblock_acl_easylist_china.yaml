@@ -1,5 +1,5 @@
 # Derived from ACL4SSR/ACL4SSR; CC-BY-SA-4.0
-# Commit: 575637df38884575bfa523e95c17d0ee3be1676c; source: Clash/BanEasyListChina.list; curated and deduplicated
+# Commit: 3024bf8b2c9db5bf8807c4595674be8bbc22bd86; source: Clash/BanEasyListChina.list; curated and deduplicated
 payload:
 - DOMAIN-SUFFIX,00p034d0dw.com
 - DOMAIN-SUFFIX,01210sop.xyz

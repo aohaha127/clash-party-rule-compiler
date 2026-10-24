@@ -1,16 +1,16 @@
 # ACL4SSR 补充与冲突报告
 
-上游：ACL4SSR/ACL4SSR @ `575637df38884575bfa523e95c17d0ee3be1676c`。
+上游：ACL4SSR/ACL4SSR @ `3024bf8b2c9db5bf8807c4595674be8bbc22bd86`。
 
 完全重复保留先匹配的规则；补充规则已被同策略后缀覆盖时省略。拦截策略优先。
 原 blackmatrix7 统计见 conflicts.md；合并后统计见本报告及 build-info.json。
 
 | 版本 | 策略组 | 规则集 | 规则条目 |
 |---|---:|---:|---:|
-| default | 55 | 81 | 240438 |
-| adblock | 55 | 83 | 285423 |
-| local | 55 | 84 | 240477 |
-| full | 55 | 86 | 285462 |
+| default | 55 | 81 | 240503 |
+| adblock | 55 | 83 | 285488 |
+| local | 55 | 84 | 240542 |
+| full | 55 | 86 | 285527 |
 
 ## default 重复与策略归类示例
 

@@ -1,17 +1,17 @@
 {
-  "checked_at_utc": "2026-10-23T04:03:25+00:00",
-  "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+  "checked_at_utc": "2026-10-24T03:57:33+00:00",
+  "upstream_commit": "00d82f6c6c374abb947fabc9c1b69f2a22e71dbc",
   "upstream_repository": "blackmatrix7/ios_rule_script",
   "published_repository": "aohaha127/clash-party-rule-compiler",
   "policy_groups": 55,
   "rule_providers": 81,
   "source_directories": 79,
-  "unique_rules": 240438,
-  "acl4ssr_commit": "575637df38884575bfa523e95c17d0ee3be1676c",
+  "unique_rules": 240503,
+  "acl4ssr_commit": "3024bf8b2c9db5bf8807c4595674be8bbc22bd86",
   "acl4ssr_repository": "ACL4SSR/ACL4SSR",
   "variants": {
     "default": {
-      "unique_rules": 240438,
+      "unique_rules": 240503,
       "exact_duplicates_removed": 69,
       "covered_supplements_removed": 2,
       "cross_policy_duplicates": 43,
@@ -30,7 +30,7 @@
       }
     },
     "adblock": {
-      "unique_rules": 285423,
+      "unique_rules": 285488,
       "exact_duplicates_removed": 979,
       "covered_supplements_removed": 25,
       "cross_policy_duplicates": 76,
@@ -51,7 +51,7 @@
       }
     },
     "local": {
-      "unique_rules": 240477,
+      "unique_rules": 240542,
       "exact_duplicates_removed": 170,
       "covered_supplements_removed": 2,
       "cross_policy_duplicates": 47,
@@ -73,7 +73,7 @@
       }
     },
     "full": {
-      "unique_rules": 285462,
+      "unique_rules": 285527,
       "exact_duplicates_removed": 1080,
       "covered_supplements_removed": 25,
       "cross_policy_duplicates": 80,
@@ -101,7 +101,7 @@
     "default": {
       "groups": 55,
       "providers": 80,
-      "provider_rules": 240333,
+      "provider_rules": 240398,
       "omitted": {
         "PROCESS-NAME": 105
       },
@@ -111,7 +111,7 @@
     "adblock": {
       "groups": 55,
       "providers": 82,
-      "provider_rules": 285318,
+      "provider_rules": 285383,
       "omitted": {
         "PROCESS-NAME": 105
       },
@@ -121,7 +121,7 @@
     "local": {
       "groups": 55,
       "providers": 82,
-      "provider_rules": 240367,
+      "provider_rules": 240432,
       "omitted": {
         "PROCESS-NAME": 110
       },
@@ -131,7 +131,7 @@
     "full": {
       "groups": 55,
       "providers": 84,
-      "provider_rules": 285352,
+      "provider_rules": 285417,
       "omitted": {
         "PROCESS-NAME": 110
       },
