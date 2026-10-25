@@ -14,6 +14,8 @@ from catalog import REGIONS
 
 SUPPORTED = {"DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD", "IP-CIDR", "IP-CIDR6", "IP-ASN"}
 NON_HK = [name for name, _, _ in REGIONS if name != "香港节点"]
+STASH_NOTICE_FILTER = (r"剩余流量|剩餘流量|套餐到期|到期时间|到期時間|流量重置|下次重置|"
+                       r"订阅到期|訂閱到期|有效期|官网|官網|公告")
 VARIANTS = {"default": "clash-party.yaml", "adblock": "clash-party-adblock.yaml",
             "local": "clash-party-local-services.yaml", "full": "clash-party-full.yaml"}
 
@@ -46,8 +48,9 @@ def stash_groups(groups: list[dict]) -> list[dict]:
             entry["proxies"] = [*NON_HK, "REJECT"]
         elif entry.get("include-all"):
             entry["proxies"] = ["REJECT"]
-            if entry.get("filter"):
-                entry["filter"] = f"(?:{entry['filter']})|^REJECT$"
+            original = entry.get("filter", ".*").replace("(?i)", "")
+            entry["filter"] = (f"(?i)^(?!.*(?:{STASH_NOTICE_FILTER}))"
+                               f"(?=.*(?:{original}|^REJECT$)).*$")
     return output
 
 

@@ -21,6 +21,7 @@ proxy-groups: #!replace
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png
   proxies:
   - REJECT
+  filter: (?i)^(?!.*(?:剩余流量|剩餘流量|套餐到期|到期时间|到期時間|流量重置|下次重置|订阅到期|訂閱到期|有效期|官网|官網|公告))(?=.*(?:.*|^REJECT$)).*$
 - name: 自动选择
   type: url-test
   include-all: true
@@ -30,6 +31,7 @@ proxy-groups: #!replace
   benchmark-url: https://www.gstatic.com/generate_204
   proxies:
   - REJECT
+  filter: (?i)^(?!.*(?:剩余流量|剩餘流量|套餐到期|到期时间|到期時間|流量重置|下次重置|订阅到期|訂閱到期|有效期|官网|官網|公告))(?=.*(?:.*|^REJECT$)).*$
 - name: 非港节点
   type: url-test
   interval: 300
@@ -46,14 +48,14 @@ proxy-groups: #!replace
 - name: 奈飞节点
   type: select
   include-all: true
-  filter: (?:(?i)NF|奈飞|解锁|Netflix|Media)|^REJECT$
+  filter: (?i)^(?!.*(?:剩余流量|剩餘流量|套餐到期|到期时间|到期時間|流量重置|下次重置|订阅到期|訂閱到期|有效期|官网|官網|公告))(?=.*(?:NF|奈飞|解锁|Netflix|Media|^REJECT$)).*$
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
   proxies:
   - REJECT
 - name: 香港节点
   type: url-test
   include-all: true
-  filter: (?:(?i)港|HK|Hong[ _-]?Kong)|^REJECT$
+  filter: (?i)^(?!.*(?:剩余流量|剩餘流量|套餐到期|到期时间|到期時間|流量重置|下次重置|订阅到期|訂閱到期|有效期|官网|官網|公告))(?=.*(?:港|HK|Hong[ _-]?Kong|^REJECT$)).*$
   interval: 300
   tolerance: 50
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png
@@ -63,7 +65,7 @@ proxy-groups: #!replace
 - name: 台湾节点
   type: url-test
   include-all: true
-  filter: (?:(?i)台|TW|Taiwan)|^REJECT$
+  filter: (?i)^(?!.*(?:剩余流量|剩餘流量|套餐到期|到期时间|到期時間|流量重置|下次重置|订阅到期|訂閱到期|有效期|官网|官網|公告))(?=.*(?:台|TW|Taiwan|^REJECT$)).*$
   interval: 300
   tolerance: 50
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png
@@ -73,7 +75,7 @@ proxy-groups: #!replace
 - name: 狮城节点
   type: url-test
   include-all: true
-  filter: (?:(?i)新加坡|坡|狮城|SG|Singapore)|^REJECT$
+  filter: (?i)^(?!.*(?:剩余流量|剩餘流量|套餐到期|到期时间|到期時間|流量重置|下次重置|订阅到期|訂閱到期|有效期|官网|官網|公告))(?=.*(?:新加坡|坡|狮城|SG|Singapore|^REJECT$)).*$
   interval: 300
   tolerance: 50
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png
@@ -83,7 +85,7 @@ proxy-groups: #!replace
 - name: 日本节点
   type: url-test
   include-all: true
-  filter: (?:(?i)日本|东京|大阪|JP|Japan)|^REJECT$
+  filter: (?i)^(?!.*(?:剩余流量|剩餘流量|套餐到期|到期时间|到期時間|流量重置|下次重置|订阅到期|訂閱到期|有效期|官网|官網|公告))(?=.*(?:日本|东京|大阪|JP|Japan|^REJECT$)).*$
   interval: 300
   tolerance: 50
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png
@@ -93,7 +95,7 @@ proxy-groups: #!replace
 - name: 美国节点
   type: url-test
   include-all: true
-  filter: (?:(?i)美|US|United[ _-]?States)|^REJECT$
+  filter: (?i)^(?!.*(?:剩余流量|剩餘流量|套餐到期|到期时间|到期時間|流量重置|下次重置|订阅到期|訂閱到期|有效期|官网|官網|公告))(?=.*(?:美|US|United[ _-]?States|^REJECT$)).*$
   interval: 300
   tolerance: 50
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
@@ -103,7 +105,7 @@ proxy-groups: #!replace
 - name: 韩国节点
   type: url-test
   include-all: true
-  filter: (?:(?i)韩|韓|首尔|KR|Korea)|^REJECT$
+  filter: (?i)^(?!.*(?:剩余流量|剩餘流量|套餐到期|到期时间|到期時間|流量重置|下次重置|订阅到期|訂閱到期|有效期|官网|官網|公告))(?=.*(?:韩|韓|首尔|KR|Korea|^REJECT$)).*$
   interval: 300
   tolerance: 50
   icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png
