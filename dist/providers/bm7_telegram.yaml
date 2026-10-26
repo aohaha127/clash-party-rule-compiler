@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: 00d82f6c6c374abb947fabc9c1b69f2a22e71dbc
+# Commit: 9b29c945b9164a02c7018ed333cb9b5bc1bcb417
 # Source directories: Telegram; deduplicated
 payload:
 - DOMAIN,api.imem.app
