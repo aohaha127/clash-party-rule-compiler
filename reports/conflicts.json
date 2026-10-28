@@ -1,6 +1,6 @@
 {
-  "source_rule_count": 247051,
-  "unique_rule_count": 240222,
+  "source_rule_count": 247063,
+  "unique_rule_count": 240234,
   "duplicate_within_provider": 11,
   "same_group_duplicates_across_providers": 132,
   "cross_group_duplicates": 6686,
@@ -1644,7 +1644,7 @@
       "removed_mode": "proxy"
     }
   ],
-  "domain_suffix_overlap_count": 7847,
+  "domain_suffix_overlap_count": 7849,
   "domain_suffix_overlap_examples": [
     {
       "specific": "DOMAIN,local.adguard.org",

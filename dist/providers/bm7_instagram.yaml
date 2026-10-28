@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: 9b29c945b9164a02c7018ed333cb9b5bc1bcb417
+# Commit: 0b6897dc17e0c513d25449c935a9694818e32f0c
 # Source directories: Instagram; deduplicated
 payload:
 - DOMAIN-KEYWORD,instagram

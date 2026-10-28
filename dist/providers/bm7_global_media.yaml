@@ -1,5 +1,5 @@
 # Derived from blackmatrix7/ios_rule_script (GPL-2.0)
-# Upstream commit: 9b29c945b9164a02c7018ed333cb9b5bc1bcb417
+# Upstream commit: 0b6897dc17e0c513d25449c935a9694818e32f0c
 # Sources: GlobalMedia/GlobalMedia_Classical.yaml
 payload:
 - DOMAIN,aistudio.google.com
