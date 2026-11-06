@@ -1,5 +1,5 @@
 # Derived from ACL4SSR/ACL4SSR; CC-BY-SA-4.0
-# Commit: 6e075448a60bbc13071977b5fd409f568c3b3eae; source: Clash/Ruleset/AI.list; curated and deduplicated
+# Commit: bdc102fc54ba64f6ecaf3c73248100fd7af32559; source: Clash/Ruleset/AI.list; curated and deduplicated
 # Loon rule set; process rules omitted.
 DOMAIN,aistudio.google.com
 DOMAIN,api.githubcopilot.com
