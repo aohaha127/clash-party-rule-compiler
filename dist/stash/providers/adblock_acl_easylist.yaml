@@ -1,5 +1,5 @@
 # Derived from ACL4SSR/ACL4SSR; CC-BY-SA-4.0
-# Commit: bdc102fc54ba64f6ecaf3c73248100fd7af32559; source: Clash/BanEasyList.list; curated and deduplicated
+# Commit: e2f257307bf0ee31921ac948036e942a29a35b35; source: Clash/BanEasyList.list; curated and deduplicated
 # iOS portable export; process rules omitted.
 payload:
 - DOMAIN-SUFFIX,0014b04291.com
