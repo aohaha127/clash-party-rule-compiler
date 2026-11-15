@@ -1759,7 +1759,8 @@
       "providers": 81,
       "inline_rules": [
         "DOMAIN,registry.npmjs.org,开发工具",
-        "DOMAIN,s.chmsrv.com,广告拦截"
+        "DOMAIN,s.chmsrv.com,广告拦截",
+        "DOMAIN-SUFFIX,greasyfork.org,节点选择"
       ],
       "acl_providers": {
         "acl_game_download": 19,
@@ -10262,7 +10263,8 @@
       "providers": 83,
       "inline_rules": [
         "DOMAIN,registry.npmjs.org,开发工具",
-        "DOMAIN,s.chmsrv.com,广告拦截"
+        "DOMAIN,s.chmsrv.com,广告拦截",
+        "DOMAIN-SUFFIX,greasyfork.org,节点选择"
       ],
       "acl_providers": {
         "acl_game_download": 19,
@@ -12143,7 +12145,8 @@
       "providers": 84,
       "inline_rules": [
         "DOMAIN,registry.npmjs.org,开发工具",
-        "DOMAIN,s.chmsrv.com,广告拦截"
+        "DOMAIN,s.chmsrv.com,广告拦截",
+        "DOMAIN-SUFFIX,greasyfork.org,节点选择"
       ],
       "acl_providers": {
         "acl_game_download": 19,
@@ -20649,7 +20652,8 @@
       "providers": 86,
       "inline_rules": [
         "DOMAIN,registry.npmjs.org,开发工具",
-        "DOMAIN,s.chmsrv.com,广告拦截"
+        "DOMAIN,s.chmsrv.com,广告拦截",
+        "DOMAIN-SUFFIX,greasyfork.org,节点选择"
       ],
       "acl_providers": {
         "acl_game_download": 19,

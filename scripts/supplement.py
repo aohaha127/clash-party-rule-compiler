@@ -13,7 +13,8 @@ from build import ROOT, canonical, domain_part, github_api, verified_blob, write
 from catalog import CATALOG
 
 REPO = "ACL4SSR/ACL4SSR"
-INLINE_RULES = ["DOMAIN,registry.npmjs.org,开发工具", "DOMAIN,s.chmsrv.com,广告拦截"]
+INLINE_RULES = ["DOMAIN,registry.npmjs.org,开发工具", "DOMAIN,s.chmsrv.com,广告拦截",
+                "DOMAIN-SUFFIX,greasyfork.org,节点选择"]
 SHARED_AI = {"auth0.com", "identrust.com", "intercom.io", "intercomcdn.com",
              "client-api.arkoselabs.com", "events.statsigapi.net", "featuregates.org"}
 NAS = {"plex.direct", "tpddns.cn", "3322.org", "3322.net", "nat123.com", "dnsapi.cn",

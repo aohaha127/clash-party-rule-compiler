@@ -101,6 +101,8 @@ Loon：下载一个 `.conf`，将 `[Remote Proxy]` 中 `https://example.invalid/
 
 `registry.npmjs.org` 额外使用内嵌精确规则 `DOMAIN,registry.npmjs.org,开发工具`，排在局域网规则后，不依赖 NPM 规则集下载。现有 `npmjs.org` 后缀覆盖仍保留，两者目标一致。此规则仅对进入 Clash 的连接生效；npm 没有经过 TUN 或显式代理时，仍需指定 npm 代理。
 
+`greasyfork.org` 及其子域名优先匹配内嵌规则 `DOMAIN-SUFFIX,greasyfork.org,节点选择`，覆盖上游「国外网站」规则集中的同域名条目。请在「节点选择」中选择代理策略或节点。
+
 完全相同规则按顺序去重；ACL 补充被此前同策略后缀覆盖时省略。跨策略后缀覆盖保留并报告，避免删除有意设置的服务例外。最新规则数、补充保留数与各版本统计见 [build-info.json](dist/build-info.json)，排除原因与归类变化见 [ACL4SSR 报告](reports/acl4ssr.md) / [完整 JSON](reports/acl4ssr.json)。原 conflicts.md 专门记录 blackmatrix7 编译阶段。
 
 ### 自定义广告域名
