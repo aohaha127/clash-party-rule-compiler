@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-15T12:49:16+00:00",
+  "checked_at_utc": "2026-11-15T12:53:50+00:00",
   "upstream_commit": "0b6897dc17e0c513d25449c935a9694818e32f0c",
   "upstream_repository": "blackmatrix7/ios_rule_script",
   "published_repository": "aohaha127/clash-party-rule-compiler",
@@ -19,9 +19,9 @@
       "groups": 55,
       "providers": 81,
       "inline_rules": [
+        "DOMAIN-SUFFIX,greasyfork.org,节点选择",
         "DOMAIN,registry.npmjs.org,开发工具",
-        "DOMAIN,s.chmsrv.com,广告拦截",
-        "DOMAIN-SUFFIX,greasyfork.org,节点选择"
+        "DOMAIN,s.chmsrv.com,广告拦截"
       ],
       "acl_providers": {
         "acl_game_download": 19,
@@ -39,9 +39,9 @@
       "groups": 55,
       "providers": 83,
       "inline_rules": [
+        "DOMAIN-SUFFIX,greasyfork.org,节点选择",
         "DOMAIN,registry.npmjs.org,开发工具",
-        "DOMAIN,s.chmsrv.com,广告拦截",
-        "DOMAIN-SUFFIX,greasyfork.org,节点选择"
+        "DOMAIN,s.chmsrv.com,广告拦截"
       ],
       "acl_providers": {
         "acl_game_download": 19,
@@ -61,9 +61,9 @@
       "groups": 55,
       "providers": 84,
       "inline_rules": [
+        "DOMAIN-SUFFIX,greasyfork.org,节点选择",
         "DOMAIN,registry.npmjs.org,开发工具",
-        "DOMAIN,s.chmsrv.com,广告拦截",
-        "DOMAIN-SUFFIX,greasyfork.org,节点选择"
+        "DOMAIN,s.chmsrv.com,广告拦截"
       ],
       "acl_providers": {
         "acl_game_download": 19,
@@ -84,9 +84,9 @@
       "groups": 55,
       "providers": 86,
       "inline_rules": [
+        "DOMAIN-SUFFIX,greasyfork.org,节点选择",
         "DOMAIN,registry.npmjs.org,开发工具",
-        "DOMAIN,s.chmsrv.com,广告拦截",
-        "DOMAIN-SUFFIX,greasyfork.org,节点选择"
+        "DOMAIN,s.chmsrv.com,广告拦截"
       ],
       "acl_providers": {
         "acl_game_download": 19,
