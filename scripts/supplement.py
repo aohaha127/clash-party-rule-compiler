@@ -13,8 +13,8 @@ from build import ROOT, canonical, domain_part, github_api, verified_blob, write
 from catalog import CATALOG
 
 REPO = "ACL4SSR/ACL4SSR"
-INLINE_RULES = ["DOMAIN,registry.npmjs.org,开发工具", "DOMAIN,s.chmsrv.com,广告拦截",
-                "DOMAIN-SUFFIX,greasyfork.org,节点选择"]
+PROXY_BEFORE_LAN = "DOMAIN-SUFFIX,greasyfork.org,节点选择"
+INLINE_RULES = ["DOMAIN,registry.npmjs.org,开发工具", "DOMAIN,s.chmsrv.com,广告拦截"]
 SHARED_AI = {"auth0.com", "identrust.com", "intercom.io", "intercomcdn.com",
              "client-api.arkoselabs.com", "events.statsigapi.net", "featuregates.org"}
 NAS = {"plex.direct", "tpddns.cn", "3322.org", "3322.net", "nat123.com", "dnsapi.cn",
@@ -187,16 +187,16 @@ def augment(published_repo: str) -> None:
                 "path": f"./rule_provider/{'bm7' if published_name.startswith('bm7_') else 'compiled'}/{published_name}.yaml",
                 "proxy": "节点选择", "interval": 86400}
             config["rules"].append(f"RULE-SET,{published_name},{target}")
-        # Keep LAN protection first; the registry route works even when HTTP
-        # rule providers have not downloaded successfully yet.
+        # Check the explicit proxy exception before the LAN IP rule resolves it.
         config["rules"][1:1] = INLINE_RULES
+        config["rules"].insert(0, PROXY_BEFORE_LAN)
         config["rules"].append("MATCH,漏网之鱼")
         write_yaml(ROOT / "dist" / filename, config,
                    "# Built with ChatGPT (Codex) for personal learning.\n"
                    "# Provider licenses and source provenance are recorded separately.\n")
         report["groups"] = len(config["proxy-groups"])
         report["providers"] = len(config["rule-providers"])
-        report["inline_rules"] = INLINE_RULES
+        report["inline_rules"] = [PROXY_BEFORE_LAN, *INLINE_RULES]
         report["acl_providers"] = {name: len(payload) for name, _, payload in resolved if name.startswith("acl_")}
         variants[variant] = report
     metadata_path = ROOT / "dist" / "build-info.json"

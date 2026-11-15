@@ -43,7 +43,7 @@
 
 ## 规则优先顺序
 
-局域网固定 `DIRECT` → 明确直连 → 广告及隐私拦截 → 具体服务 → 媒体和游戏合集 → 国内网站 → 国外网站 → 漏网之鱼。完全相同的规则只保留第一条。更具体的域名与通用后缀可能分别属于不同策略，按 YAML 中的先后顺序匹配。
+Greasy Fork 域名代理例外 → 局域网固定 `DIRECT` → 明确直连 → 广告及隐私拦截 → 具体服务 → 媒体和游戏合集 → 国内网站 → 国外网站 → 漏网之鱼。完全相同的规则只保留第一条。更具体的域名与通用后缀可能分别属于不同策略，按 YAML 中的先后顺序匹配。
 
 查看 [重复与覆盖报告](reports/conflicts.md) 和 [机器可读报告](reports/conflicts.json)。报告列出完全重复规则、保留的策略、被去掉的后续重复项，以及不同策略之间的域名后缀覆盖示例。
 
@@ -101,7 +101,7 @@ Loon：下载一个 `.conf`，将 `[Remote Proxy]` 中 `https://example.invalid/
 
 `registry.npmjs.org` 额外使用内嵌精确规则 `DOMAIN,registry.npmjs.org,开发工具`，排在局域网规则后，不依赖 NPM 规则集下载。现有 `npmjs.org` 后缀覆盖仍保留，两者目标一致。此规则仅对进入 Clash 的连接生效；npm 没有经过 TUN 或显式代理时，仍需指定 npm 代理。
 
-`greasyfork.org` 及其子域名优先匹配内嵌规则 `DOMAIN-SUFFIX,greasyfork.org,节点选择`，覆盖上游「国外网站」规则集中的同域名条目。请在「节点选择」中选择代理策略或节点。
+`greasyfork.org` 及其子域名优先匹配内嵌规则 `DOMAIN-SUFFIX,greasyfork.org,节点选择`，排在局域网规则之前，避免被本机 hosts 的回环地址误分流。请在「节点选择」中选择代理策略或节点。
 
 完全相同规则按顺序去重；ACL 补充被此前同策略后缀覆盖时省略。跨策略后缀覆盖保留并报告，避免删除有意设置的服务例外。最新规则数、补充保留数与各版本统计见 [build-info.json](dist/build-info.json)，排除原因与归类变化见 [ACL4SSR 报告](reports/acl4ssr.md) / [完整 JSON](reports/acl4ssr.json)。原 conflicts.md 专门记录 blackmatrix7 编译阶段。
 

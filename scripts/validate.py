@@ -81,9 +81,11 @@ def validate_file(path: Path, mihomo: Path | None) -> None:
     validate_override(override, providers)
     check_group_cycles(override["proxy-groups"])
     inline = [rule for rule in override["rules"][:-1] if not rule.startswith("RULE-SET,")]
-    expected_inline = ["DOMAIN,registry.npmjs.org,开发工具", "DOMAIN,s.chmsrv.com,广告拦截",
-                "DOMAIN-SUFFIX,greasyfork.org,节点选择"]
-    if inline != expected_inline or override["rules"][1:1 + len(inline)] != expected_inline:
+    from supplement import INLINE_RULES, PROXY_BEFORE_LAN
+    expected_inline = [PROXY_BEFORE_LAN, *INLINE_RULES]
+    if inline != expected_inline or override["rules"][:2 + len(INLINE_RULES)] != [
+        PROXY_BEFORE_LAN, "RULE-SET,bm7_lan,DIRECT", *INLINE_RULES
+    ]:
         raise ValueError("custom inline routes missing or misplaced")
     if len(override["rules"]) != len(providers) + len(inline) + 1:
         raise ValueError("rule count does not match provider count")
