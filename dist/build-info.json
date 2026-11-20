@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-19T06:43:02+00:00",
+  "checked_at_utc": "2026-11-20T06:30:32+00:00",
   "upstream_commit": "0b6897dc17e0c513d25449c935a9694818e32f0c",
   "upstream_repository": "blackmatrix7/ios_rule_script",
   "published_repository": "aohaha127/clash-party-rule-compiler",
@@ -7,7 +7,7 @@
   "rule_providers": 81,
   "source_directories": 79,
   "unique_rules": 240253,
-  "acl4ssr_commit": "e2f257307bf0ee31921ac948036e942a29a35b35",
+  "acl4ssr_commit": "a77a123f5df30a7503605c24a78d63a5be35eae3",
   "acl4ssr_repository": "ACL4SSR/ACL4SSR",
   "variants": {
     "default": {
