@@ -1,5 +1,5 @@
 # Derived from ACL4SSR/ACL4SSR; CC-BY-SA-4.0
-# Commit: a77a123f5df30a7503605c24a78d63a5be35eae3; source: Clash/Ruleset/PrivateTracker.list; curated and deduplicated
+# Commit: c45d484ffc43ea0b64db63d847741c1e94586d73; source: Clash/Ruleset/PrivateTracker.list; curated and deduplicated
 payload:
 - DOMAIN-SUFFIX,1ptba.com
 - DOMAIN-SUFFIX,animetorrents.me
