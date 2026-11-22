@@ -1,16 +1,16 @@
 # ACL4SSR 补充与冲突报告
 
-上游：ACL4SSR/ACL4SSR @ `c45d484ffc43ea0b64db63d847741c1e94586d73`。
+上游：ACL4SSR/ACL4SSR @ `a7bdd9c97c3c4a1d01a7259bba7c23c275794cc7`。
 
 完全重复保留先匹配的规则；补充规则已被同策略后缀覆盖时省略。拦截策略优先。
 原 blackmatrix7 统计见 conflicts.md；合并后统计见本报告及 build-info.json。
 
 | 版本 | 策略组 | 规则集 | 规则条目 |
 |---|---:|---:|---:|
-| default | 55 | 81 | 240253 |
-| adblock | 55 | 83 | 285238 |
-| local | 55 | 84 | 240292 |
-| full | 55 | 86 | 285277 |
+| default | 55 | 81 | 240258 |
+| adblock | 55 | 83 | 288309 |
+| local | 55 | 84 | 240297 |
+| full | 55 | 86 | 288348 |
 
 ## default 重复与策略归类示例
 
@@ -34,7 +34,10 @@
 | `DOMAIN-SUFFIX,jetbrains.ai` | AI 服务 | 开发工具 | exact |
 | `DOMAIN-SUFFIX,docker.com` | 开发工具 | 开发工具 | exact |
 | `DOMAIN-SUFFIX,docker.io` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,figma.com` | 开发工具 | 开发工具 | exact |
 | `DOMAIN-SUFFIX,gitlab.com` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,npmjs.com` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,vercel.com` | 开发工具 | 云平台 | exact |
 | `DOMAIN-SUFFIX,gcr.io` | 开发工具 | 谷歌服务 | exact |
 | `DOMAIN,aistudio.google.com` | AI 服务 | 国外媒体 | exact |
 | `DOMAIN,api.githubcopilot.com` | AI 服务 | 国外媒体 | exact |
@@ -57,6 +60,7 @@
 | `DOMAIN-SUFFIX,mistral.ai` | AI 服务 | 国外媒体 | exact |
 | `DOMAIN-SUFFIX,perplexity.ai` | AI 服务 | 国外媒体 | exact |
 | `DOMAIN-SUFFIX,x.ai` | AI 服务 | 国外媒体 | exact |
+| `DOMAIN-SUFFIX,grok.com` | AI 服务 | X / Twitter | exact |
 | `PROCESS-NAME,DownloadService.exe` | 国内直连 | 国内直连 | exact |
 | `PROCESS-NAME,Folx.exe` | 国内直连 | 国内直连 | exact |
 | `PROCESS-NAME,NetTransport.exe` | 国内直连 | 国内直连 | exact |
@@ -72,6 +76,7 @@
 | `DOMAIN,assets1.xboxlive.com` | 游戏直连 | 国外网站 | exact |
 | `DOMAIN,assets2.xboxlive.com` | 游戏直连 | 国外网站 | exact |
 | `DOMAIN,gog-cdn-lumen.secure2.footprint.net` | 游戏直连 | 国外网站 | exact |
+| `DOMAIN-SUFFIX,clau.de` | AI 服务 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,sora.com` | AI 服务 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,apache.org` | 开发工具 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,elastic.co` | 开发工具 | 国外网站 | exact |
@@ -98,8 +103,6 @@
 | `DOMAIN-SUFFIX,9t5.me` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.ucoz.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,aaacompany.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,abgligarchan.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,aclickads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,acuityplatform.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad-delivery.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad-stir.com` | 广告拦截 | 广告拦截 | exact |
@@ -119,28 +122,27 @@
 | `DOMAIN-SUFFIX,adsame.com` | 应用净化 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adsco.re` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adsinstant.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,adsrv.me` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adtaily.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adxadserv.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adxpansion.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,affiliate.heureka.cz` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,affiliates.goodvibes.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,affiliates.thrixxx.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,alespeonor.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,afrdtech.com` | 隐私拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,agkn.com` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,allyes.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,am15.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,appads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,aralego.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,atdmt.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,atwola.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,auxml.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,award.sitekeuring.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,away-stay.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,axonix.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,banners.adultfriendfinder.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,banners.cams.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bannershotlink.perfectgonzo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bidder.criteo.com` | 广告拦截 | 广告拦截 | suffix coverage |
+| `DOMAIN-SUFFIX,bidswitch.net` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bidtheatre.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bl.wavecdn.de` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,blastcahs.com` | 广告拦截 | 广告拦截 | exact |
@@ -159,14 +161,13 @@
 | `DOMAIN-SUFFIX,chengaib.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,clarity.abacast.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,clearadnetwork.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,clickadin.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,clickcdn.co` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,clkrev.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,codedexchange.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,coinadster.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,conjeller-chikemon.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,content.livesportmedia.eu` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,contentabc.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,countertrck.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,cpalabtracking.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,cpcmart.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,cpm.amateurcommunity.de` | 广告拦截 | 广告拦截 | exact |
@@ -193,7 +194,6 @@
 | `DOMAIN-SUFFIX,dyn.empflix.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dyn.tnaflix.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,e2ertt.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,effectivemeasure.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,eoredi.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,eqads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,exdynsrv.com` | 广告拦截 | 广告拦截 | exact |
@@ -205,8 +205,8 @@
 | `DOMAIN-SUFFIX,faggrim.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,fastapi.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,fastclick.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,fastdld.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,feeds.videosz.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,fl.corniercuffed.qpon` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,flowwiththetide.xyz` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,fractionfridgejudiciary.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,fwmrm.net` | 广告拦截 | 广告拦截 | exact |
@@ -225,24 +225,18 @@
 | `DOMAIN-SUFFIX,hadsecz.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hbid.ams3.cdn.digitaloceanspaces.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hilltopads.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,hipersushiads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hyperpromote.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ie8eamus.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,imp-adedge.i-mobile.co.jp` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,indexww.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,innity.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,inpagepush.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,ioredi.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ipredictive.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,isboost.co.jp` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,jads.co` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,junmediadirect.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,jwpltx.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,karma.mdpcdn.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,keepinfit.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,kitrigthy.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,koutobey.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,leadbolt.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,leadzu.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,liadm.com` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,linkev.com` | 广告拦截 | 广告拦截 | exact |
@@ -260,23 +254,15 @@
 | `DOMAIN-SUFFIX,mob1ledev1ces.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,monadplug.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,mookie1.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,movie-pass.live` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,mozgvya.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,msads.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,netcatx.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,netpatas.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,newjulads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,newsatads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,nkmsite.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,noclef.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,notifysrv.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,nqrkzcd7ixwr.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,ofgogoatan.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,ofhypnoer.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,ofphanpytor.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,onclickads.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,onetouch4.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,optvx.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,overture.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,padsatz.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,padspms.com` | 广告拦截 | 广告拦截 | exact |
@@ -296,16 +282,15 @@
 | `DOMAIN-SUFFIX,promos.fling.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,propellerads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,psma02.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,pttsite.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pubmatic.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,push.house` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,q6idnawboy7g.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,quotes.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,raupsica.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,realsrv.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,realtime-bid.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,regulationprivilegescan.top` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,record.betzillopartners.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,responservbzh.icu` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,retailmedia-static.criteo.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,rexadvert.xyz` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,riverhit.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,rlcdn.com` | 广告拦截 | 广告拦截 | exact |
@@ -313,9 +298,11 @@
 | `DOMAIN-SUFFIX,rotabanner.kulichki.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,rotator.tradetracker.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,routeme.one` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,routeserve.info` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,rubylife.go2cloud.org` | 广告拦截 | 广告拦截 | suffix coverage |
+| `DOMAIN-SUFFIX,rumt-sg.com` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,rydresa.info` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,s.dsabva.com` | 广告拦截 | 广告拦截 | suffix coverage |
+| `DOMAIN-SUFFIX,s.dsnucs.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,sdhfbvd.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,searchmulty.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,securecloud-dt.com` | 广告拦截 | 广告拦截 | exact |
@@ -326,7 +313,6 @@
 | `DOMAIN-SUFFIX,smenqskfmpfxnb.bid` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,socdm.com` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,socket.streamable.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,son-in-lawmorbid.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,special-offers.online` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,special-promotions.online` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,sponsorpay.com` | 广告拦截 | 广告拦截 | exact |
@@ -335,6 +321,7 @@
 | `DOMAIN-SUFFIX,steepto.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,stickyadstv.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,swesomepop.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,sync.gsyndication.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,tapioni.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,tapjoyads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,tfosrv.com` | 广告拦截 | 广告拦截 | exact |
@@ -343,20 +330,18 @@
 | `DOMAIN-SUFFIX,tm-offers.gamingadult.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,topbetfast.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,tosfeed.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,totogetica.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,trackspeeder.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,tradeadexchange.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,trafficfactory.biz` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,trafficjunky.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,trafforsrv.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,trblocked.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,tremorhub.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,tribalfusion.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,trkunited.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,uimserv.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,upush.co` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,uuidksinc.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,voredi.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,vrtcal.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,wall.vgr.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,wallpapersfacts.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,wg-aff.com` | 广告拦截 | 广告拦截 | exact |
@@ -369,8 +354,6 @@
 | `DOMAIN-SUFFIX,xapi.juicyads.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,xmlppcbuzz.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,xxxjmp.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,ycn57v1ncx.fnoz8tgk8owfg6mpe.cfd` | 广告拦截 | 广告拦截 | suffix coverage |
-| `DOMAIN-SUFFIX,yldbt.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,yunshipei.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,003store.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,1.1010pic.com` | 广告拦截 | 广告拦截 | exact |
@@ -439,9 +422,7 @@
 | `DOMAIN-SUFFIX,360640.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,39jz.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,51gxqm.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,5pub.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,5y9nfpes.52pk.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,614514.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,644446.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,6669667.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,7011.stia.cn` | 广告拦截 | 广告拦截 | exact |
@@ -457,7 +438,6 @@
 | `DOMAIN-SUFFIX,a.52wubi.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.52zxw.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.armystar.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,a.bake818.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.baomihua.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.duanmeiwen.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.duduji.com` | 广告拦截 | 广告拦截 | exact |
@@ -472,7 +452,6 @@
 | `DOMAIN-SUFFIX,a.oh100.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.qinghua5.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.qsjiajiao.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,a.rensheng5.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.shenchuang.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.thn21.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.tiyuxiu.com` | 广告拦截 | 广告拦截 | exact |
@@ -514,7 +493,6 @@
 | `DOMAIN-SUFFIX,ad-api.cnblogs.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad-img.diyidan.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad.52av.one` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,ad.52av.tv` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad.bobi.tw` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad.cdnjm.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad.gmw.cn` | 广告拦截 | 广告拦截 | exact |
@@ -523,6 +501,7 @@
 | `DOMAIN-SUFFIX,ad123.ynet.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adadmin.house365.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adbd.liuxue86.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,adbfkaoxvm.in` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adf.dahe.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adjb.5nd.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adm.52swine.com` | 广告拦截 | 广告拦截 | exact |
@@ -537,7 +516,6 @@
 | `DOMAIN-SUFFIX,adpai.thepaper.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adrs.sdo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adsc.wasu.tv` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,adsclick.yx.js.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adshows.21cn.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adt.xdrig.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,adv-sv-show.focus.cn` | 广告拦截 | 广告拦截 | exact |
@@ -552,8 +530,8 @@
 | `DOMAIN-SUFFIX,as1.m.hao123.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ashow.pcpop.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,atiws.aipai.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,awjakpos.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ax.ifeng.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,axkozwhiqah.in` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,b.kouke5.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,b.unjs.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,b1.51scw.net` | 广告拦截 | 广告拦截 | exact |
@@ -563,13 +541,11 @@
 | `DOMAIN-SUFFIX,b1.c1km4.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,b1.xiao84.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,b7sw62.pingshu8.xyz` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,badding.oss-ap-southeast-1.aliyuncs.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,baidu1.codejie.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,baidujs.cnys.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bas.boshi.tv` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bd-s.baixing.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bd.czxuexi.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,bd.ershenghuo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bd1-china.6789.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bd1.365qilu.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bd1.flfgw.cn` | 广告拦截 | 广告拦截 | exact |
@@ -668,7 +644,6 @@
 | `DOMAIN-SUFFIX,de.as.pptv.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dehua.ixinfan.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,deliver.ifeng.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,delivery.playallvideos.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,delivery.wasu.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,df888.eastday.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,djs.baomihua.com` | 广告拦截 | 广告拦截 | exact |
@@ -687,13 +662,11 @@
 | `DOMAIN-SUFFIX,dm1.zjydt.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dmm.aizhan.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dmr.cnhoney.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,dmym.aixyy.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,doubleclick.ctfile.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dsp.ali213.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,du1.bbdj.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dup.baidustatic.com` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dydab.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,dzjzg.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,eap.big5.enorth.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,eap.enorth.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ebp.renren.com` | 广告拦截 | 广告拦截 | exact |
@@ -702,7 +675,6 @@
 | `DOMAIN-SUFFIX,emdcadvertise.eastmoney.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,emjs.mkzhan.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ent1.12584.cn` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,eyqbpifffccdc.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,f1.06ps.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,f1.ichong123.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,f1.pig66.com` | 广告拦截 | 广告拦截 | exact |
@@ -728,7 +700,6 @@
 | `DOMAIN-SUFFIX,gg.blueidea.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,gg.cs090.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,gg.egouz.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,gg.gsdlcn.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,gg.kugou.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,gg.sonhoo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,gg.uuu9.com` | 广告拦截 | 广告拦截 | exact |
@@ -756,10 +727,7 @@
 | `DOMAIN-SUFFIX,h1.kukuw.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hades.qyer.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hapic1.zhuangxiu22.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,hdapp1003-a.akamaihd.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,hdapp1008-a.akamaihd.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hdc.maxli.cn` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,hdsrc-a.akamaihd.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hh.jiankang.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hi.xiunm.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hi.xiunm.com` | 广告拦截 | 广告拦截 | exact |
@@ -812,9 +780,7 @@
 | `DOMAIN-SUFFIX,jy.zhongxues.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,k1.dancihu.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,k1.wanwenwan.cn` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,khrtac.xiangha.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,kpshx.douguo.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,le4le.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,leabd.douguo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,lixiangmo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ll.gxsky.com` | 广告拦截 | 广告拦截 | exact |
@@ -844,7 +810,6 @@
 | `DOMAIN-SUFFIX,md.tvzhe.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,mg.32r.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,mg.glwxw.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,mikka.app` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,milk.yesky.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,mini.hao123.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,miniye.xjts.cn` | 广告拦截 | 广告拦截 | exact |
@@ -859,30 +824,30 @@
 | `DOMAIN-SUFFIX,o.phb123.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,o1.jyjyj.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,okkkk.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,ovgadhtcyvak.in` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,p.7060.la` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,p.zol-img.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,p1.zhongyoo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,p4p.sina.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,p8u.hinet.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,panda.kdnet.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,panel-cn.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pb.shuxigua.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,penxiangge.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pg-ad-b1.nosdn.127.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,phpad.cqnews.net` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,phuolhogmxin.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pic.0597kk.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pic.fengniao.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,pic50.pingguolv.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pics.xgo-img.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pkk1.zuimeiniwo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,poster.weather.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pro.iweihai.cn` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,profitablecpmratenetwork.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pub.funshion.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,q1.yyxwzx.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,qcvf.ifeng.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,qd.x4399.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,qifake.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,qiji1.jdwx.info` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,qiyeb.iaskbus.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,qqhuhu.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,qujishu.com` | 广告拦截 | 广告拦截 | exact |
@@ -910,7 +875,6 @@
 | `DOMAIN-SUFFIX,shili.downxia.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,shili.wanyx.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,show.kc.taotaosou.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,sjbaiduadv1.redou.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,sp.dnqc.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ss.ting55.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ssb.ah499.com` | 广告拦截 | 广告拦截 | exact |
@@ -974,7 +938,6 @@
 | `DOMAIN-SUFFIX,xc.macd.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,xc.mydrivers.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,xcf-bd-js.chuimg.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,xdyjt.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,xinju.cc` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,xitongku.cc` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,xs.houyi.baofeng.net` | 广告拦截 | 广告拦截 | suffix coverage |
@@ -1020,7 +983,10 @@
 | `DOMAIN-SUFFIX,jetbrains.ai` | AI 服务 | 开发工具 | exact |
 | `DOMAIN-SUFFIX,docker.com` | 开发工具 | 开发工具 | exact |
 | `DOMAIN-SUFFIX,docker.io` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,figma.com` | 开发工具 | 开发工具 | exact |
 | `DOMAIN-SUFFIX,gitlab.com` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,npmjs.com` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,vercel.com` | 开发工具 | 云平台 | exact |
 | `DOMAIN-SUFFIX,gvt2.com` | 广告拦截 | YouTube | exact |
 | `DOMAIN-SUFFIX,2mdn-cn.net` | 广告拦截 | 谷歌服务 | exact |
 | `DOMAIN-SUFFIX,admob-cn.com` | 广告拦截 | 谷歌服务 | exact |
@@ -1051,6 +1017,7 @@
 | `DOMAIN-SUFFIX,perplexity.ai` | AI 服务 | 国外媒体 | exact |
 | `DOMAIN-SUFFIX,tynt.com` | 广告拦截 | 国外媒体 | exact |
 | `DOMAIN-SUFFIX,x.ai` | AI 服务 | 国外媒体 | exact |
+| `DOMAIN-SUFFIX,grok.com` | AI 服务 | X / Twitter | exact |
 | `PROCESS-NAME,DownloadService.exe` | 国内直连 | 国内直连 | exact |
 | `PROCESS-NAME,Folx.exe` | 国内直连 | 国内直连 | exact |
 | `PROCESS-NAME,NetTransport.exe` | 国内直连 | 国内直连 | exact |
@@ -1067,20 +1034,20 @@
 | `DOMAIN,assets2.xboxlive.com` | 游戏直连 | 国外网站 | exact |
 | `DOMAIN,gog-cdn-lumen.secure2.footprint.net` | 游戏直连 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,bizographics.com` | 广告拦截 | 国外网站 | exact |
+| `DOMAIN-SUFFIX,clau.de` | AI 服务 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,dirty.games` | 广告拦截 | 国外网站 | exact |
+| `DOMAIN-SUFFIX,dobbyporn.com` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,ebayrtm.com` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,gloporn.com` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,incloak.com` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,mediasama.com` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,megaad.nz` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,pctlwm.com` | 广告拦截 | 国外网站 | exact |
-| `DOMAIN-SUFFIX,pornvideos.casa` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,prpops.com` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,ptapjmp.com` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,rabbitcounter.com` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,ravm.tv` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,sora.com` | AI 服务 | 国外网站 | exact |
-| `DOMAIN-SUFFIX,trustedpeach.com` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,vid.me` | 广告拦截 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,apache.org` | 开发工具 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,elastic.co` | 开发工具 | 国外网站 | exact |
@@ -1092,6 +1059,10 @@
 | `DOMAIN-SUFFIX,quay.io` | 开发工具 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,redhat.com` | 开发工具 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,sonatype.org` | 开发工具 | 国外网站 | exact |
+| `DOMAIN-SUFFIX,sourcegraph.com` | 开发工具 | 国外网站 | exact |
+| `DOMAIN-SUFFIX,spring.io` | 开发工具 | 国外网站 | exact |
+| `DOMAIN-SUFFIX,spring.net` | 开发工具 | 国外网站 | exact |
+| `DOMAIN-SUFFIX,stackoverflow.com` | 开发工具 | 国外网站 | exact |
 
 ## local 重复与策略归类示例
 
@@ -1208,7 +1179,10 @@
 | `DOMAIN-SUFFIX,jetbrains.ai` | AI 服务 | 开发工具 | exact |
 | `DOMAIN-SUFFIX,docker.com` | 开发工具 | 开发工具 | exact |
 | `DOMAIN-SUFFIX,docker.io` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,figma.com` | 开发工具 | 开发工具 | exact |
 | `DOMAIN-SUFFIX,gitlab.com` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,npmjs.com` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,vercel.com` | 开发工具 | 云平台 | exact |
 | `DOMAIN-SUFFIX,gcr.io` | 开发工具 | 谷歌服务 | exact |
 | `DOMAIN,aistudio.google.com` | AI 服务 | 国外媒体 | exact |
 | `DOMAIN,api.githubcopilot.com` | AI 服务 | 国外媒体 | exact |
@@ -1231,6 +1205,7 @@
 | `DOMAIN-SUFFIX,mistral.ai` | AI 服务 | 国外媒体 | exact |
 | `DOMAIN-SUFFIX,perplexity.ai` | AI 服务 | 国外媒体 | exact |
 | `DOMAIN-SUFFIX,x.ai` | AI 服务 | 国外媒体 | exact |
+| `DOMAIN-SUFFIX,grok.com` | AI 服务 | X / Twitter | exact |
 | `PROCESS-NAME,DownloadService.exe` | 国内直连 | 国内直连 | exact |
 | `PROCESS-NAME,Folx.exe` | 国内直连 | 国内直连 | exact |
 | `PROCESS-NAME,NetTransport.exe` | 国内直连 | 国内直连 | exact |
@@ -1251,6 +1226,7 @@
 | `DOMAIN,assets1.xboxlive.com` | 游戏直连 | 国外网站 | exact |
 | `DOMAIN,assets2.xboxlive.com` | 游戏直连 | 国外网站 | exact |
 | `DOMAIN,gog-cdn-lumen.secure2.footprint.net` | 游戏直连 | 国外网站 | exact |
+| `DOMAIN-SUFFIX,clau.de` | AI 服务 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,myqnapcloud.com` | 国内直连 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,quickconnect.to` | 国内直连 | 国外网站 | exact |
 | `DOMAIN-SUFFIX,sora.com` | AI 服务 | 国外网站 | exact |
@@ -1373,8 +1349,6 @@
 | `DOMAIN-SUFFIX,9t5.me` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.ucoz.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,aaacompany.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,abgligarchan.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,aclickads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,acuityplatform.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad-delivery.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad-stir.com` | 广告拦截 | 广告拦截 | exact |
@@ -1394,28 +1368,27 @@
 | `DOMAIN-SUFFIX,adsame.com` | 应用净化 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adsco.re` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adsinstant.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,adsrv.me` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adtaily.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adxadserv.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adxpansion.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,affiliate.heureka.cz` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,affiliates.goodvibes.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,affiliates.thrixxx.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,alespeonor.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,afrdtech.com` | 隐私拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,agkn.com` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,allyes.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,am15.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,appads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,aralego.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,atdmt.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,atwola.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,auxml.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,award.sitekeuring.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,away-stay.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,axonix.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,banners.adultfriendfinder.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,banners.cams.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bannershotlink.perfectgonzo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bidder.criteo.com` | 广告拦截 | 广告拦截 | suffix coverage |
+| `DOMAIN-SUFFIX,bidswitch.net` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bidtheatre.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bl.wavecdn.de` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,blastcahs.com` | 广告拦截 | 广告拦截 | exact |
@@ -1434,14 +1407,13 @@
 | `DOMAIN-SUFFIX,chengaib.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,clarity.abacast.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,clearadnetwork.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,clickadin.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,clickcdn.co` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,clkrev.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,codedexchange.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,coinadster.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,conjeller-chikemon.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,content.livesportmedia.eu` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,contentabc.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,countertrck.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,cpalabtracking.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,cpcmart.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,cpm.amateurcommunity.de` | 广告拦截 | 广告拦截 | exact |
@@ -1468,7 +1440,6 @@
 | `DOMAIN-SUFFIX,dyn.empflix.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dyn.tnaflix.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,e2ertt.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,effectivemeasure.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,eoredi.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,eqads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,exdynsrv.com` | 广告拦截 | 广告拦截 | exact |
@@ -1480,8 +1451,8 @@
 | `DOMAIN-SUFFIX,faggrim.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,fastapi.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,fastclick.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,fastdld.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,feeds.videosz.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,fl.corniercuffed.qpon` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,flowwiththetide.xyz` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,fractionfridgejudiciary.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,fwmrm.net` | 广告拦截 | 广告拦截 | exact |
@@ -1500,24 +1471,18 @@
 | `DOMAIN-SUFFIX,hadsecz.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hbid.ams3.cdn.digitaloceanspaces.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hilltopads.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,hipersushiads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hyperpromote.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ie8eamus.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,imp-adedge.i-mobile.co.jp` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,indexww.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,innity.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,inpagepush.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,ioredi.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ipredictive.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,isboost.co.jp` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,jads.co` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,junmediadirect.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,jwpltx.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,karma.mdpcdn.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,keepinfit.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,kitrigthy.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,koutobey.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,leadbolt.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,leadzu.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,liadm.com` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,linkev.com` | 广告拦截 | 广告拦截 | exact |
@@ -1535,23 +1500,15 @@
 | `DOMAIN-SUFFIX,mob1ledev1ces.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,monadplug.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,mookie1.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,movie-pass.live` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,mozgvya.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,msads.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,netcatx.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,netpatas.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,newjulads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,newsatads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,nkmsite.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,noclef.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,notifysrv.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,nqrkzcd7ixwr.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,ofgogoatan.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,ofhypnoer.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,ofphanpytor.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,onclickads.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,onetouch4.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,optvx.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,overture.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,padsatz.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,padspms.com` | 广告拦截 | 广告拦截 | exact |
@@ -1571,16 +1528,15 @@
 | `DOMAIN-SUFFIX,promos.fling.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,propellerads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,psma02.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,pttsite.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pubmatic.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,push.house` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,q6idnawboy7g.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,quotes.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,raupsica.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,realsrv.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,realtime-bid.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,regulationprivilegescan.top` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,record.betzillopartners.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,responservbzh.icu` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,retailmedia-static.criteo.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,rexadvert.xyz` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,riverhit.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,rlcdn.com` | 广告拦截 | 广告拦截 | exact |
@@ -1588,9 +1544,11 @@
 | `DOMAIN-SUFFIX,rotabanner.kulichki.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,rotator.tradetracker.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,routeme.one` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,routeserve.info` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,rubylife.go2cloud.org` | 广告拦截 | 广告拦截 | suffix coverage |
+| `DOMAIN-SUFFIX,rumt-sg.com` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,rydresa.info` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,s.dsabva.com` | 广告拦截 | 广告拦截 | suffix coverage |
+| `DOMAIN-SUFFIX,s.dsnucs.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,sdhfbvd.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,searchmulty.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,securecloud-dt.com` | 广告拦截 | 广告拦截 | exact |
@@ -1601,7 +1559,6 @@
 | `DOMAIN-SUFFIX,smenqskfmpfxnb.bid` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,socdm.com` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,socket.streamable.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,son-in-lawmorbid.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,special-offers.online` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,special-promotions.online` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,sponsorpay.com` | 广告拦截 | 广告拦截 | exact |
@@ -1610,6 +1567,7 @@
 | `DOMAIN-SUFFIX,steepto.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,stickyadstv.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,swesomepop.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,sync.gsyndication.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,tapioni.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,tapjoyads.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,tfosrv.com` | 广告拦截 | 广告拦截 | exact |
@@ -1618,20 +1576,18 @@
 | `DOMAIN-SUFFIX,tm-offers.gamingadult.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,topbetfast.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,tosfeed.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,totogetica.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,trackspeeder.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,tradeadexchange.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,trafficfactory.biz` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,trafficjunky.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,trafforsrv.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,trblocked.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,tremorhub.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,tribalfusion.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,trkunited.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,uimserv.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,upush.co` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,uuidksinc.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,voredi.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,vrtcal.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,wall.vgr.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,wallpapersfacts.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,wg-aff.com` | 广告拦截 | 广告拦截 | exact |
@@ -1644,8 +1600,6 @@
 | `DOMAIN-SUFFIX,xapi.juicyads.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,xmlppcbuzz.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,xxxjmp.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,ycn57v1ncx.fnoz8tgk8owfg6mpe.cfd` | 广告拦截 | 广告拦截 | suffix coverage |
-| `DOMAIN-SUFFIX,yldbt.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,yunshipei.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,003store.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,1.1010pic.com` | 广告拦截 | 广告拦截 | exact |
@@ -1714,9 +1668,7 @@
 | `DOMAIN-SUFFIX,360640.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,39jz.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,51gxqm.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,5pub.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,5y9nfpes.52pk.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,614514.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,644446.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,6669667.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,7011.stia.cn` | 广告拦截 | 广告拦截 | exact |
@@ -1732,7 +1684,6 @@
 | `DOMAIN-SUFFIX,a.52wubi.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.52zxw.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.armystar.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,a.bake818.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.baomihua.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.duanmeiwen.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.duduji.com` | 广告拦截 | 广告拦截 | exact |
@@ -1747,7 +1698,6 @@
 | `DOMAIN-SUFFIX,a.oh100.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.qinghua5.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.qsjiajiao.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,a.rensheng5.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.shenchuang.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.thn21.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,a.tiyuxiu.com` | 广告拦截 | 广告拦截 | exact |
@@ -1789,7 +1739,6 @@
 | `DOMAIN-SUFFIX,ad-api.cnblogs.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad-img.diyidan.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad.52av.one` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,ad.52av.tv` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad.bobi.tw` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad.cdnjm.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ad.gmw.cn` | 广告拦截 | 广告拦截 | exact |
@@ -1798,6 +1747,7 @@
 | `DOMAIN-SUFFIX,ad123.ynet.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adadmin.house365.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adbd.liuxue86.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,adbfkaoxvm.in` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adf.dahe.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adjb.5nd.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adm.52swine.com` | 广告拦截 | 广告拦截 | exact |
@@ -1812,7 +1762,6 @@
 | `DOMAIN-SUFFIX,adpai.thepaper.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adrs.sdo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adsc.wasu.tv` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,adsclick.yx.js.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adshows.21cn.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,adt.xdrig.com` | 广告拦截 | 广告拦截 | suffix coverage |
 | `DOMAIN-SUFFIX,adv-sv-show.focus.cn` | 广告拦截 | 广告拦截 | exact |
@@ -1827,8 +1776,8 @@
 | `DOMAIN-SUFFIX,as1.m.hao123.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ashow.pcpop.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,atiws.aipai.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,awjakpos.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ax.ifeng.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,axkozwhiqah.in` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,b.kouke5.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,b.unjs.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,b1.51scw.net` | 广告拦截 | 广告拦截 | exact |
@@ -1838,13 +1787,11 @@
 | `DOMAIN-SUFFIX,b1.c1km4.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,b1.xiao84.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,b7sw62.pingshu8.xyz` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,badding.oss-ap-southeast-1.aliyuncs.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,baidu1.codejie.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,baidujs.cnys.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bas.boshi.tv` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bd-s.baixing.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bd.czxuexi.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,bd.ershenghuo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bd1-china.6789.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bd1.365qilu.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,bd1.flfgw.cn` | 广告拦截 | 广告拦截 | exact |
@@ -1943,7 +1890,6 @@
 | `DOMAIN-SUFFIX,de.as.pptv.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dehua.ixinfan.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,deliver.ifeng.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,delivery.playallvideos.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,delivery.wasu.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,df888.eastday.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,djs.baomihua.com` | 广告拦截 | 广告拦截 | exact |
@@ -1962,13 +1908,11 @@
 | `DOMAIN-SUFFIX,dm1.zjydt.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dmm.aizhan.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dmr.cnhoney.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,dmym.aixyy.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,doubleclick.ctfile.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dsp.ali213.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,du1.bbdj.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dup.baidustatic.com` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,dydab.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,dzjzg.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,eap.big5.enorth.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,eap.enorth.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ebp.renren.com` | 广告拦截 | 广告拦截 | exact |
@@ -1977,7 +1921,6 @@
 | `DOMAIN-SUFFIX,emdcadvertise.eastmoney.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,emjs.mkzhan.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ent1.12584.cn` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,eyqbpifffccdc.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,f1.06ps.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,f1.ichong123.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,f1.pig66.com` | 广告拦截 | 广告拦截 | exact |
@@ -2003,7 +1946,6 @@
 | `DOMAIN-SUFFIX,gg.blueidea.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,gg.cs090.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,gg.egouz.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,gg.gsdlcn.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,gg.kugou.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,gg.sonhoo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,gg.uuu9.com` | 广告拦截 | 广告拦截 | exact |
@@ -2031,10 +1973,7 @@
 | `DOMAIN-SUFFIX,h1.kukuw.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hades.qyer.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hapic1.zhuangxiu22.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,hdapp1003-a.akamaihd.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,hdapp1008-a.akamaihd.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hdc.maxli.cn` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,hdsrc-a.akamaihd.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hh.jiankang.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hi.xiunm.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,hi.xiunm.com` | 广告拦截 | 广告拦截 | exact |
@@ -2087,9 +2026,7 @@
 | `DOMAIN-SUFFIX,jy.zhongxues.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,k1.dancihu.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,k1.wanwenwan.cn` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,khrtac.xiangha.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,kpshx.douguo.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,le4le.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,leabd.douguo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,lixiangmo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ll.gxsky.com` | 广告拦截 | 广告拦截 | exact |
@@ -2119,7 +2056,6 @@
 | `DOMAIN-SUFFIX,md.tvzhe.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,mg.32r.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,mg.glwxw.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,mikka.app` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,milk.yesky.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,mini.hao123.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,miniye.xjts.cn` | 广告拦截 | 广告拦截 | exact |
@@ -2134,30 +2070,30 @@
 | `DOMAIN-SUFFIX,o.phb123.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,o1.jyjyj.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,okkkk.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,ovgadhtcyvak.in` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,p.7060.la` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,p.zol-img.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,p1.zhongyoo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,p4p.sina.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,p8u.hinet.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,panda.kdnet.net` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,panel-cn.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pb.shuxigua.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,penxiangge.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pg-ad-b1.nosdn.127.net` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,phpad.cqnews.net` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,phuolhogmxin.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pic.0597kk.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pic.fengniao.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,pic50.pingguolv.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pics.xgo-img.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pkk1.zuimeiniwo.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,poster.weather.com.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pro.iweihai.cn` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,profitablecpmratenetwork.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,pub.funshion.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,q1.yyxwzx.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,qcvf.ifeng.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,qd.x4399.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,qifake.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,qiji1.jdwx.info` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,qiyeb.iaskbus.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,qqhuhu.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,qujishu.com` | 广告拦截 | 广告拦截 | exact |
@@ -2185,7 +2121,6 @@
 | `DOMAIN-SUFFIX,shili.downxia.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,shili.wanyx.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,show.kc.taotaosou.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,sjbaiduadv1.redou.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,sp.dnqc.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ss.ting55.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,ssb.ah499.com` | 广告拦截 | 广告拦截 | exact |
@@ -2249,7 +2184,6 @@
 | `DOMAIN-SUFFIX,xc.macd.cn` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,xc.mydrivers.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,xcf-bd-js.chuimg.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,xdyjt.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,xinju.cc` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,xitongku.cc` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,xs.houyi.baofeng.net` | 广告拦截 | 广告拦截 | suffix coverage |
@@ -2274,10 +2208,52 @@
 | `DOMAIN-SUFFIX,zhihu.xmcimg.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,zisu.cn.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,zk.91post.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,zoom.zshu.net` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,zt2088.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,ztyumn.ifeng.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN-SUFFIX,zuowen.hydcd.com` | 广告拦截 | 广告拦截 | exact |
+| `DOMAIN,ai.google.dev` | AI 服务 | AI 服务 | exact |
+| `DOMAIN,bard.google.com` | AI 服务 | AI 服务 | suffix coverage |
+| `DOMAIN,gemini.google.com` | AI 服务 | AI 服务 | suffix coverage |
+| `DOMAIN,generativelanguage.googleapis.com` | AI 服务 | AI 服务 | exact |
+| `DOMAIN-SUFFIX,anthropic.com` | AI 服务 | AI 服务 | exact |
+| `DOMAIN-SUFFIX,bard.google.com` | AI 服务 | AI 服务 | exact |
+| `DOMAIN-SUFFIX,chatgpt.com` | AI 服务 | AI 服务 | exact |
+| `DOMAIN-SUFFIX,claude.ai` | AI 服务 | AI 服务 | exact |
+| `DOMAIN-SUFFIX,gemini.google.com` | AI 服务 | AI 服务 | exact |
+| `DOMAIN-SUFFIX,oaistatic.com` | AI 服务 | AI 服务 | exact |
+| `DOMAIN-SUFFIX,oaiusercontent.com` | AI 服务 | AI 服务 | exact |
+| `DOMAIN-SUFFIX,openai.com` | AI 服务 | AI 服务 | exact |
+| `DOMAIN-SUFFIX,openaiapi-site.azureedge.net` | AI 服务 | AI 服务 | exact |
+| `DOMAIN-SUFFIX,grazie.ai` | AI 服务 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,jetbrains.ai` | AI 服务 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,docker.com` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,docker.io` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,figma.com` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,gitlab.com` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,npmjs.com` | 开发工具 | 开发工具 | exact |
+| `DOMAIN-SUFFIX,vercel.com` | 开发工具 | 云平台 | exact |
+| `DOMAIN-SUFFIX,gvt2.com` | 广告拦截 | YouTube | exact |
+| `DOMAIN-SUFFIX,2mdn-cn.net` | 广告拦截 | 谷歌服务 | exact |
+| `DOMAIN-SUFFIX,admob-cn.com` | 广告拦截 | 谷歌服务 | exact |
+| `DOMAIN-SUFFIX,adsensecustomsearchads.com` | 广告拦截 | 谷歌服务 | exact |
+| `DOMAIN-SUFFIX,doubleclick-cn.net` | 广告拦截 | 谷歌服务 | exact |
+| `DOMAIN-SUFFIX,gcr.io` | 开发工具 | 谷歌服务 | exact |
+| `DOMAIN-SUFFIX,googleadservices-cn.com` | 广告拦截 | 谷歌服务 | exact |
+| `DOMAIN-SUFFIX,googlevads-cn.com` | 广告拦截 | 谷歌服务 | exact |
+| `DOMAIN,aistudio.google.com` | AI 服务 | 国外媒体 | exact |
+| `DOMAIN,api.githubcopilot.com` | AI 服务 | 国外媒体 | exact |
+| `DOMAIN,api.groq.com` | AI 服务 | 国外媒体 | exact |
+| `DOMAIN,api.together.xyz` | AI 服务 | 国外媒体 | exact |
+| `DOMAIN,console.groq.com` | AI 服务 | 国外媒体 | exact |
+| `DOMAIN,copilot-proxy.githubusercontent.com` | AI 服务 | 国外媒体 | exact |
+| `DOMAIN,notebooklm.google.com` | AI 服务 | 国外媒体 | exact |
+| `DOMAIN,sydney.bing.com` | AI 服务 | 国外媒体 | exact |
+| `DOMAIN-SUFFIX,ai.azure.com` | AI 服务 | 国外媒体 | exact |
 
 ## 主动排除
 
-- ai：排除 10 条，完整规则和原因见 acl4ssr.json。
+- ai：排除 11 条，完整规则和原因见 acl4ssr.json。
 - developer：排除 2 条，完整规则和原因见 acl4ssr.json。
 - download：排除 9 条，完整规则和原因见 acl4ssr.json。
 - game_download：排除 0 条，完整规则和原因见 acl4ssr.json。

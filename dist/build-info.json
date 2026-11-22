@@ -1,21 +1,21 @@
 {
-  "checked_at_utc": "2026-11-21T06:21:50+00:00",
+  "checked_at_utc": "2026-11-22T05:53:21+00:00",
   "upstream_commit": "0b6897dc17e0c513d25449c935a9694818e32f0c",
   "upstream_repository": "blackmatrix7/ios_rule_script",
   "published_repository": "aohaha127/clash-party-rule-compiler",
   "policy_groups": 55,
   "rule_providers": 81,
   "source_directories": 79,
-  "unique_rules": 240253,
-  "acl4ssr_commit": "c45d484ffc43ea0b64db63d847741c1e94586d73",
+  "unique_rules": 240258,
+  "acl4ssr_commit": "a7bdd9c97c3c4a1d01a7259bba7c23c275794cc7",
   "acl4ssr_repository": "ACL4SSR/ACL4SSR",
   "variants": {
     "default": {
-      "unique_rules": 240253,
-      "exact_duplicates_removed": 69,
+      "unique_rules": 240258,
+      "exact_duplicates_removed": 74,
       "covered_supplements_removed": 2,
-      "cross_policy_duplicates": 43,
-      "suffix_overlap_count": 7860,
+      "cross_policy_duplicates": 46,
+      "suffix_overlap_count": 7863,
       "groups": 55,
       "providers": 81,
       "inline_rules": [
@@ -25,17 +25,17 @@
       ],
       "acl_providers": {
         "acl_game_download": 19,
-        "acl_ai": 26,
-        "acl_developer": 15,
+        "acl_ai": 31,
+        "acl_developer": 18,
         "acl_download": 13
       }
     },
     "adblock": {
-      "unique_rules": 285238,
-      "exact_duplicates_removed": 979,
-      "covered_supplements_removed": 25,
-      "cross_policy_duplicates": 76,
-      "suffix_overlap_count": 8147,
+      "unique_rules": 288309,
+      "exact_duplicates_removed": 936,
+      "covered_supplements_removed": 30,
+      "cross_policy_duplicates": 82,
+      "suffix_overlap_count": 8139,
       "groups": 55,
       "providers": 83,
       "inline_rules": [
@@ -45,19 +45,19 @@
       ],
       "acl_providers": {
         "acl_game_download": 19,
-        "acl_easylist": 40594,
-        "acl_easylist_china": 4414,
-        "acl_ai": 26,
-        "acl_developer": 15,
+        "acl_easylist": 43180,
+        "acl_easylist_china": 4893,
+        "acl_ai": 31,
+        "acl_developer": 18,
         "acl_download": 13
       }
     },
     "local": {
-      "unique_rules": 240292,
-      "exact_duplicates_removed": 170,
+      "unique_rules": 240297,
+      "exact_duplicates_removed": 175,
       "covered_supplements_removed": 2,
-      "cross_policy_duplicates": 47,
-      "suffix_overlap_count": 7865,
+      "cross_policy_duplicates": 50,
+      "suffix_overlap_count": 7868,
       "groups": 55,
       "providers": 84,
       "inline_rules": [
@@ -70,17 +70,17 @@
         "acl_private_tracker": 28,
         "acl_nas": 14,
         "acl_remote_desktop": 5,
-        "acl_ai": 26,
-        "acl_developer": 15,
+        "acl_ai": 31,
+        "acl_developer": 18,
         "acl_download": 13
       }
     },
     "full": {
-      "unique_rules": 285277,
-      "exact_duplicates_removed": 1080,
-      "covered_supplements_removed": 25,
-      "cross_policy_duplicates": 80,
-      "suffix_overlap_count": 8152,
+      "unique_rules": 288348,
+      "exact_duplicates_removed": 1037,
+      "covered_supplements_removed": 30,
+      "cross_policy_duplicates": 86,
+      "suffix_overlap_count": 8144,
       "groups": 55,
       "providers": 86,
       "inline_rules": [
@@ -93,10 +93,10 @@
         "acl_private_tracker": 28,
         "acl_nas": 14,
         "acl_remote_desktop": 5,
-        "acl_easylist": 40594,
-        "acl_easylist_china": 4414,
-        "acl_ai": 26,
-        "acl_developer": 15,
+        "acl_easylist": 43180,
+        "acl_easylist_china": 4893,
+        "acl_ai": 31,
+        "acl_developer": 18,
         "acl_download": 13
       }
     }
@@ -105,7 +105,7 @@
     "default": {
       "groups": 55,
       "providers": 80,
-      "provider_rules": 240148,
+      "provider_rules": 240153,
       "omitted": {
         "PROCESS-NAME": 105
       },
@@ -115,7 +115,7 @@
     "adblock": {
       "groups": 55,
       "providers": 82,
-      "provider_rules": 285133,
+      "provider_rules": 288204,
       "omitted": {
         "PROCESS-NAME": 105
       },
@@ -125,7 +125,7 @@
     "local": {
       "groups": 55,
       "providers": 82,
-      "provider_rules": 240182,
+      "provider_rules": 240187,
       "omitted": {
         "PROCESS-NAME": 110
       },
@@ -135,7 +135,7 @@
     "full": {
       "groups": 55,
       "providers": 84,
-      "provider_rules": 285167,
+      "provider_rules": 288238,
       "omitted": {
         "PROCESS-NAME": 110
       },

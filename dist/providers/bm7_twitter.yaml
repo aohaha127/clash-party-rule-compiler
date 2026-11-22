@@ -1,6 +1,6 @@
-# Derived from blackmatrix7/ios_rule_script; GPL-2.0
-# Commit: 0b6897dc17e0c513d25449c935a9694818e32f0c
-# Source directories: Twitter; deduplicated
+# Derived from blackmatrix7/ios_rule_script (GPL-2.0)
+# Upstream commit: 0b6897dc17e0c513d25449c935a9694818e32f0c
+# Sources: Twitter/Twitter.yaml
 payload:
 - DOMAIN-SUFFIX,cms-twdigitalassets.com
 - DOMAIN-SUFFIX,grok.com

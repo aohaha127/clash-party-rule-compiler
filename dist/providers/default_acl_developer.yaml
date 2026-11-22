@@ -1,5 +1,5 @@
 # Derived from ACL4SSR/ACL4SSR; CC-BY-SA-4.0
-# Commit: c45d484ffc43ea0b64db63d847741c1e94586d73; source: Clash/Ruleset/Developer.list; curated and deduplicated
+# Commit: a7bdd9c97c3c4a1d01a7259bba7c23c275794cc7; source: Clash/Ruleset/Developer.list; curated and deduplicated
 payload:
 - DOMAIN-SUFFIX,apache.org
 - DOMAIN-SUFFIX,elastic.co
@@ -7,8 +7,10 @@ payload:
 - DOMAIN-SUFFIX,gcr.io
 - DOMAIN-SUFFIX,gitlab.io
 - DOMAIN-SUFFIX,jitpack.io
+- DOMAIN-SUFFIX,linear.app
 - DOMAIN-SUFFIX,maven.org
 - DOMAIN-SUFFIX,mvnrepository.com
+- DOMAIN-SUFFIX,neon.com
 - DOMAIN-SUFFIX,quay.io
 - DOMAIN-SUFFIX,redhat.com
 - DOMAIN-SUFFIX,sonatype.org
@@ -16,3 +18,4 @@ payload:
 - DOMAIN-SUFFIX,spring.io
 - DOMAIN-SUFFIX,spring.net
 - DOMAIN-SUFFIX,stackoverflow.com
+- DOMAIN-SUFFIX,vercel.com

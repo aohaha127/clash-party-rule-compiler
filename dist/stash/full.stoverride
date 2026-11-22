@@ -814,12 +814,12 @@ rule-providers: #!replace
     interval: 86400
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/stash/providers/bm7_cloudflare.yaml
     path: ./rules/bm7_cloudflare.yaml
-  bm7_vercel:
+  default_bm7_vercel:
     behavior: classical
     format: yaml
     interval: 86400
-    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/stash/providers/bm7_vercel.yaml
-    path: ./rules/bm7_vercel.yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/stash/providers/default_bm7_vercel.yaml
+    path: ./rules/default_bm7_vercel.yaml
   bm7_digitalocean:
     behavior: classical
     format: yaml
@@ -1054,12 +1054,12 @@ rule-providers: #!replace
     interval: 86400
     url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/stash/providers/bm7_game.yaml
     path: ./rules/bm7_game.yaml
-  bm7_twitter:
+  default_bm7_twitter:
     behavior: classical
     format: yaml
     interval: 86400
-    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/stash/providers/bm7_twitter.yaml
-    path: ./rules/bm7_twitter.yaml
+    url: https://raw.githubusercontent.com/aohaha127/clash-party-rule-compiler/main/dist/stash/providers/default_bm7_twitter.yaml
+    path: ./rules/default_bm7_twitter.yaml
   bm7_facebook:
     behavior: classical
     format: yaml
@@ -1172,7 +1172,7 @@ rules: #!replace
 - RULE-SET,bm7_figma,开发工具
 - RULE-SET,default_acl_developer,开发工具
 - RULE-SET,bm7_cloudflare,Cloudflare
-- RULE-SET,bm7_vercel,云平台
+- RULE-SET,default_bm7_vercel,云平台
 - RULE-SET,bm7_digitalocean,云平台
 - RULE-SET,bm7_google_fcm,谷歌FCM
 - RULE-SET,bm7_google_search,谷歌服务
@@ -1212,7 +1212,7 @@ rules: #!replace
 - RULE-SET,bm7_nintendo,游戏代理
 - RULE-SET,bm7_xbox,游戏代理
 - RULE-SET,bm7_game,游戏直连
-- RULE-SET,bm7_twitter,X / Twitter
+- RULE-SET,default_bm7_twitter,X / Twitter
 - RULE-SET,bm7_facebook,Meta 社交
 - RULE-SET,bm7_instagram,Meta 社交
 - RULE-SET,bm7_reddit,Reddit

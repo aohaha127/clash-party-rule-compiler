@@ -1,5 +1,5 @@
 # Derived from ACL4SSR/ACL4SSR; CC-BY-SA-4.0
-# Commit: c45d484ffc43ea0b64db63d847741c1e94586d73; source: Clash/Ruleset/GameDownload.list; curated and deduplicated
+# Commit: a7bdd9c97c3c4a1d01a7259bba7c23c275794cc7; source: Clash/Ruleset/GameDownload.list; curated and deduplicated
 payload:
 - DOMAIN,ssl-lvlt.cdn.ea.com
 - DOMAIN,uplaypc-s-ubisoft.cdn.ubionline.com.cn

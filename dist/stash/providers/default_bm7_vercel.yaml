@@ -16,7 +16,6 @@ payload:
 - DOMAIN-SUFFIX,vercel-status.com
 - DOMAIN-SUFFIX,vercel.app
 - DOMAIN-SUFFIX,vercel.blog
-- DOMAIN-SUFFIX,vercel.com
 - DOMAIN-SUFFIX,vercel.events
 - DOMAIN-SUFFIX,vercel.link
 - DOMAIN-SUFFIX,vercel.live

@@ -1,10 +1,14 @@
 {
   "repository": "ACL4SSR/ACL4SSR",
-  "commit": "c45d484ffc43ea0b64db63d847741c1e94586d73",
+  "commit": "a7bdd9c97c3c4a1d01a7259bba7c23c275794cc7",
   "excluded_rules": {
     "ai": [
       {
         "rule": "DOMAIN-KEYWORD,anthropic",
+        "reason": "unsupported or intentionally broad matcher"
+      },
+      {
+        "rule": "DOMAIN-KEYWORD,antigravity",
         "reason": "unsupported or intentionally broad matcher"
       },
       {
@@ -698,7 +702,7 @@
   },
   "variants": {
     "default": {
-      "unique_rules": 240253,
+      "unique_rules": 240258,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -845,11 +849,35 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,figma.com",
+          "kept_provider": "bm7_figma",
+          "kept_group": "开发工具",
+          "removed_provider": "acl_developer",
+          "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
           "rule": "DOMAIN-SUFFIX,gitlab.com",
           "kept_provider": "bm7_gitlab",
           "kept_group": "开发工具",
           "removed_provider": "acl_developer",
           "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,npmjs.com",
+          "kept_provider": "bm7_npm",
+          "kept_group": "开发工具",
+          "removed_provider": "acl_developer",
+          "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,vercel.com",
+          "kept_provider": "acl_developer",
+          "kept_group": "开发工具",
+          "removed_provider": "bm7_vercel",
+          "removed_group": "云平台",
           "reason": "exact"
         },
         {
@@ -1029,6 +1057,14 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,grok.com",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_twitter",
+          "removed_group": "X / Twitter",
+          "reason": "exact"
+        },
+        {
           "rule": "PROCESS-NAME,DownloadService.exe",
           "kept_provider": "acl_download",
           "kept_group": "国内直连",
@@ -1144,6 +1180,14 @@
           "rule": "DOMAIN,gog-cdn-lumen.secure2.footprint.net",
           "kept_provider": "acl_game_download",
           "kept_group": "游戏直连",
+          "removed_provider": "bm7_global",
+          "removed_group": "国外网站",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,clau.de",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
           "removed_provider": "bm7_global",
           "removed_group": "国外网站",
           "reason": "exact"
@@ -1269,10 +1313,10 @@
           "reason": "exact"
         }
       ],
-      "exact_duplicates_removed": 69,
+      "exact_duplicates_removed": 74,
       "covered_supplements_removed": 2,
-      "cross_policy_duplicates": 43,
-      "suffix_overlap_count": 7860,
+      "cross_policy_duplicates": 46,
+      "suffix_overlap_count": 7863,
       "suffix_overlap_examples": [
         {
           "specific": "DOMAIN,local.adguard.org",
@@ -1764,13 +1808,13 @@
       ],
       "acl_providers": {
         "acl_game_download": 19,
-        "acl_ai": 26,
-        "acl_developer": 15,
+        "acl_ai": 31,
+        "acl_developer": 18,
         "acl_download": 13
       }
     },
     "adblock": {
-      "unique_rules": 285238,
+      "unique_rules": 288309,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -1814,22 +1858,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,aaacompany.net",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,abgligarchan.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,aclickads.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -1989,14 +2017,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,adsrv.me",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,adtaily.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -2045,9 +2065,17 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,alespeonor.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
+          "rule": "DOMAIN-SUFFIX,afrdtech.com",
+          "kept_provider": "bm7_privacy",
+          "kept_group": "隐私拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,agkn.com",
+          "kept_provider": "bm7_privacy",
+          "kept_group": "隐私拦截",
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
           "reason": "exact"
@@ -2062,14 +2090,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,am15.net",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,appads.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -2117,14 +2137,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,away-stay.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,axonix.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -2163,6 +2175,14 @@
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
           "reason": "suffix coverage"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,bidswitch.net",
+          "kept_provider": "bm7_privacy",
+          "kept_group": "隐私拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "exact"
         },
         {
           "rule": "DOMAIN-SUFFIX,bidtheatre.com",
@@ -2309,14 +2329,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,clickadin.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,clickcdn.co",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -2357,7 +2369,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,contentabc.com",
+          "rule": "DOMAIN-SUFFIX,content.livesportmedia.eu",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -2365,7 +2377,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,countertrck.com",
+          "rule": "DOMAIN-SUFFIX,contentabc.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -2581,14 +2593,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,effectivemeasure.net",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,eoredi.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -2677,7 +2681,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,fastdld.com",
+          "rule": "DOMAIN-SUFFIX,feeds.videosz.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -2685,12 +2689,12 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,feeds.videosz.com",
-          "kept_provider": "bm7_advertising",
+          "rule": "DOMAIN-SUFFIX,fl.corniercuffed.qpon",
+          "kept_provider": "acl_easylist",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
-          "reason": "exact"
+          "reason": "suffix coverage"
         },
         {
           "rule": "DOMAIN-SUFFIX,flowwiththetide.xyz",
@@ -2837,14 +2841,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,hipersushiads.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,hyperpromote.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -2893,14 +2889,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,ioredi.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,ipredictive.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -2925,22 +2913,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,junmediadirect.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,jwpltx.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,karma.mdpcdn.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -2958,22 +2930,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,kitrigthy.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,koutobey.net",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,leadbolt.net",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -3117,14 +3073,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,movie-pass.live",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,mozgvya.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -3142,14 +3090,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,netcatx.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,netpatas.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -3181,47 +3121,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,noclef.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,notifysrv.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,nqrkzcd7ixwr.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,ofgogoatan.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,ofhypnoer.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,ofphanpytor.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -3238,14 +3138,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,onetouch4.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,optvx.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -3405,14 +3297,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,pttsite.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,pubmatic.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -3422,14 +3306,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,push.house",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,q6idnawboy7g.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -3469,12 +3345,12 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,regulationprivilegescan.top",
-          "kept_provider": "bm7_advertising",
+          "rule": "DOMAIN-SUFFIX,record.betzillopartners.com",
+          "kept_provider": "acl_easylist",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
-          "reason": "exact"
+          "reason": "suffix coverage"
         },
         {
           "rule": "DOMAIN-SUFFIX,responservbzh.icu",
@@ -3483,6 +3359,14 @@
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
           "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,retailmedia-static.criteo.com",
+          "kept_provider": "bm7_advertising",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "suffix coverage"
         },
         {
           "rule": "DOMAIN-SUFFIX,rexadvert.xyz",
@@ -3541,14 +3425,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,routeserve.info",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,rubylife.go2cloud.org",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -3557,12 +3433,36 @@
           "reason": "suffix coverage"
         },
         {
+          "rule": "DOMAIN-SUFFIX,rumt-sg.com",
+          "kept_provider": "bm7_privacy",
+          "kept_group": "隐私拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
           "rule": "DOMAIN-SUFFIX,rydresa.info",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
           "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,s.dsabva.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "suffix coverage"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,s.dsnucs.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "suffix coverage"
         },
         {
           "rule": "DOMAIN-SUFFIX,sdhfbvd.com",
@@ -3645,14 +3545,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,son-in-lawmorbid.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,special-offers.online",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -3715,6 +3607,14 @@
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
           "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,sync.gsyndication.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "suffix coverage"
         },
         {
           "rule": "DOMAIN-SUFFIX,tapioni.com",
@@ -3781,14 +3681,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,totogetica.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,trackspeeder.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -3829,14 +3721,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,trblocked.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,tremorhub.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -3846,14 +3730,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,tribalfusion.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,trkunited.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -3886,6 +3762,14 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,voredi.com",
+          "kept_provider": "bm7_advertising",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,vrtcal.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -3982,22 +3866,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,xxxjmp.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,ycn57v1ncx.fnoz8tgk8owfg6mpe.cfd",
-          "kept_provider": "acl_easylist",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "suffix coverage"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,yldbt.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -4549,23 +4417,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,5pub.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,5y9nfpes.52pk.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,614514.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -4693,14 +4545,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,a.bake818.cn",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,a.baomihua.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -4806,14 +4650,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,a.qsjiajiao.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,a.rensheng5.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -5149,14 +4985,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,ad.52av.tv",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,ad.bobi.tw",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -5215,6 +5043,14 @@
         {
           "rule": "DOMAIN-SUFFIX,adbd.liuxue86.com",
           "kept_provider": "bm7_advertising",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist_china",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,adbfkaoxvm.in",
+          "kept_provider": "acl_easylist",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
           "removed_group": "广告拦截",
@@ -5326,14 +5162,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,adsc.wasu.tv",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,adsclick.yx.js.cn",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -5453,16 +5281,16 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,awjakpos.com",
-          "kept_provider": "acl_easylist",
+          "rule": "DOMAIN-SUFFIX,ax.ifeng.com",
+          "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
           "removed_group": "广告拦截",
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,ax.ifeng.com",
-          "kept_provider": "bm7_advertising",
+          "rule": "DOMAIN-SUFFIX,axkozwhiqah.in",
+          "kept_provider": "acl_easylist",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
           "removed_group": "广告拦截",
@@ -5541,14 +5369,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,badding.oss-ap-southeast-1.aliyuncs.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,baidu1.codejie.net",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -5582,14 +5402,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,bd.czxuexi.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,bd.ershenghuo.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -6381,14 +6193,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,delivery.playallvideos.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,delivery.wasu.cn",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -6533,14 +6337,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,dmym.aixyy.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,doubleclick.ctfile.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -6574,14 +6370,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,dydab.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,dzjzg.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -6647,14 +6435,6 @@
         {
           "rule": "DOMAIN-SUFFIX,ent1.12584.cn",
           "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,eyqbpifffccdc.net",
-          "kept_provider": "acl_easylist",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
           "removed_group": "广告拦截",
@@ -6854,14 +6634,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,gg.egouz.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,gg.gsdlcn.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -7085,31 +6857,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,hdapp1003-a.akamaihd.net",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,hdapp1008-a.akamaihd.net",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,hdc.maxli.cn",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,hdsrc-a.akamaihd.net",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -7533,23 +7281,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,khrtac.xiangha.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,kpshx.douguo.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,le4le.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -7789,14 +7521,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,mikka.app",
-          "kept_provider": "acl_easylist",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,milk.yesky.com.cn",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -7909,6 +7633,14 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,ovgadhtcyvak.in",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist_china",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
           "rule": "DOMAIN-SUFFIX,p.7060.la",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -7957,14 +7689,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,panel-cn.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,pb.shuxigua.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -7997,6 +7721,14 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,phuolhogmxin.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist_china",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
           "rule": "DOMAIN-SUFFIX,pic.0597kk.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -8006,14 +7738,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,pic.fengniao.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,pic50.pingguolv.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -8053,6 +7777,14 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,profitablecpmratenetwork.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist_china",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
           "rule": "DOMAIN-SUFFIX,pub.funshion.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -8086,14 +7818,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,qifake.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,qiji1.jdwx.info",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -8310,14 +8034,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,show.kc.taotaosou.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,sjbaiduadv1.redou.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -8829,14 +8545,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,xdyjt.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,xinju.cc",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -9197,11 +8905,35 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,figma.com",
+          "kept_provider": "bm7_figma",
+          "kept_group": "开发工具",
+          "removed_provider": "acl_developer",
+          "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
           "rule": "DOMAIN-SUFFIX,gitlab.com",
           "kept_provider": "bm7_gitlab",
           "kept_group": "开发工具",
           "removed_provider": "acl_developer",
           "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,npmjs.com",
+          "kept_provider": "bm7_npm",
+          "kept_group": "开发工具",
+          "removed_provider": "acl_developer",
+          "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,vercel.com",
+          "kept_provider": "acl_developer",
+          "kept_group": "开发工具",
+          "removed_provider": "bm7_vercel",
+          "removed_group": "云平台",
           "reason": "exact"
         },
         {
@@ -9445,6 +9177,14 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,grok.com",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_twitter",
+          "removed_group": "X / Twitter",
+          "reason": "exact"
+        },
+        {
           "rule": "PROCESS-NAME,DownloadService.exe",
           "kept_provider": "acl_download",
           "kept_group": "国内直连",
@@ -9573,7 +9313,23 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,clau.de",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_global",
+          "removed_group": "国外网站",
+          "reason": "exact"
+        },
+        {
           "rule": "DOMAIN-SUFFIX,dirty.games",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "bm7_global",
+          "removed_group": "国外网站",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,dobbyporn.com",
           "kept_provider": "acl_easylist",
           "kept_group": "广告拦截",
           "removed_provider": "bm7_global",
@@ -9629,14 +9385,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,pornvideos.casa",
-          "kept_provider": "acl_easylist",
-          "kept_group": "广告拦截",
-          "removed_provider": "bm7_global",
-          "removed_group": "国外网站",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,prpops.com",
           "kept_provider": "acl_easylist",
           "kept_group": "广告拦截",
@@ -9672,14 +9420,6 @@
           "rule": "DOMAIN-SUFFIX,sora.com",
           "kept_provider": "acl_ai",
           "kept_group": "AI 服务",
-          "removed_provider": "bm7_global",
-          "removed_group": "国外网站",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,trustedpeach.com",
-          "kept_provider": "acl_easylist",
-          "kept_group": "广告拦截",
           "removed_provider": "bm7_global",
           "removed_group": "国外网站",
           "reason": "exact"
@@ -9771,12 +9511,44 @@
           "removed_provider": "bm7_global",
           "removed_group": "国外网站",
           "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,sourcegraph.com",
+          "kept_provider": "acl_developer",
+          "kept_group": "开发工具",
+          "removed_provider": "bm7_global",
+          "removed_group": "国外网站",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,spring.io",
+          "kept_provider": "acl_developer",
+          "kept_group": "开发工具",
+          "removed_provider": "bm7_global",
+          "removed_group": "国外网站",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,spring.net",
+          "kept_provider": "acl_developer",
+          "kept_group": "开发工具",
+          "removed_provider": "bm7_global",
+          "removed_group": "国外网站",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,stackoverflow.com",
+          "kept_provider": "acl_developer",
+          "kept_group": "开发工具",
+          "removed_provider": "bm7_global",
+          "removed_group": "国外网站",
+          "reason": "exact"
         }
       ],
-      "exact_duplicates_removed": 979,
-      "covered_supplements_removed": 25,
-      "cross_policy_duplicates": 76,
-      "suffix_overlap_count": 8147,
+      "exact_duplicates_removed": 936,
+      "covered_supplements_removed": 30,
+      "cross_policy_duplicates": 82,
+      "suffix_overlap_count": 8139,
       "suffix_overlap_examples": [
         {
           "specific": "DOMAIN,local.adguard.org",
@@ -10268,15 +10040,15 @@
       ],
       "acl_providers": {
         "acl_game_download": 19,
-        "acl_easylist": 40594,
-        "acl_easylist_china": 4414,
-        "acl_ai": 26,
-        "acl_developer": 15,
+        "acl_easylist": 43180,
+        "acl_easylist_china": 4893,
+        "acl_ai": 31,
+        "acl_developer": 18,
         "acl_download": 13
       }
     },
     "local": {
-      "unique_rules": 240292,
+      "unique_rules": 240297,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -11167,11 +10939,35 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,figma.com",
+          "kept_provider": "bm7_figma",
+          "kept_group": "开发工具",
+          "removed_provider": "acl_developer",
+          "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
           "rule": "DOMAIN-SUFFIX,gitlab.com",
           "kept_provider": "bm7_gitlab",
           "kept_group": "开发工具",
           "removed_provider": "acl_developer",
           "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,npmjs.com",
+          "kept_provider": "bm7_npm",
+          "kept_group": "开发工具",
+          "removed_provider": "acl_developer",
+          "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,vercel.com",
+          "kept_provider": "acl_developer",
+          "kept_group": "开发工具",
+          "removed_provider": "bm7_vercel",
+          "removed_group": "云平台",
           "reason": "exact"
         },
         {
@@ -11351,6 +11147,14 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,grok.com",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_twitter",
+          "removed_group": "X / Twitter",
+          "reason": "exact"
+        },
+        {
           "rule": "PROCESS-NAME,DownloadService.exe",
           "kept_provider": "acl_download",
           "kept_group": "国内直连",
@@ -11511,6 +11315,14 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,clau.de",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_global",
+          "removed_group": "国外网站",
+          "reason": "exact"
+        },
+        {
           "rule": "DOMAIN-SUFFIX,myqnapcloud.com",
           "kept_provider": "acl_nas",
           "kept_group": "国内直连",
@@ -11655,10 +11467,10 @@
           "reason": "exact"
         }
       ],
-      "exact_duplicates_removed": 170,
+      "exact_duplicates_removed": 175,
       "covered_supplements_removed": 2,
-      "cross_policy_duplicates": 47,
-      "suffix_overlap_count": 7865,
+      "cross_policy_duplicates": 50,
+      "suffix_overlap_count": 7868,
       "suffix_overlap_examples": [
         {
           "specific": "DOMAIN,local.adguard.org",
@@ -12153,13 +11965,13 @@
         "acl_private_tracker": 28,
         "acl_nas": 14,
         "acl_remote_desktop": 5,
-        "acl_ai": 26,
-        "acl_developer": 15,
+        "acl_ai": 31,
+        "acl_developer": 18,
         "acl_download": 13
       }
     },
     "full": {
-      "unique_rules": 285277,
+      "unique_rules": 288348,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -12954,22 +12766,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,abgligarchan.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,aclickads.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,acuityplatform.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -13122,14 +12918,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,adsrv.me",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,adtaily.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -13178,9 +12966,17 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,alespeonor.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
+          "rule": "DOMAIN-SUFFIX,afrdtech.com",
+          "kept_provider": "bm7_privacy",
+          "kept_group": "隐私拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,agkn.com",
+          "kept_provider": "bm7_privacy",
+          "kept_group": "隐私拦截",
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
           "reason": "exact"
@@ -13195,14 +12991,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,am15.net",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,appads.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -13250,14 +13038,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,away-stay.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,axonix.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -13296,6 +13076,14 @@
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
           "reason": "suffix coverage"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,bidswitch.net",
+          "kept_provider": "bm7_privacy",
+          "kept_group": "隐私拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "exact"
         },
         {
           "rule": "DOMAIN-SUFFIX,bidtheatre.com",
@@ -13442,14 +13230,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,clickadin.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,clickcdn.co",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -13490,7 +13270,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,contentabc.com",
+          "rule": "DOMAIN-SUFFIX,content.livesportmedia.eu",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -13498,7 +13278,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,countertrck.com",
+          "rule": "DOMAIN-SUFFIX,contentabc.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -13714,14 +13494,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,effectivemeasure.net",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,eoredi.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -13810,7 +13582,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,fastdld.com",
+          "rule": "DOMAIN-SUFFIX,feeds.videosz.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -13818,12 +13590,12 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,feeds.videosz.com",
-          "kept_provider": "bm7_advertising",
+          "rule": "DOMAIN-SUFFIX,fl.corniercuffed.qpon",
+          "kept_provider": "acl_easylist",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
-          "reason": "exact"
+          "reason": "suffix coverage"
         },
         {
           "rule": "DOMAIN-SUFFIX,flowwiththetide.xyz",
@@ -13970,14 +13742,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,hipersushiads.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,hyperpromote.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -14026,14 +13790,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,ioredi.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,ipredictive.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -14058,22 +13814,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,junmediadirect.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,jwpltx.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,karma.mdpcdn.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -14091,22 +13831,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,kitrigthy.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,koutobey.net",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,leadbolt.net",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -14250,14 +13974,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,movie-pass.live",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,mozgvya.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -14275,14 +13991,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,netcatx.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,netpatas.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -14314,47 +14022,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,noclef.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,notifysrv.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,nqrkzcd7ixwr.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,ofgogoatan.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,ofhypnoer.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,ofphanpytor.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -14371,14 +14039,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,onetouch4.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,optvx.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -14538,14 +14198,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,pttsite.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,pubmatic.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -14555,14 +14207,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,push.house",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,q6idnawboy7g.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -14602,12 +14246,12 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,regulationprivilegescan.top",
-          "kept_provider": "bm7_advertising",
+          "rule": "DOMAIN-SUFFIX,record.betzillopartners.com",
+          "kept_provider": "acl_easylist",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
-          "reason": "exact"
+          "reason": "suffix coverage"
         },
         {
           "rule": "DOMAIN-SUFFIX,responservbzh.icu",
@@ -14616,6 +14260,14 @@
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
           "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,retailmedia-static.criteo.com",
+          "kept_provider": "bm7_advertising",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "suffix coverage"
         },
         {
           "rule": "DOMAIN-SUFFIX,rexadvert.xyz",
@@ -14674,14 +14326,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,routeserve.info",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,rubylife.go2cloud.org",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -14690,12 +14334,36 @@
           "reason": "suffix coverage"
         },
         {
+          "rule": "DOMAIN-SUFFIX,rumt-sg.com",
+          "kept_provider": "bm7_privacy",
+          "kept_group": "隐私拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
           "rule": "DOMAIN-SUFFIX,rydresa.info",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
           "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,s.dsabva.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "suffix coverage"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,s.dsnucs.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "suffix coverage"
         },
         {
           "rule": "DOMAIN-SUFFIX,sdhfbvd.com",
@@ -14778,14 +14446,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,son-in-lawmorbid.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,special-offers.online",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -14848,6 +14508,14 @@
           "removed_provider": "acl_easylist",
           "removed_group": "广告拦截",
           "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,sync.gsyndication.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "suffix coverage"
         },
         {
           "rule": "DOMAIN-SUFFIX,tapioni.com",
@@ -14914,14 +14582,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,totogetica.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,trackspeeder.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -14962,14 +14622,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,trblocked.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,tremorhub.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -14979,14 +14631,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,tribalfusion.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,trkunited.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -15019,6 +14663,14 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,voredi.com",
+          "kept_provider": "bm7_advertising",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,vrtcal.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -15115,22 +14767,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,xxxjmp.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,ycn57v1ncx.fnoz8tgk8owfg6mpe.cfd",
-          "kept_provider": "acl_easylist",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "suffix coverage"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,yldbt.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -15682,23 +15318,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,5pub.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,5y9nfpes.52pk.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,614514.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -15826,14 +15446,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,a.bake818.cn",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,a.baomihua.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -15939,14 +15551,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,a.qsjiajiao.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,a.rensheng5.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -16282,14 +15886,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,ad.52av.tv",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,ad.bobi.tw",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -16348,6 +15944,14 @@
         {
           "rule": "DOMAIN-SUFFIX,adbd.liuxue86.com",
           "kept_provider": "bm7_advertising",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist_china",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,adbfkaoxvm.in",
+          "kept_provider": "acl_easylist",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
           "removed_group": "广告拦截",
@@ -16459,14 +16063,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,adsc.wasu.tv",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,adsclick.yx.js.cn",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -16586,16 +16182,16 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,awjakpos.com",
-          "kept_provider": "acl_easylist",
+          "rule": "DOMAIN-SUFFIX,ax.ifeng.com",
+          "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
           "removed_group": "广告拦截",
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,ax.ifeng.com",
-          "kept_provider": "bm7_advertising",
+          "rule": "DOMAIN-SUFFIX,axkozwhiqah.in",
+          "kept_provider": "acl_easylist",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
           "removed_group": "广告拦截",
@@ -16674,14 +16270,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,badding.oss-ap-southeast-1.aliyuncs.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,baidu1.codejie.net",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -16715,14 +16303,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,bd.czxuexi.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,bd.ershenghuo.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -17514,14 +17094,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,delivery.playallvideos.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,delivery.wasu.cn",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -17666,14 +17238,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,dmym.aixyy.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,doubleclick.ctfile.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -17707,14 +17271,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,dydab.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,dzjzg.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -17780,14 +17336,6 @@
         {
           "rule": "DOMAIN-SUFFIX,ent1.12584.cn",
           "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,eyqbpifffccdc.net",
-          "kept_provider": "acl_easylist",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
           "removed_group": "广告拦截",
@@ -17987,14 +17535,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,gg.egouz.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,gg.gsdlcn.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -18218,31 +17758,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,hdapp1003-a.akamaihd.net",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,hdapp1008-a.akamaihd.net",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,hdc.maxli.cn",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,hdsrc-a.akamaihd.net",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -18666,23 +18182,7 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,khrtac.xiangha.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,kpshx.douguo.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,le4le.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -18922,14 +18422,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,mikka.app",
-          "kept_provider": "acl_easylist",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,milk.yesky.com.cn",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -19042,6 +18534,14 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,ovgadhtcyvak.in",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist_china",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
           "rule": "DOMAIN-SUFFIX,p.7060.la",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -19090,14 +18590,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,panel-cn.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,pb.shuxigua.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -19130,6 +18622,14 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,phuolhogmxin.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist_china",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
           "rule": "DOMAIN-SUFFIX,pic.0597kk.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -19139,14 +18639,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,pic.fengniao.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,pic50.pingguolv.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -19186,6 +18678,14 @@
           "reason": "exact"
         },
         {
+          "rule": "DOMAIN-SUFFIX,profitablecpmratenetwork.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist_china",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
           "rule": "DOMAIN-SUFFIX,pub.funshion.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -19219,14 +18719,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,qifake.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,qiji1.jdwx.info",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -19443,14 +18935,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,show.kc.taotaosou.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,sjbaiduadv1.redou.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist_china",
@@ -19962,14 +19446,6 @@
           "reason": "exact"
         },
         {
-          "rule": "DOMAIN-SUFFIX,xdyjt.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist_china",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
           "rule": "DOMAIN-SUFFIX,xinju.cc",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
@@ -20160,12 +19636,348 @@
           "removed_provider": "acl_easylist_china",
           "removed_group": "广告拦截",
           "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,zoom.zshu.net",
+          "kept_provider": "bm7_advertising",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist_china",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,zt2088.com",
+          "kept_provider": "bm7_advertising",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist_china",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,ztyumn.ifeng.com",
+          "kept_provider": "bm7_advertising",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist_china",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,zuowen.hydcd.com",
+          "kept_provider": "bm7_advertising",
+          "kept_group": "广告拦截",
+          "removed_provider": "acl_easylist_china",
+          "removed_group": "广告拦截",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN,ai.google.dev",
+          "kept_provider": "bm7_gemini",
+          "kept_group": "AI 服务",
+          "removed_provider": "acl_ai",
+          "removed_group": "AI 服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN,bard.google.com",
+          "kept_provider": "bm7_gemini",
+          "kept_group": "AI 服务",
+          "removed_provider": "acl_ai",
+          "removed_group": "AI 服务",
+          "reason": "suffix coverage"
+        },
+        {
+          "rule": "DOMAIN,gemini.google.com",
+          "kept_provider": "bm7_gemini",
+          "kept_group": "AI 服务",
+          "removed_provider": "acl_ai",
+          "removed_group": "AI 服务",
+          "reason": "suffix coverage"
+        },
+        {
+          "rule": "DOMAIN,generativelanguage.googleapis.com",
+          "kept_provider": "bm7_gemini",
+          "kept_group": "AI 服务",
+          "removed_provider": "acl_ai",
+          "removed_group": "AI 服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,anthropic.com",
+          "kept_provider": "bm7_claude",
+          "kept_group": "AI 服务",
+          "removed_provider": "acl_ai",
+          "removed_group": "AI 服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,bard.google.com",
+          "kept_provider": "bm7_gemini",
+          "kept_group": "AI 服务",
+          "removed_provider": "acl_ai",
+          "removed_group": "AI 服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,chatgpt.com",
+          "kept_provider": "bm7_openai",
+          "kept_group": "AI 服务",
+          "removed_provider": "acl_ai",
+          "removed_group": "AI 服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,claude.ai",
+          "kept_provider": "bm7_claude",
+          "kept_group": "AI 服务",
+          "removed_provider": "acl_ai",
+          "removed_group": "AI 服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,gemini.google.com",
+          "kept_provider": "bm7_gemini",
+          "kept_group": "AI 服务",
+          "removed_provider": "acl_ai",
+          "removed_group": "AI 服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,oaistatic.com",
+          "kept_provider": "bm7_openai",
+          "kept_group": "AI 服务",
+          "removed_provider": "acl_ai",
+          "removed_group": "AI 服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,oaiusercontent.com",
+          "kept_provider": "bm7_openai",
+          "kept_group": "AI 服务",
+          "removed_provider": "acl_ai",
+          "removed_group": "AI 服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,openai.com",
+          "kept_provider": "bm7_openai",
+          "kept_group": "AI 服务",
+          "removed_provider": "acl_ai",
+          "removed_group": "AI 服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,openaiapi-site.azureedge.net",
+          "kept_provider": "bm7_openai",
+          "kept_group": "AI 服务",
+          "removed_provider": "acl_ai",
+          "removed_group": "AI 服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,grazie.ai",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_jetbrains",
+          "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,jetbrains.ai",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_jetbrains",
+          "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,docker.com",
+          "kept_provider": "bm7_docker",
+          "kept_group": "开发工具",
+          "removed_provider": "acl_developer",
+          "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,docker.io",
+          "kept_provider": "bm7_docker",
+          "kept_group": "开发工具",
+          "removed_provider": "acl_developer",
+          "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,figma.com",
+          "kept_provider": "bm7_figma",
+          "kept_group": "开发工具",
+          "removed_provider": "acl_developer",
+          "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,gitlab.com",
+          "kept_provider": "bm7_gitlab",
+          "kept_group": "开发工具",
+          "removed_provider": "acl_developer",
+          "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,npmjs.com",
+          "kept_provider": "bm7_npm",
+          "kept_group": "开发工具",
+          "removed_provider": "acl_developer",
+          "removed_group": "开发工具",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,vercel.com",
+          "kept_provider": "acl_developer",
+          "kept_group": "开发工具",
+          "removed_provider": "bm7_vercel",
+          "removed_group": "云平台",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,gvt2.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "bm7_youtube",
+          "removed_group": "YouTube",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,2mdn-cn.net",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "bm7_google",
+          "removed_group": "谷歌服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,admob-cn.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "bm7_google",
+          "removed_group": "谷歌服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,adsensecustomsearchads.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "bm7_google",
+          "removed_group": "谷歌服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,doubleclick-cn.net",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "bm7_google",
+          "removed_group": "谷歌服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,gcr.io",
+          "kept_provider": "acl_developer",
+          "kept_group": "开发工具",
+          "removed_provider": "bm7_google",
+          "removed_group": "谷歌服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,googleadservices-cn.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "bm7_google",
+          "removed_group": "谷歌服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,googlevads-cn.com",
+          "kept_provider": "acl_easylist",
+          "kept_group": "广告拦截",
+          "removed_provider": "bm7_google",
+          "removed_group": "谷歌服务",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN,aistudio.google.com",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_global_media",
+          "removed_group": "国外媒体",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN,api.githubcopilot.com",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_global_media",
+          "removed_group": "国外媒体",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN,api.groq.com",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_global_media",
+          "removed_group": "国外媒体",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN,api.together.xyz",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_global_media",
+          "removed_group": "国外媒体",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN,console.groq.com",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_global_media",
+          "removed_group": "国外媒体",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN,copilot-proxy.githubusercontent.com",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_global_media",
+          "removed_group": "国外媒体",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN,notebooklm.google.com",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_global_media",
+          "removed_group": "国外媒体",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN,sydney.bing.com",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_global_media",
+          "removed_group": "国外媒体",
+          "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,ai.azure.com",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_global_media",
+          "removed_group": "国外媒体",
+          "reason": "exact"
         }
       ],
-      "exact_duplicates_removed": 1080,
-      "covered_supplements_removed": 25,
-      "cross_policy_duplicates": 80,
-      "suffix_overlap_count": 8152,
+      "exact_duplicates_removed": 1037,
+      "covered_supplements_removed": 30,
+      "cross_policy_duplicates": 86,
+      "suffix_overlap_count": 8144,
       "suffix_overlap_examples": [
         {
           "specific": "DOMAIN,local.adguard.org",
@@ -20660,10 +20472,10 @@
         "acl_private_tracker": 28,
         "acl_nas": 14,
         "acl_remote_desktop": 5,
-        "acl_easylist": 40594,
-        "acl_easylist_china": 4414,
-        "acl_ai": 26,
-        "acl_developer": 15,
+        "acl_easylist": 43180,
+        "acl_easylist_china": 4893,
+        "acl_ai": 31,
+        "acl_developer": 18,
         "acl_download": 13
       }
     }

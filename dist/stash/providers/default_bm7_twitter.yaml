@@ -4,7 +4,6 @@
 # iOS portable export; process rules omitted.
 payload:
 - DOMAIN-SUFFIX,cms-twdigitalassets.com
-- DOMAIN-SUFFIX,grok.com
 - DOMAIN-SUFFIX,periscope.tv
 - DOMAIN-SUFFIX,pscp.tv
 - DOMAIN-SUFFIX,t.co
