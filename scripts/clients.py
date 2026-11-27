@@ -15,7 +15,7 @@ from catalog import REGIONS
 SUPPORTED = {"DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD", "IP-CIDR", "IP-CIDR6", "IP-ASN"}
 NON_HK = [name for name, _, _ in REGIONS if name != "香港节点"]
 STASH_NOTICE_FILTER = (r"剩余流量|剩餘流量|套餐到期|到期时间|到期時間|流量重置|下次重置|"
-                       r"订阅到期|訂閱到期|有效期|官网|官網|公告")
+                       r"订阅到期|訂閱到期|到期|截止|有效期|官网|官網|公告")
 VARIANTS = {"default": "clash-party.yaml", "adblock": "clash-party-adblock.yaml",
             "local": "clash-party-local-services.yaml", "full": "clash-party-full.yaml"}
 
