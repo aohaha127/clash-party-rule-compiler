@@ -1,6 +1,6 @@
 # ACL4SSR 补充与冲突报告
 
-上游：ACL4SSR/ACL4SSR @ `a7bdd9c97c3c4a1d01a7259bba7c23c275794cc7`。
+上游：ACL4SSR/ACL4SSR @ `384af1b35d29df946013cf8912db1c3e40935ce5`。
 
 完全重复保留先匹配的规则；补充规则已被同策略后缀覆盖时省略。拦截策略优先。
 原 blackmatrix7 统计见 conflicts.md；合并后统计见本报告及 build-info.json。
@@ -8,9 +8,9 @@
 | 版本 | 策略组 | 规则集 | 规则条目 |
 |---|---:|---:|---:|
 | default | 55 | 81 | 240258 |
-| adblock | 55 | 83 | 288309 |
+| adblock | 55 | 83 | 288999 |
 | local | 55 | 84 | 240297 |
-| full | 55 | 86 | 288348 |
+| full | 55 | 86 | 289038 |
 
 ## default 重复与策略归类示例
 
@@ -240,7 +240,6 @@
 | `DOMAIN-SUFFIX,leadzu.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,liadm.com` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,linkev.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,madsans.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,madserving.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,marketgid.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,marketing.888.com` | 广告拦截 | 广告拦截 | exact |
@@ -1486,7 +1485,6 @@
 | `DOMAIN-SUFFIX,leadzu.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,liadm.com` | 隐私拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,linkev.com` | 广告拦截 | 广告拦截 | exact |
-| `DOMAIN-SUFFIX,madsans.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,madserving.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,marketgid.com` | 广告拦截 | 广告拦截 | exact |
 | `DOMAIN-SUFFIX,marketing.888.com` | 广告拦截 | 广告拦截 | exact |
@@ -2250,6 +2248,7 @@
 | `DOMAIN,notebooklm.google.com` | AI 服务 | 国外媒体 | exact |
 | `DOMAIN,sydney.bing.com` | AI 服务 | 国外媒体 | exact |
 | `DOMAIN-SUFFIX,ai.azure.com` | AI 服务 | 国外媒体 | exact |
+| `DOMAIN-SUFFIX,claude.com` | AI 服务 | 国外媒体 | exact |
 
 ## 主动排除
 

@@ -18,7 +18,7 @@
     "adblock": {
       "groups": 55,
       "providers": 82,
-      "provider_rules": 288204,
+      "provider_rules": 288894,
       "omitted": {
         "PROCESS-NAME": 105
       },
@@ -38,7 +38,7 @@
     "full": {
       "groups": 55,
       "providers": 84,
-      "provider_rules": 288238,
+      "provider_rules": 288928,
       "omitted": {
         "PROCESS-NAME": 110
       },

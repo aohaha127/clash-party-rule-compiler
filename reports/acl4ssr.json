@@ -1,6 +1,6 @@
 {
   "repository": "ACL4SSR/ACL4SSR",
-  "commit": "a7bdd9c97c3c4a1d01a7259bba7c23c275794cc7",
+  "commit": "384af1b35d29df946013cf8912db1c3e40935ce5",
   "excluded_rules": {
     "ai": [
       {
@@ -1814,7 +1814,7 @@
       }
     },
     "adblock": {
-      "unique_rules": 288309,
+      "unique_rules": 288999,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -2954,14 +2954,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,linkev.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,madsans.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -9545,7 +9537,7 @@
           "reason": "exact"
         }
       ],
-      "exact_duplicates_removed": 936,
+      "exact_duplicates_removed": 935,
       "covered_supplements_removed": 30,
       "cross_policy_duplicates": 82,
       "suffix_overlap_count": 8139,
@@ -10040,8 +10032,8 @@
       ],
       "acl_providers": {
         "acl_game_download": 19,
-        "acl_easylist": 43180,
-        "acl_easylist_china": 4893,
+        "acl_easylist": 43803,
+        "acl_easylist_china": 4960,
         "acl_ai": 31,
         "acl_developer": 18,
         "acl_download": 13
@@ -11971,7 +11963,7 @@
       }
     },
     "full": {
-      "unique_rules": 288348,
+      "unique_rules": 289038,
       "removed_examples": [
         {
           "rule": "DOMAIN,origin-a.akamaihd.net",
@@ -13855,14 +13847,6 @@
         },
         {
           "rule": "DOMAIN-SUFFIX,linkev.com",
-          "kept_provider": "bm7_advertising",
-          "kept_group": "广告拦截",
-          "removed_provider": "acl_easylist",
-          "removed_group": "广告拦截",
-          "reason": "exact"
-        },
-        {
-          "rule": "DOMAIN-SUFFIX,madsans.com",
           "kept_provider": "bm7_advertising",
           "kept_group": "广告拦截",
           "removed_provider": "acl_easylist",
@@ -19972,9 +19956,17 @@
           "removed_provider": "bm7_global_media",
           "removed_group": "国外媒体",
           "reason": "exact"
+        },
+        {
+          "rule": "DOMAIN-SUFFIX,claude.com",
+          "kept_provider": "acl_ai",
+          "kept_group": "AI 服务",
+          "removed_provider": "bm7_global_media",
+          "removed_group": "国外媒体",
+          "reason": "exact"
         }
       ],
-      "exact_duplicates_removed": 1037,
+      "exact_duplicates_removed": 1036,
       "covered_supplements_removed": 30,
       "cross_policy_duplicates": 86,
       "suffix_overlap_count": 8144,
@@ -20472,8 +20464,8 @@
         "acl_private_tracker": 28,
         "acl_nas": 14,
         "acl_remote_desktop": 5,
-        "acl_easylist": 43180,
-        "acl_easylist_china": 4893,
+        "acl_easylist": 43803,
+        "acl_easylist_china": 4960,
         "acl_ai": 31,
         "acl_developer": 18,
         "acl_download": 13

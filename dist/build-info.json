@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-27T07:34:54+00:00",
+  "checked_at_utc": "2026-11-28T07:01:59+00:00",
   "upstream_commit": "0b6897dc17e0c513d25449c935a9694818e32f0c",
   "upstream_repository": "blackmatrix7/ios_rule_script",
   "published_repository": "aohaha127/clash-party-rule-compiler",
@@ -7,7 +7,7 @@
   "rule_providers": 81,
   "source_directories": 79,
   "unique_rules": 240258,
-  "acl4ssr_commit": "a7bdd9c97c3c4a1d01a7259bba7c23c275794cc7",
+  "acl4ssr_commit": "384af1b35d29df946013cf8912db1c3e40935ce5",
   "acl4ssr_repository": "ACL4SSR/ACL4SSR",
   "variants": {
     "default": {
@@ -31,8 +31,8 @@
       }
     },
     "adblock": {
-      "unique_rules": 288309,
-      "exact_duplicates_removed": 936,
+      "unique_rules": 288999,
+      "exact_duplicates_removed": 935,
       "covered_supplements_removed": 30,
       "cross_policy_duplicates": 82,
       "suffix_overlap_count": 8139,
@@ -45,8 +45,8 @@
       ],
       "acl_providers": {
         "acl_game_download": 19,
-        "acl_easylist": 43180,
-        "acl_easylist_china": 4893,
+        "acl_easylist": 43803,
+        "acl_easylist_china": 4960,
         "acl_ai": 31,
         "acl_developer": 18,
         "acl_download": 13
@@ -76,8 +76,8 @@
       }
     },
     "full": {
-      "unique_rules": 288348,
-      "exact_duplicates_removed": 1037,
+      "unique_rules": 289038,
+      "exact_duplicates_removed": 1036,
       "covered_supplements_removed": 30,
       "cross_policy_duplicates": 86,
       "suffix_overlap_count": 8144,
@@ -93,8 +93,8 @@
         "acl_private_tracker": 28,
         "acl_nas": 14,
         "acl_remote_desktop": 5,
-        "acl_easylist": 43180,
-        "acl_easylist_china": 4893,
+        "acl_easylist": 43803,
+        "acl_easylist_china": 4960,
         "acl_ai": 31,
         "acl_developer": 18,
         "acl_download": 13
@@ -115,7 +115,7 @@
     "adblock": {
       "groups": 55,
       "providers": 82,
-      "provider_rules": 288204,
+      "provider_rules": 288894,
       "omitted": {
         "PROCESS-NAME": 105
       },
@@ -135,7 +135,7 @@
     "full": {
       "groups": 55,
       "providers": 84,
-      "provider_rules": 288238,
+      "provider_rules": 288928,
       "omitted": {
         "PROCESS-NAME": 110
       },
